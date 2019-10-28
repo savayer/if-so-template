@@ -1,0 +1,158 @@
+.header {
+    height: 750px;
+    position: relative;
+    background-image: linear-gradient(to top, rgba(235, 235, 235, .39) 0%, #fff 100%);
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        width: 100%;
+        z-index: 11;
+        height: 210px;
+        background: url(../../../img/svg/divider.svg);    
+    }
+}
+
+.header__container {
+    display: flex;
+    height: 450px;
+    padding-right: calc(21% + 10px);
+}
+
+.header__content {
+    margin: auto;
+    max-width: 650px;
+    position: relative;    
+    &:before {
+        content: '';
+        position: absolute;
+        background: transparent;
+        z-index: 10;
+        top: -100%;
+        width: 94%;
+        height: 300px;
+        background-image: linear-gradient(to top, #fcfcfc 0%, #fefefe 100%);
+        left: 0;
+        box-shadow: -40px 0 40px #fcfcfc;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        background: transparent;
+        z-index: 10;
+        top: -100%;
+        width: 91%;
+        height: 300px;
+        background-image: linear-gradient(to top, #fcfcfc 0%, #fefefe 100%);
+        left: 0;
+        box-shadow: 40px 0 40px #fcfcfc;
+    }
+}
+
+.header__object {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    z-index: 9;
+}
+
+.header__title {
+    color: $text_color;
+    font-size: 60px;
+    font-family: 'FuturaBold';
+    font-weight: 700;
+    line-height: 1;
+    position: relative;
+    z-index: 11;
+}
+
+.header__description {
+    color: $text_color;
+    font-family: "Open Sans";
+    font-size: 26px;
+    font-weight: 400;
+    margin: 18px 0;    
+}
+
+.header__offer {
+    margin-top: 50px;
+}
+
+.try_it--header {    
+    border-color: $blue;
+    border: none;
+    background-color: $blue;
+    padding: 18px 20px 18px 70px;
+    .try_it__text {
+        color: #fff;
+        font-size: 26px;
+    }
+    .try_it__arrow-container {
+        margin-left: 30px;
+    }
+}
+
+.header__right_bg {
+    background: url(../../../img/bg_header_right.png) no-repeat;
+    background-size: contain;
+    display: block;
+    width: 900px;
+    height: 720px;
+    position: absolute;
+    z-index: 11;
+    top: calc(24% + 5px);
+    right: 0;
+    transform: rotate(.6deg)
+}
+
+.header__left-cloud {
+    width: 248px;
+    height: 69px;
+    background: url(../../../img/cloud_left.png) no-repeat;
+    position: absolute;
+    top: 15%;
+    //left: -30px;
+    left: 25%;
+    animation: leftCloud 5s forwards;
+}
+
+#right_upper_cloud {    
+    animation: rightUpperCloud 10s forwards;
+}
+
+#right_cloud {
+    animation: rightCloud 10s forwards;
+}
+
+@keyframes rightUpperCloud {
+    from {
+        transform: translate(0);
+        opacity: .3;
+    }
+    to {
+        transform: translate(-100%);        
+        opacity: 0;
+    }
+}
+
+@keyframes rightCloud {
+    from {
+        transform: translate(0);
+        opacity: .39;
+    }
+    to {
+        transform: translate(-100%);        
+        opacity: 0;
+    }
+}
+
+@keyframes leftCloud {
+    from {
+        left: 25%;
+        opacity: 0;
+    }
+    to {
+        left: -30px;
+        opacity: 1;
+    }
+}

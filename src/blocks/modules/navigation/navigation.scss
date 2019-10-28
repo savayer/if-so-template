@@ -2,6 +2,8 @@
     padding: 30px 60px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 11;
 }
 
 .menu {
@@ -13,7 +15,7 @@
 }
 
 .menu__item {
-    margin: 0 25%;
+    margin: 0 20%;
     &.active {        
         background: $active_color;
         padding: 5px 18px;
@@ -29,6 +31,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 1.35;
+    font-family: 'FuturaBold';
     text-transform: uppercase;
     &:hover {
         cursor: pointer;
@@ -56,7 +59,6 @@
 }
 
 .try_it__arrow-container {
-    width: 19px;
     height: 100%;
     overflow: hidden;
     display: inline-block;
@@ -65,13 +67,7 @@
 }
 
 .try_it__arrow {
-    width: 19px;
-    height: 18px;
-    background: url(../../../img/svg/arrow.svg) no-repeat;
     display: block;
-    /* position: absolute; */
-    /* top: calc((40px - 18px)/2); */
-    /* right: -33px; */
     transition: .3s;
 }
 
