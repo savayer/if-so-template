@@ -1,0 +1,99 @@
+@for $i from 1 through 6 {
+    .bubble#{$i} {
+        background: url(../../../img/bubbles/bubble#{$i}.png) no-repeat;
+    }
+}
+
+.bubble {
+    position: absolute;
+    display: flex;
+    line-height: 1.4;
+    background-size: contain;
+    transform: $persp;
+}
+
+.bubble__name, .bubble__value {    
+    font-family: 'Open Sans ExtraBold';    
+    font-size: 20px;
+}
+
+.bubble__content {
+    margin: auto;
+    text-align: center;    
+}
+
+.bubble1 {
+    width: 194px;
+    height: 176px;
+    bottom: 4%;
+    left: 8%;
+    z-index: 3;
+    .bubble__content {
+        padding-bottom: 20px;
+    }
+    .bubble__name, .bubble__value {
+        color: #7159f3;        
+    }
+}
+
+.bubble2 {    
+    width: 221px;
+    height: 193px;
+    left: -7%;
+    bottom: 22%;
+    z-index: 2;
+    .bubble__content {
+        padding-bottom: 20px;
+    }
+    .bubble__name, .bubble__value {
+        color: #f68e56;
+    }
+}
+
+.bubble3 {        
+    width: 205px;
+    height: 191px;
+    top: 11%;
+    left: 2%;
+    z-index: 1;
+    .bubble__content {
+        padding-bottom: 10px;
+    }
+    .bubble__name, .bubble__value {
+        color: #f87979;
+    }
+}
+
+.bubble4 {    
+    width: 192px;
+    height: 193px;
+    top: -17%;
+    left: 22%;
+    .bubble__content {
+        padding-bottom: 15px;
+    }
+    .bubble__name, .bubble__value {
+        color: #de6372;
+    }
+}
+
+.bubble5 {
+    width: 228px;
+    height: 160px;
+    top: 0%;
+    right: 27%;
+    .bubble__name, .bubble__value {
+        color: #7cc576;
+    }
+}
+
+.bubble6 {            
+    width: 232px;
+    height: 151px;
+    right: 18%;
+    top: 29%;
+    z-index: 100;
+    .bubble__name, .bubble__value {
+        color: #00bff3;
+    }
+}

@@ -42,18 +42,20 @@
     background: #fff;
     border: 2px solid $text_color;
     border-radius: 24px;
-    padding: 10px 15px 10px 40px;
+    padding: 10px 15px 8px 40px;
     text-decoration: none;
     cursor: pointer;
+    outline: none;
     &:hover .try_it__arrow {
         animation: move .7s ease;
-    }
+    }    
 }
 
 .try_it__text {    
     text-transform: uppercase;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 400;
+    font-family: 'FuturaBold';
     display: inline-block;
     vertical-align: middle;
 }
@@ -69,29 +71,4 @@
 .try_it__arrow {
     display: block;
     transition: .3s;
-}
-
-@keyframes move {
-    0% {
-        transform: translate(0)
-    }
-    25% {
-        transform: translate(50%);
-        opacity: .5;
-    }
-    50% {
-        transform: translate(110%);
-        opacity: 0;
-    }
-    51% {
-        transform: translate(-110%);        
-    }
-    60% {
-        transform: translate(-50%);
-        opacity: .5;
-    }
-    100% {
-        transform: translate(0);
-        opacity: 1;
-    }
 }

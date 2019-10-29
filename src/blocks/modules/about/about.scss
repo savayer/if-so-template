@@ -1,0 +1,79 @@
+.about {
+    margin-top: 120px;
+}
+
+.about__wrapper {
+    @include row-flex();
+}
+
+.about__view {
+    @include col();
+    @include size(7);    
+    perspective: 1000px;
+    position: relative;
+    &:after {
+        content: '';
+        width: 300px;
+        height: 308px;
+        background: url(../../../img/man-if-so.png) center / contain no-repeat;
+        display: block;
+        position: absolute;
+        bottom: -18%;
+        right: 30px;
+    }
+}
+
+.view__per {
+    background: url(../../../img/about.png) no-repeat;
+    background-size: contain;
+    min-height: 417px;
+    max-width: 620px;
+    transform: $persp;    
+    box-shadow: 1px 26px 73px #ccc;
+    border: 2px solid #eaeaea;
+    border-radius: 39px;
+}
+
+@import './bubbles';
+
+.about__content {
+    padding-top: 100px;
+    @include col();
+    @include size(5);
+}
+
+.about__introtext {
+    font-size: 28px;
+    color: $text_color;
+    font-family: 'FuturaBold';
+    margin: 10px 0;
+}
+
+.about__description {
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: $text_color;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.about__button {
+    margin-top: 50px;
+}
+
+.try_it--watch {
+    border-color: $blue;
+    border: none;
+    background-color: $blue;
+    padding: 18px 40px 18px 20px;
+    &:hover .try_it__arrow {
+        animation-name: moveLeft;
+    }
+    .try_it__text {
+        color: #fff;
+        font-size: 24px;
+    }
+    .try_it__arrow-container {
+        margin-right: 20px;
+    }
+}
