@@ -24,9 +24,9 @@
 
 .bubble1 {
     width: 194px;
-    height: 176px;
-    bottom: 4%;
-    left: 8%;
+    height: 176px;    
+    bottom: 3%;
+    left: 9%;
     z-index: 3;
     .bubble__content {
         padding-bottom: 20px;
@@ -39,8 +39,8 @@
 .bubble2 {    
     width: 221px;
     height: 193px;
-    left: -7%;
-    bottom: 22%;
+    left: -6%;
+    bottom: 23%;
     z-index: 2;
     .bubble__content {
         padding-bottom: 20px;
@@ -53,8 +53,8 @@
 .bubble3 {        
     width: 205px;
     height: 191px;
-    top: 11%;
-    left: 2%;
+    top: 10%;
+    left: 3%;
     z-index: 1;
     .bubble__content {
         padding-bottom: 10px;
@@ -67,8 +67,8 @@
 .bubble4 {    
     width: 192px;
     height: 193px;
-    top: -17%;
-    left: 22%;
+    top: -20%;
+    left: 26%;
     .bubble__content {
         padding-bottom: 15px;
     }
@@ -81,7 +81,7 @@
     width: 228px;
     height: 160px;
     top: 0%;
-    right: 27%;
+    right: 15%;
     .bubble__name, .bubble__value {
         color: #7cc576;
     }
@@ -90,8 +90,8 @@
 .bubble6 {            
     width: 232px;
     height: 151px;
-    right: 18%;
-    top: 29%;
+    right: 5%;
+    top: 26%;
     z-index: 100;
     .bubble__name, .bubble__value {
         color: #00bff3;

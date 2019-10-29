@@ -8,7 +8,7 @@
 
 .about__view {
     @include col();
-    @include size(7);    
+    @include size(6);    
     perspective: 1000px;
     position: relative;
     &:after {
@@ -19,7 +19,7 @@
         display: block;
         position: absolute;
         bottom: -18%;
-        right: 30px;
+        right: -10%;
     }
 }
 
@@ -39,14 +39,25 @@
 .about__content {
     padding-top: 100px;
     @include col();
-    @include size(5);
+    @include size(6);
+    padding-left: 50px;    
 }
 
 .about__introtext {
-    font-size: 28px;
-    color: $text_color;
-    font-family: 'FuturaBold';
     margin: 10px 0;
+    span {
+        display: block;
+        font-size: 26px;
+        color: $text_color;
+        font-family: 'FuturaBold';
+        word-spacing: -5px;
+        &:nth-child(1) {
+            margin-left: 20px;
+        }
+        &:nth-child(2) {
+            margin-left: 40px;
+        }
+    }
 }
 
 .about__description {
@@ -54,11 +65,30 @@
     font-size: 20px;
     color: $text_color;
     line-height: 1.4;
-    font-weight: 400;
+    font-weight: 400;    
+    & > span {
+        display: block;
+        &:nth-child(1) {
+            margin-left: 60px;
+        }
+        &:nth-child(2) {
+            margin-left: 80px;
+        }
+        &:nth-child(3) {
+            margin-left: 85px;
+        }
+        &:nth-child(4) {
+            margin-left: 80px;
+        }
+        &:nth-child(5) {
+            margin-left: 70px;
+        }
+    }
 }
 
 .about__button {
     margin-top: 50px;
+    text-align: center;
 }
 
 .try_it--watch {
