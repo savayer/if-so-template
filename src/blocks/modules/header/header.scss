@@ -9,13 +9,26 @@
         width: 100%;
         z-index: 11;
         height: 210px;
+        height: 28%;
         background: url(../../../img/svg/divider.svg);    
+    }
+
+    &:after {
+        content: '';
+        width: 165px;
+        height: 400px;
+        background: url(../../../img/about_arrows.png) center/contain no-repeat;
+        display: block;
+        position: absolute;        
+        left: 9%;
+        bottom: -44%;
+        z-index: 11;
     }
     /* clip-path: polygon(
         0 0,
         100% 0,
         100% 100%,
-        0 calc(100% - 4vw)
+        0 calc(100% - 8vw)
     ); */
 }
 
