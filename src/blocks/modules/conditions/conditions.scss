@@ -1,0 +1,50 @@
+.conditions {
+    margin-top: 200px;
+}
+
+.conditions__items {
+    margin-top: 50px;
+    @include row-flex();
+}
+
+.cond__item {
+    @include col();
+    @include size(4);
+    @include size-lg(4);
+    @include size-sm(6);
+    @include size-xs(1);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.conditions__title {
+    text-align: center;
+}
+
+.conditions__introtext {
+    text-align: center;
+    span {
+        display: block;
+        font-family: 'FuturaBold';
+        font-size: 26px;
+        &:nth-child(1) {
+            margin-left: -100px
+        }
+        &:nth-child(2) {
+            margin-left: 110px;
+        }
+    }
+}
+
+.cond__title {
+    font-family: 'FuturaBold';
+    font-size: 28px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.cond__description {
+    font-family: "Open Sans";
+    font-size: 20px;
+    text-align: center;
+}

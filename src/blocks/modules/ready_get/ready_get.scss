@@ -1,0 +1,40 @@
+.ready_get {
+    margin-top: 100px;
+}
+
+.ready_get__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 14%;
+}
+
+.ready_get__illustration {
+    width: 660px;
+    height: 650px;
+    margin-left: 100px;
+    background: url(../../../img/ready_get.png) center/contain no-repeat;
+}
+
+.ready_get__title {
+    span {
+        font-family: 'FuturaBold';
+        word-spacing: -5px;
+        display: block;
+        &:nth-child(2) {
+            margin-left: 210px;
+        }
+    }
+}
+
+.ready_get__introtext {
+    font-family: 'FuturaBold';
+    font-size: 26px;
+    padding-left: 85px;
+}
+
+.ready_get__button {
+    margin-top: 50px;
+    text-align: center;
+}

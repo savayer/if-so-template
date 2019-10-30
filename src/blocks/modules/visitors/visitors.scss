@@ -1,0 +1,40 @@
+.visitors {
+    margin-top: 150px;
+}
+
+.visitors__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.visitors__illustration {
+    width: 800px;
+    height: 650px;
+    background: url(../../../img/visitors.png) center/contain no-repeat;
+
+}
+
+.visitors__title {
+    span {
+        font-family: 'FuturaBold';
+        word-spacing: -6px;
+        display: block;
+        &:nth-child(2) {
+            margin-left: 80px;
+        }
+    }
+}
+
+.visitors__introtext {
+    margin-top: 10px;
+    span {
+        font-family: 'FuturaBold';
+        font-size: 26px;
+        display: block;
+        &:nth-child(1) {
+            margin-left: 40px;
+        }
+    }
+}
