@@ -105,6 +105,11 @@
     border-color: $blue;
     border: none;
     background-color: $blue;
+    transition: .3s;
+    &:active {
+        background: $blue_hover;
+        border-color: $blue_hover;
+    }
     padding: 18px 40px 18px 20px;
     &:hover .try_it__arrow {
         animation-name: moveLeft;

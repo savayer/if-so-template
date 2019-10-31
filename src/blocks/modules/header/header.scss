@@ -94,9 +94,13 @@
 
 .try_it--button {    
     border-color: $blue;
+    transition: .3s;
     border: none;
     background-color: $blue;
     padding: 18px 20px 18px 70px;
+    &:active {
+        background: $blue_hover;
+    }
     .try_it__text {
         color: #fff;
         font-size: 24px;

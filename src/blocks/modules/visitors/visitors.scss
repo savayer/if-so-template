@@ -7,13 +7,18 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .visitors__illustration {
     width: 800px;
     height: 650px;
     background: url(../../../img/visitors.png) center/contain no-repeat;
+    margin-left: -8%;
+}
 
+.visitors__content {
+    margin-left: 40px;
 }
 
 .visitors__title {
@@ -37,4 +42,22 @@
             margin-left: 40px;
         }
     }
+}
+
+.visitors__bubble1 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 320px;
+    bottom: 20%;
+    background: url(../../../img/visitors_bubble1.png) center/contain no-repeat;
+}
+
+.visitors__bubble2 {
+    width: 265px;
+    height: 250px;
+    background: url(../../../img/visitors_bubble2.png) center/contain no-repeat;
+    position: absolute;
+    bottom: -5%;
+    right: 40px;
 }

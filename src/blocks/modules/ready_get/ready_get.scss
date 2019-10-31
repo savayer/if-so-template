@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     padding-left: 14%;
+    position: relative;
 }
 
 .ready_get__illustration {
@@ -37,4 +38,22 @@
 .ready_get__button {
     margin-top: 50px;
     text-align: center;
+}
+
+.ready_get__bubble1 {
+    width: 265px;
+    height: 250px;
+    background: url(../../../img/ready_get_bubble1.png) center/contain no-repeat;
+    position: absolute;
+    top: 20%;
+    left: 50px;
+}
+
+.ready_get__bubble2 {
+    width: 80px;
+    height: 80px;
+    background: url(../../../img/ready_get_bubble2.png) center/contain no-repeat;
+    position: absolute;
+    top: 56%;
+    left: 250px;
 }

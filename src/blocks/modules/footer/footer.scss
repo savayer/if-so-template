@@ -1,8 +1,9 @@
 .footer {
-    margin-top: 100px;
+    margin-top: 60px;
     background-color: #32325d;    
     position: relative;
     padding: 190px 0 50px;
+    overflow: hidden;
     &:before {
         content: '';
         position: absolute;
