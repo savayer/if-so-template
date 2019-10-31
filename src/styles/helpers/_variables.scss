@@ -8,10 +8,25 @@ $persp: rotateX(2deg) rotateZ(-10deg) rotateY(42deg);
 
 $font_path: '../../fonts/';
 
-$socials: (
+$socials: ( //class: image
     'ln': 'ln',
     'yt': 'yt',
     'tw': 'tw',
     'fb': 'fb',
     'inst': 'inst',
+);
+
+$linesColors: (
+    1: #5f49d2,
+    2: #4cb5d2,
+    3: #f87979,
+    4: #e9921b,
+    5: #f06edc,
+    6: #00aeef,
+    7: #f87979,
+    8: #836cfe,
+    9: #47b6d4,
+    10: #02a0fa,
+    11: #f68e56,
+    12: #f7941d
 );

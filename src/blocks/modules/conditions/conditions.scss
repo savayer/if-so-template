@@ -3,7 +3,7 @@
 }
 
 .conditions__items {
-    margin-top: 50px;
+    margin-top: 80px;
     @include row-flex();
 }
 
@@ -11,10 +11,28 @@
     @include col();
     @include size(4);
     @include size-lg(4);
-    @include size-sm(6);
-    @include size-xs(1);
-    margin-top: 30px;
-    margin-bottom: 30px;
+    @include size-md(6);
+    @include size-xs(12);
+    margin-top: 60px;
+    margin-bottom: 70px;    
+    display: flex;
+    flex-direction: column;
+}
+
+@each $num, $color in $linesColors {
+    .cond__item:nth-child(#{$num}) {
+        .line1 {
+            fill: $color;
+            /* stroke: $color;             */
+            /* stroke-dashoffset: 4200;
+            stroke-dasharray: 4200; */
+            /* animation: drawLine 2s forwards infinite; */
+        }
+        .line2 {
+            fill: $color;
+            opacity: .5;
+        }
+    }
 }
 
 .conditions__title {
@@ -36,10 +54,38 @@
     }
 }
 
+.cond__image {
+    position: relative;
+    margin-bottom: 45px;
+    img {
+        margin: 0 auto;
+        display: block;
+        min-height: 78px;
+    }
+}
+
+.cond__lines {
+    width: 107px;
+    height: 63px;
+    position: absolute;
+    top: -50px;
+    right: 60px;
+    path {
+        transform: translate(0,63px) scale(0.1,-0.1);
+    }
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
 .cond__title {
     font-family: 'FuturaBold';
     font-size: 28px;
-    margin: 15px 0;
+    margin-bottom: 15px;
+    word-spacing: -7px;
     text-align: center;
 }
 
@@ -47,13 +93,7 @@
     font-family: "Open Sans";
     font-size: 20px;
     text-align: center;
-}
-
-.cond__image {
+    /* padding: 0 55px; */
+    max-width: 245px;
     margin: 0 auto;
-}
-
-.cond__lines {
-    width: 107px;
-    height: 63px;
 }
