@@ -132,14 +132,17 @@
     //left: -30px;
     left: 25%;
     animation: leftCloud 5s forwards;
+    animation-delay: 2s;
 }
 
 #right_upper_cloud {    
     animation: rightUpperCloud 10s forwards;
+    animation-delay: 2s;
 }
 
 #right_cloud {
     animation: rightCloud 10s forwards;
+    animation-delay: 2s;
 }
 
 @keyframes rightUpperCloud {

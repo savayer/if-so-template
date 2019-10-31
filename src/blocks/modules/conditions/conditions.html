@@ -8,7 +8,7 @@
             <span>segmenting your visitors</span>
         </div>
 
-        <svg class="cond__lines">
+        <!-- <svg class="cond__lines">
             <symbol id="line1">
                 <path class="line1" d="M0 613 c0 -17 12 -21 93 -32 300 -40 568 -219 721 -483 29 -50 33
                 -53 53 -40 20 13 -79 165 -169 258 -170 177 -387 283 -630 309 -63 7 -68 6
@@ -18,12 +18,23 @@
                 <path class="line2" d="M756 412 c-4 -13 15 -40 68 -94 79 -83 105 -120 163 -240 31 -64 42
                 -78 61 -78 25 0 25 8 -3 75 -42 104 -236 355 -273 355 -6 0 -13 -8 -16 -18z" />
             </symbol>
+        </svg> -->
+
+        <svg class="cond__lines" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 64">
+            <symbol id="line1">
+                <path class="line1" d="M101.71,96.33A104,104,0,0,0,12.94,38.75l.13-3.1A107.08,107.08,0,0,1,104.49,95Z"/>                
+            </symbol>
+            <symbol id="line2">
+                <path class="line2" d="M119.54,99.73a104.41,104.41,0,0,0-28.16-40.8l2.06-2.32a107.7,107.7,0,0,1,29,42Z" />
+            </symbol>
         </svg>
 
         <div class="conditions__items cond">
             <div class="cond__item">
                 <div class="cond__image">
-                    <svg class="cond__lines"><use href="#line1" class="line1" /><use href="#line2" class="line2" /></svg>
+                    <svg class="cond__lines">
+                        <use href="#line1" class="line1" />
+                        <use href="#line2" class="line2" /></svg>
                     <img src="../../../img/conditions/1.png" alt="">
                 </div>
                 <div class="cond__title">Geolocation</div>
@@ -32,7 +43,9 @@
             </div>
             <div class="cond__item">
                 <div class="cond__image">
-                    <svg class="cond__lines"><use href="#line1" class="line1" /><use href="#line2" class="line2" /></svg>
+                    <svg class="cond__lines">
+                        <use href="#line1" class="line1" />
+                        <use href="#line2" class="line2" /></svg>
                     <img src="../../../img/conditions/2.png" alt="">
                 </div>
                 <div class="cond__title">Start & End Date</div>

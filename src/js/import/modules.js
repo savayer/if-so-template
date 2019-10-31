@@ -8,3 +8,6 @@ import "%modules%/visitors/visitors";
 import "%modules%/conditions/conditions";
 import "%modules%/ready_get/ready_get";
 import "%modules%/footer/footer"
+import AOS from 'aos';
+
+AOS.init()

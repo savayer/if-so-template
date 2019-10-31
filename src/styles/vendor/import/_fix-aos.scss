@@ -1,0 +1,27 @@
+$aos-mini-distance: 35px !default;
+$aos-middle-distance: 50px !default;
+
+[data-aos="fade-right-mini"] {
+    transform: translate3d(-$aos-mini-distance, 0, 0);
+}
+
+[data-aos="fade-left-mini"] {
+    transform: translate3d($aos-mini-distance, 0, 0);
+}
+
+[data-aos='fade-up-middle'] {
+    transform: translate3d(0, $aos-middle-distance, 0);
+}
+
+[data-aos="fade-bubble"] {
+    transform: translate3d(0, 0, 0);
+}
+
+[data-aos="fade-about"] {
+    transform: translate3d(-100px, 0, 0) rotateX(2deg) rotateZ(-10deg) rotateY(42deg);
+}
+
+[data-aos^='fade-about'][data-aos^='fade-about'].aos-animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateX(2deg) rotateZ(-10deg) rotateY(42deg);
+}
