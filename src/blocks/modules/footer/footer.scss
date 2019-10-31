@@ -1,0 +1,183 @@
+.footer {
+    margin-top: 100px;
+    background-color: #32325d;    
+    position: relative;
+    padding: 190px 0 50px;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -30px;
+        width: 100%;
+        z-index: 11;
+        height: 190px;        
+        background: url(../../../img/svg/divider_up.svg);
+    }
+}
+
+.footer__wrapper {
+    @include row-flex();
+}
+
+.footer__col1 {
+    @include col();
+    @include size(3);
+    position: relative;
+    padding: 0 30px;
+}
+
+.footer__col2 {
+    @include col();
+    @include size(6);
+}
+
+.footer__col3 {
+    @include col();
+    @include size(3);
+    display: flex;
+}
+
+.footer__logo {
+    position: absolute;
+    top: -60px;
+    a {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.footer__slogan {
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 18px;
+}
+
+.footer__button {
+    margin-top: 30px;
+    a {
+        background: #fff;
+        border-radius: 20px;
+        color: #32325d;
+        font-family: 'FuturaBold';
+        font-size: 16px;
+        font-weight: 700;        
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 14px 8px;
+    }
+}
+
+.footer__menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    li {
+        margin: 0 20px;
+    }
+    a {
+        text-transform: uppercase;
+        color: #fff;
+        font-family: 'FuturaBold';
+        font-size: 18px;
+        font-weight: 700;        
+        text-decoration: none;
+    }
+}
+
+.footer__copyright {
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 13px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer__social {
+    margin-top: 30px;
+}
+
+.social__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+        margin: 0 10px;        
+    }
+    a {
+        display: block;
+        width: 30px;
+        height: 25px;        
+        @each $class, $image in $socials {
+            &.#{$class} {
+                background: url(../../../img/social/#{$image}.png) center/contain no-repeat;
+            }
+        }
+    }
+}
+
+.footer__help {
+    margin: 0 auto;
+}
+
+.help__title {
+    color: #fff;
+    font-family: 'FuturaBold';
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 20px;
+    &:after {
+        content: '';
+        height: 9px;
+        width: 170px;
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        background: url(../../../img/footer_line.png) center/contain no-repeat;
+    }
+}
+
+.help__links {
+    list-style: none;
+    li {
+        margin: 10px 0;
+    }
+}
+
+.help__link {
+    color: #fff;
+    font: {
+        family: 'Open Sans';
+        size: 15px;
+        weight: 400;
+    }
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }    
+}
+
+.footer__go_up {
+    display: block;
+    width: 45px;
+    height: 100px;
+    background: #fff;
+    border-radius: 25px;
+    position: absolute;
+    bottom: -40px;
+    right: 10%;
+    cursor: pointer;
+    &:after {
+        content: '';
+        background: url(../../../img/up.png) center/contain no-repeat;
+        width: 25px;
+        height: 22px;
+        position: absolute;
+        bottom: 60px;
+        right: calc(10% + 6px);
+        transition: .4s;
+    }
+    &:hover:after {
+        bottom: 65px;
+    }
+}

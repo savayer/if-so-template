@@ -1,7 +1,7 @@
 .reasons {
     background: $gray;
     margin-top: 250px;
-    padding: 210px 0;
+    padding: 200px 0;
     position: relative;
     display: flex;
     padding-right: 10%;
@@ -11,8 +11,7 @@
         top: -30px;
         width: 100%;
         z-index: 11;
-        height: 210px;
-        height: 28%;
+        height: 190px;        
         background: url(../../../img/svg/divider_up.svg);
     }
     &:after {
@@ -21,8 +20,7 @@
         bottom: -30px;
         width: 100%;
         z-index: 11;
-        height: 210px;
-        height: 28%;
+        height: 190px;        
         background: url(../../../img/svg/divider.svg);    
     }    
 }
