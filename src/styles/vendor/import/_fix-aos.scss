@@ -9,7 +9,11 @@ $aos-middle-distance: 50px !default;
     transform: translate3d($aos-mini-distance, 0, 0);
 }
 
-[data-aos='fade-up-middle'] {
+[data-aos="fade-up-mini"] {
+    transform: translate3d(0, $aos-mini-distance, 0);
+}
+
+[data-aos="fade-up-middle"] {
     transform: translate3d(0, $aos-middle-distance, 0);
 }
 
@@ -18,10 +22,33 @@ $aos-middle-distance: 50px !default;
 }
 
 [data-aos="fade-about"] {
-    transform: translate3d(-100px, 0, 0) rotateX(2deg) rotateZ(-10deg) rotateY(42deg);
+    transform: translate3d(-100px, 0, 0) rotateX(2deg) rotateZ(-10deg)
+        rotateY(42deg);
 }
 
-[data-aos^='fade-about'][data-aos^='fade-about'].aos-animate {
+[data-aos^="fade-about"][data-aos^="fade-about"].aos-animate {
     opacity: 1;
     transform: translate3d(0, 0, 0) rotateX(2deg) rotateZ(-10deg) rotateY(42deg);
+}
+
+[data-aos="draw-line"] {
+    &.aos-animate use {
+        animation: drawLine 1s forwards;
+    }
+
+    @for $i from 1 through 60 {
+        body[data-aos-duration="#{$i * 50}"] &,
+        &[data-aos][data-aos-duration="#{$i * 50}"] use {
+            transition-duration: #{$i * 50}ms;
+        }
+
+        body[data-aos-delay="#{$i * 50}"] &,
+        &[data-aos][data-aos-delay="#{$i * 50}"] {
+            transition-delay: 0;
+
+            &.aos-animate use {
+                transition-delay: #{$i * 50}ms;
+            }
+        }
+    }
 }
