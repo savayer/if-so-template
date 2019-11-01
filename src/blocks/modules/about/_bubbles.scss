@@ -9,7 +9,7 @@
     display: flex;
     line-height: 1.4;
     background-size: contain;
-    transform: $persp;
+    transform: $persp;    
 }
 
 .bubble__name, .bubble__value {    
@@ -34,6 +34,22 @@
     .bubble__name, .bubble__value {
         color: #7159f3;        
     }
+    &.aos-animate {
+        animation: moving1 2500ms infinite;
+        animation-delay: 1s;    
+    }
+}
+
+@keyframes moving1 {
+    0% {
+        transform: translateX(0) $persp;
+    }
+    50% {
+        transform: translateX(5px) $persp;        
+    }
+    100% {
+        transform: translateX(0) $persp;
+    }
 }
 
 .bubble2 {    
@@ -47,6 +63,10 @@
     }
     .bubble__name, .bubble__value {
         color: #f68e56;
+    }
+    &.aos-animate {
+        animation: moving1 2500ms infinite;
+        animation-delay: 1s;    
     }
 }
 
@@ -62,6 +82,22 @@
     .bubble__name, .bubble__value {
         color: #f87979;
     }
+    &.aos-animate {
+        animation: moving3 2500ms infinite;
+        animation-delay: 1s;    
+    }
+}
+
+@keyframes moving3 {
+    0% {
+        transform: translate(0, 0) $persp;
+    }
+    50% {
+        transform: translate(5px, 5px) $persp;        
+    }
+    100% {
+        transform: translate(0, 0) $persp;
+    }
 }
 
 .bubble4 {    
@@ -75,6 +111,22 @@
     .bubble__name, .bubble__value {
         color: #de6372;
     }
+    &.aos-animate {
+        animation: moving4 2500ms infinite;
+        animation-delay: 1s;    
+    }
+}
+
+@keyframes moving4 {
+    0% {
+        transform: translateY(0) $persp;
+    }
+    50% {
+        transform: translateY(5px) $persp;        
+    }
+    100% {
+        transform: translateY(0) $persp;
+    }
 }
 
 .bubble5 {
@@ -84,6 +136,22 @@
     right: 15%;
     .bubble__name, .bubble__value {
         color: #7cc576;
+    }
+    &.aos-animate {
+        animation: moving5 2500ms infinite;
+        animation-delay: 1s;    
+    }
+}
+
+@keyframes moving5 {
+    0% {
+        transform: translate(0, 0) $persp;
+    }
+    50% {
+        transform: translate(5px, -5px) $persp;        
+    }
+    100% {
+        transform: translate(0) $persp;
     }
 }
 
@@ -95,5 +163,21 @@
     z-index: 100;
     .bubble__name, .bubble__value {
         color: #00bff3;
+    }
+    &.aos-animate {
+        animation: moving6 2500ms infinite;
+        animation-delay: 1s;    
+    }
+}
+
+@keyframes moving6 {
+    0% {
+        transform: translateX(0) $persp;
+    }
+    50% {
+        transform: translateX(-5px) $persp;        
+    }
+    100% {
+        transform: translateX(0) $persp;
     }
 }
