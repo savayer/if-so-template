@@ -10,7 +10,7 @@
     @extend %header_unskew;
     display: flex;
     height: 450px;
-    padding-right: calc(21% + 10px);
+    padding-right: calc(24% + 6px);
 }
 
 .header__content {
@@ -75,19 +75,18 @@
     transition: .3s;
     border: none;
     background-color: $blue;
-    padding: 18px 80px 18px 70px;
+    padding: 15px 25px 15px 70px;
     &:active {
         background: $blue_hover;
     }
     .try_it__text {
         color: #fff;
         font-size: 24px;
-        height: 24px;
     }
     .try_it__arrow-container {
-        top: 16px;
-        right: 20px;
-    }
+        height: 24px;
+        margin-left: 30px;
+    }    
 }
 
 .header__right_bg {
@@ -136,12 +135,14 @@
     0% {
         opacity: 0;
         transform: translate(0);
+        -ms-transform: translate(0);
     }
     10% {        
         opacity: .3;
     }
     100% {
-        transform: translate(-60%);        
+        transform: translate(-60%);  
+        -ms-transform: translate(-60%);
         opacity: 0;
     }    
 }
@@ -150,12 +151,14 @@
     0% {
         opacity: 0;
         transform: translate(0);
+        -ms-transform: translate(0);
     }
     10% {        
         opacity: .39;
     }
     100% {
-        transform: translate(-60%);        
+        transform: translate(-60%);
+        -ms-transform: translate(-60%);
         opacity: 0;
     }  
 }
