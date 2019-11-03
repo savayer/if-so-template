@@ -5,6 +5,14 @@ $blue_hover: #42a7c4;
 $gray: #e1e1e1;
 $footer_color: #32325d;
 
+$header_skew: skew(0, 4.8deg);
+
+%header_unskew {
+    transform: skew(0, -4.8deg) translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+} 
+
 $persp: rotateX(2deg) rotateZ(-10deg) rotateY(42deg);
 
 $font_path: '../../fonts/';

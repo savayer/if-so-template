@@ -1,9 +1,10 @@
 .navigation {
-    padding: 30px 60px;
+    padding: 30px 80px;
     display: flex;
     justify-content: space-between;
     position: relative;
     z-index: 11;
+    @extend %header_unskew;
 }
 
 .menu {
@@ -16,7 +17,7 @@
 
 .menu__item {
     margin: 0 54px;
-    padding: 5px 18px;
+    padding: 5px 18px 0;
     transition: .3s;
     &.active {        
         background: $active_color;
@@ -24,14 +25,7 @@
         a {
             color: #fff;
         }
-    }
-    &:hover {
-        background: $active_color;        
-        border-radius: 20px;
-        a {
-            color: #fff;
-        }
-    }
+    }    
 }
 
 .menu__link {
@@ -43,17 +37,36 @@
     text-transform: uppercase;
     &:hover {
         cursor: pointer;
+        &:after {
+            width: 100%;
+        }
     }
+
+    &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $active_color;
+        transition: width .3s;
+    }
+
+.cool-link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
 }
 
 .try_it {    
     background: #fff;
     border: 2px solid $text_color;
-    border-radius: 24px;
-    padding: 10px 15px 8px 40px;
+    border-radius: 30px;
+    padding: 10px 45px 10px 40px;
+    display: inline-block;
     text-decoration: none;
     cursor: pointer;
     outline: none;
+    position: relative;
     &:hover .try_it__arrow {
         animation: move .7s ease;
     }    
@@ -62,6 +75,7 @@
 .try_it__text {    
     text-transform: uppercase;
     font-size: 20px;
+    height: 20px;
     font-weight: 400;
     font-family: 'FuturaBold';
     display: inline-block;
@@ -71,9 +85,9 @@
 .try_it__arrow-container {
     height: 100%;
     overflow: hidden;
-    display: inline-block;
-    vertical-align: middle;    
-    margin-left: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;    
 }
 
 .try_it__arrow {

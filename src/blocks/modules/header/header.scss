@@ -1,43 +1,13 @@
 .header {
-    height: 750px;
-    position: relative;
-    /* &:before {
-        content: '';
-        position: absolute;
-        bottom: -30px;
-        width: 100%;
-        z-index: 11;
-        height: 210px;
-        
-        background: url(../../../img/svg/divider.svg);    
-    } */
-    &:before {
-        content: '';
-        position: absolute;
-        top: -59px;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: linear-gradient(to top, rgba(235, 235, 235, .39) 0%, #fff 100%);
-        width: 110%;
-        height: 100%;
-        transform: rotate(4.8deg);
-    }
-
-    /* &:after {
-        content: '';
-        width: 165px;
-        height: 400px;
-        background: url(../../../img/about_arrows.png) center/contain no-repeat;
-        display: block;
-        position: absolute;        
-        left: 9%;
-        bottom: -44%;
-        z-index: 11;
-    } */
+    min-height: 684px;
+    position: relative;    
+    background-image: linear-gradient(to top, rgba(235, 235, 235, 0.39)0%, #fff 100%);
+    transform: $header_skew;
+    //linear-gradient(to top, rgba(235, 235, 235, .39) 0%, #fff 100%);
 }
 
 .header__container {
+    @extend %header_unskew;
     display: flex;
     height: 450px;
     padding-right: calc(21% + 10px);
@@ -53,7 +23,7 @@
         background: transparent;
         z-index: 10;
         top: -100%;
-        width: 30%;
+        width: 50%;
         height: 300px;
         background-image: linear-gradient(to top, #fcfcfc 0%, #fefefe 100%);
         left: 0;
@@ -62,7 +32,7 @@
     &:after {
         content: '';
         position: absolute;
-        background: transparent;
+        background: transparent;        
         z-index: 10;
         top: -100%;
         width: 90%;
@@ -76,9 +46,11 @@
 .header__object {
     position: absolute;
     right: -30px;
-    top: 0;
+    top: -35px;
     z-index: 9;
+    z-index: -1;
     max-width: 60%;
+    @extend %header_unskew;
 }
 
 .header__title {    
@@ -103,16 +75,18 @@
     transition: .3s;
     border: none;
     background-color: $blue;
-    padding: 18px 20px 18px 70px;
+    padding: 18px 80px 18px 70px;
     &:active {
         background: $blue_hover;
     }
     .try_it__text {
         color: #fff;
         font-size: 24px;
+        height: 24px;
     }
     .try_it__arrow-container {
-        margin-left: 30px;
+        top: 16px;
+        right: 20px;
     }
 }
 
@@ -124,9 +98,9 @@
     height: 720px;
     position: absolute;
     z-index: 11;
-    top: calc(33% + 3px);
+    top: calc(30% + 2px);
     right: 0;
-    transform: rotate(.8deg)
+    transform: skew(0, -4deg);
 }
 
 .header__left-cloud {
@@ -134,9 +108,11 @@
     height: 69px;
     background: url(../../../img/cloud_left.png) no-repeat;
     position: absolute;
-    top: 15%;
+    top: 25%;
+    z-index: -1;
     //left: -30px;
     left: 25%;
+    @extend %header_unskew;
     &.active {
         animation: leftCloud 20s infinite;
     }

@@ -4,6 +4,28 @@
     }
 }
 
+.about__profile_bubble {
+    margin: auto;    
+    background: url(../../../img/your_profile.svg) center/contain no-repeat;
+    width: 200px;
+    height: 210px;
+    position: relative;
+}
+
+.profile_bubble__text {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 15px;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    text-align: center;    
+}   
+
 .bubble {
     position: absolute;
     display: flex;

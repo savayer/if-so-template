@@ -1,5 +1,5 @@
 .work_explain {
-    margin-top: 180px;
+    margin-top: 300px;
 }
 
 .work_explain__wrapper {
@@ -67,24 +67,30 @@
     font-size: 21px;
     font-weight: 400;
     line-height: 1.35;
-    span {        
+    &:nth-child(2) {
+        margin-left: 40px;
+    }
+}
+
+.list__number {    
+    position: absolute;
+    width: 90px;
+    height: 70px;
+    background: url(../../../img/how_work_list.svg) center/contain no-repeat;    
+    left: -105px;        
+    top: -22px;  
+    span {
+        margin: auto;
         position: absolute;
-        width: 90px;
-        height: 70px;
-        background: url(../../../img/how_work_list.svg) center/contain no-repeat;
-        display: block;
-        left: -105px;        
-        top: -26px;        
+        top: calc(90px/2 - 54px);
+        left: -11px;
+        right: 0;
+        text-align: center;
         font: {
             family: 'Helvetica85';
             size: 54px;
             weight: bold;
         }
-        padding-left: 21px;
-        padding-bottom: 85px;        
-    }
-    &:nth-child(2) {
-        margin-left: 40px;
     }
 }
 

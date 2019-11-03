@@ -1,5 +1,5 @@
 .about {
-    margin-top: 120px;
+    margin-top: 250px;
 }
 
 .about__wrapper {
@@ -34,7 +34,7 @@
 }
 
 .view__per {
-    background: url(../../../img/about.png) no-repeat;
+    background: url(../../../img/about.svg) no-repeat;
     background-size: contain;
     min-height: 417px;
     max-width: 620px;
@@ -42,6 +42,8 @@
     box-shadow: 1px 26px 73px #ccc;
     border: 2px solid #eaeaea;
     border-radius: 39px;
+    display: flex;
+    padding-right: 30px;
 }
 
 @import './bubbles';
@@ -110,15 +112,18 @@
         background: $blue_hover;
         border-color: $blue_hover;
     }
-    padding: 18px 40px 18px 20px;
+    padding: 18px 40px 18px 80px;
     &:hover .try_it__arrow {
         animation-name: moveLeft;
     }
     .try_it__text {
         color: #fff;
         font-size: 24px;
+        height: 24px;
     }
     .try_it__arrow-container {
-        margin-right: 20px;
+        right: auto;
+        left: 20px;
+        top: 16px;
     }
 }

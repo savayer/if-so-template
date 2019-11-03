@@ -1,35 +1,22 @@
 .reasons {
     background: $gray;
-    margin-top: 250px;
-    padding: 200px 0;
-    position: relative;
-    display: flex;
+    margin-top: 280px;
+    padding: 80px 0;
+    position: relative;    
     padding-right: 10%;
-    &:before {
-        content: '';
-        position: absolute;
-        top: -30px;
-        width: 100%;
-        z-index: 11;
-        height: 190px;        
-        background: url(../../../img/svg/divider_up.svg);
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: -30px;
-        width: 100%;
-        z-index: 11;
-        height: 190px;        
-        background: url(../../../img/svg/divider.svg);    
-    }    
+    transform: skew(0, 4.4deg)
+}
+
+.reasons__wrapper {
+    display: flex;
+    transform: skew(0, -4.4deg)
 }
 
 .reasons__illustration {
     position: absolute;
     z-index: 12;
-    right: -10%;
-    top: 24%;
+    right: -25%;
+    top: 0;
     width: 690px;
     height: 800px;
     background: url(../../../img/reason_love.svg) center/contain no-repeat;
