@@ -5,14 +5,34 @@
     position: relative;
     z-index: 11;
     @extend %header_unskew;
+    @include max(1500) {    
+        padding: 30px 50px;
+    }
+    @include max(1200) {
+        padding: 30px 40px;
+    }
+    .try_it {
+        @include max(1100) {
+            display: none;
+        }
+    }
 }
 
 .menu {
     list-style: none;
+}
+
+.navigation__menu {    
     margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+    @include max(900) {
+        padding-left: 20px;
+    }
+    @include max(840) {
+        display: none;
+    }
 }
 
 .menu__item {
@@ -25,7 +45,25 @@
         a {
             color: #fff;
         }
-    }    
+    }
+    @include max(1800) {
+        margin: 0 56px;
+    }
+    @include max(1650) {    
+        margin: 0 52px;
+    }
+    @include max(1550) {
+        margin: 0 45px;
+    }
+    @include max(1400) {
+        margin: 0 35px;
+    }
+    @include max(1300) {
+        margin: 0 25px;
+    }
+    @include max(1200) {
+        margin: 0 15px;
+    }
 }
 
 .menu__link {
@@ -92,4 +130,62 @@
 .try_it__arrow {
     display: block;
     transition: .3s;
+}
+
+
+.navigation__menu_wrapper {
+    position: fixed;
+    height: 100vh;
+    min-width: 300px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff; 
+    transform: translate(110%);
+    transition: .4s;
+    padding: 80px 30px 30px;
+    box-shadow: -8px 0 24px #eaeaea;
+    &.active {
+        transform: translate(0)
+    }
+    .menu__item {
+        margin: 10px 0;
+    }
+}
+
+.navigation__toggle_menu {
+    display: none;
+    margin-left: auto;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+    @include max(840) {
+        display: block;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 4px;
+        background-color: $active_color;
+        margin: 6px 0;        
+        transition: .4s;
+        border-radius: 4px;
+    }
+    .bar1 {
+        width: 30px;
+    }
+    .bar2 {
+        width: 25px;
+    }
+    &.active {
+        .bar1 {    
+            transform: rotate(-45deg) translate(-7px, 6px);
+            width: 35px;    
+        }
+        .bar2 {
+            opacity: 0;    
+        }
+        .bar3 {    
+            transform: rotate(45deg) translate(-8px, -8px);    
+        }
+    }
 }

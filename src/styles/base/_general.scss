@@ -22,7 +22,8 @@ body {
 }
 
 .wrapper {
-    overflow-x: hidden;    
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .title {
@@ -46,6 +47,10 @@ body {
         margin: 0 -3px;
         font-size: 16px;        
     }
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 @keyframes move {
