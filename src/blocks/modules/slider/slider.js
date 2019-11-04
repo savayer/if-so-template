@@ -6,5 +6,6 @@ $('.slider__items').slick({
     slidesToShow: 4,
     infinite: true,
     autoplay: true,
+    speed: 700,
     autoplaySpeed: 2000,
 })

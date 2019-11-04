@@ -58,13 +58,13 @@ $aos-middle-distance: 50px !default;
 }
 [data-aos="fade-about"] {
     @for $i from 1 through 10 {
-        body[data-aos-delay='#{$i * 80}'] &,
-        &[data-aos][data-aos-delay='#{$i * 80}'] {
+        body[data-aos-delay='#{$i * 80 + 500}'] &,
+        &[data-aos][data-aos-delay='#{$i * 80 + 500}'] {
             transition-delay: 0;
 
             &.aos-animate {
-            transition-delay: #{$i * 80}ms;
-            animation-delay: #{$i * 80}ms;
+            transition-delay: #{$i * 80 + 500}ms;
+            animation-delay: #{$i * 80 + 500}ms;
             }
         }
     }

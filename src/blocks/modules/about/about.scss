@@ -1,16 +1,25 @@
 .about {
     margin-top: 250px;
+    @include xl(margin-top, 200px);
+    .container {
+        @include max(390) {
+            padding: 0;
+            width: 100%;
+        }
+    }
 }
 
 .about__wrapper {
     @include row-flex();
+    justify-content: center;
 }
 
 .about__view {
     @include col();
-    @include size(6);    
+    @include size(6);
+    @include size-xl(7);
     perspective: 1000px;
-    position: relative;
+    position: relative;        
     &:after {
         content: '';
         width: 300px;
@@ -19,7 +28,28 @@
         display: block;
         position: absolute;
         bottom: -18%;
-        right: -10%;
+        right: -10%;  
+        @include xl(bottom, -32%); 
+        @include max(1100) { right: 0; }
+        @include max(800) {
+            bottom: -26%;
+            right: -20px;
+            width: 250px;
+            height: 258px;
+        }
+        @include max(768) {
+            width: 190px;
+            height: 198px;
+            right: 0;
+        }
+        @include sm(right, -20px);
+        @include max(500) { bottom: -46%; }
+        @include max(420) { bottom: -50%; }
+        @include max(370) {
+            width: 160px;
+            height: 170px;
+            bottom: -40%;
+        }
     }
     &:before {
         content: '';
@@ -30,7 +60,42 @@
         position: absolute;        
         left: -145px;
         top: -38%;
+        @include max(1550) {
+            width: 115px;
+            height: 310px;
+            left: -85px;   
+        }
+        @include max(768) {
+            width: 85px;
+            height: 234px;
+            left: -65px;
+        }
+        @include max(576) {
+            width: 65px;
+            height: 194px;
+            left: -25px;
+            top: -30%;
+        }
+        @include max(500) { left: 12px; }
+        @include max(420) { left: -5px; }
+        @include max(400) { content: none }
     }
+    @include max(1440) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @include max(1200) {
+        order: 2;
+        margin-top: 120px;
+        margin-left: 100px;
+    }
+    @include max(1100) { @include size(8); margin-left: 160px; }
+    @include max(1000) { @include size(9); margin-left: 120px; }    
+    @include max(840) { @include size(10); }
+    @include max(768) { @include size(12); margin-left: 110px; }
+    @include max(620) { margin-left: 70px }
+    @include sm(margin-left, 20px);
+    @include max(500) { margin-left: 0 }
 }
 
 .view__per {
@@ -44,6 +109,26 @@
     border-radius: 39px;
     display: flex;
     padding-right: 30px;
+    @include max(768) {
+        min-height: 327px;
+        max-width: 490px;
+        padding-right: 10px;
+    }
+    @include max(500) {
+        min-height: 253px;
+        max-width: 370px;
+        padding-right: 0;
+        margin: auto;
+    }
+    @include max(390) {
+        min-height: 263px;
+        max-width: 100%;
+    }
+    @include max(360) {
+        max-width: 110%;
+        width: 110%;
+    }
+    @include max(330) { min-height: 250px }
 }
 
 @import './bubbles';
@@ -52,7 +137,19 @@
     padding-top: 100px;
     @include col();
     @include size(6);
-    padding-left: 50px;    
+    padding-left: 50px; 
+    @include max(1440) {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        width: auto;
+    }
+    @include max(1200) {
+        padding-top: 0;
+        order: 1;
+    }
+    @include max(500) { padding: 0 15px; }
+    @include max(390) { padding: 0 30px; }
 }
 
 .about__introtext {
@@ -63,11 +160,17 @@
         color: $text_color;
         font-family: 'FuturaBold';
         word-spacing: -5px;
+        @include max(1300) { font-size: 24px; }
+        @include max(1200) { font-size: 22px; }
+        @include max(768) { font-size: 20px; }
+        @include max(440) { font-size: 18px; }
         &:nth-child(1) {
             margin-left: 20px;
+            @include max(460) { margin-left: 10px }
         }
         &:nth-child(2) {
             margin-left: 40px;
+            @include max(460) { margin-left: 20px }
         }
     }
 }
@@ -80,27 +183,43 @@
     font-weight: 400;    
     & > span {
         display: block;
+        @include max(390) { display: inline; }
         &:nth-child(1) {
             margin-left: 60px;
+            @include max(460) { margin-left: 40px }
         }
         &:nth-child(2) {
             margin-left: 80px;
+            @include max(460) { margin-left: 60px }
         }
         &:nth-child(3) {
             margin-left: 85px;
+            @include max(460) { margin-left: 65px }
         }
         &:nth-child(4) {
             margin-left: 80px;
+            @include max(460) { margin-left: 60px }
         }
         &:nth-child(5) {
             margin-left: 70px;
+            @include max(460) { margin-left: 50px }
         }
+    }
+    @include md(font-size, 18px);
+    @include max(500) { font-size: 16px; }
+    @include max(440) { 
+        text-align: left;
+        padding-left: 21px; 
+        span { margin-left: 0 !important } 
     }
 }
 
 .about__button {
     margin-top: 50px;
     text-align: center;
+    @include max(440) {
+        margin-top: 30px;
+    }
 }
 
 .try_it--watch {
@@ -108,20 +227,37 @@
     border: none;
     background-color: $blue;
     transition: .3s;
+    padding: 15px 40px 15px 15px;
+    @include max(500) {
+        padding: 12px 40px 12px 15px;
+    }
     &:active {
         background: $blue_hover;
         border-color: $blue_hover;
     }
-    padding: 15px 40px 15px 15px;
     &:hover .try_it__arrow {
         animation-name: moveLeft;
     }
     .try_it__text {
         color: #fff;
         font-size: 24px;
+        @include max(1200) {
+            font-size: 22px;
+        }
+        @include max(500) {
+            font-size: 20px;
+        }
     }
     .try_it__arrow-container {
         margin-right: 30px;
         height: 24px;
+        @include max(500) {
+            height: 20px;
+        }
+    }
+    .try_it__arrow svg{
+        @include max(500) {
+            height: 20px;
+        }
     }
 }

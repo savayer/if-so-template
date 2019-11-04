@@ -10,6 +10,14 @@
     width: 200px;
     height: 210px;
     position: relative;
+    @include max(768) {
+        width: 170px;
+        height: 180px;
+    }
+    @include max(500) {
+        width: 140px;
+        height: 150px;        
+    }
 }
 
 .profile_bubble__text {
@@ -23,7 +31,16 @@
     padding-left: 15px;
     font-family: 'Open Sans';
     font-weight: 800;
-    text-align: center;    
+    text-align: center;
+    @include max(768) {
+        bottom: 63px;
+        font-size: 18px;
+    }
+    @include max(500) {
+        bottom: 56px;
+        font-size: 16px;
+        padding-left: 10px;
+    }
 }   
 
 .bubble {
@@ -38,6 +55,15 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-size: 20px;
+    @include max(768) { font-size: 16px }    
+}
+
+.bubble__value {
+    &.sm {
+        font-size: 16px;
+        @include max(768) { font-size: 14px }
+        @include max(500) { font-size: 12px }
+    }
 }
 
 .bubble__content {
@@ -54,6 +80,8 @@
     z-index: 3;
     .bubble__content {
         padding-bottom: 20px;
+        @include max(768) { padding-bottom: 10px; }
+
     }
     .bubble__name, .bubble__value {
         color: #7159f3;        
@@ -62,6 +90,20 @@
         animation: moving1 2500ms infinite;
         animation-delay: 1s;    
     }
+
+    @include xl(bottom, -7%);
+    @include max(768) {
+        width: 164px;
+        height: 146px;
+    }
+    @include max(500) {
+        width: 140px;
+        height: 126px;
+        bottom: -10%;
+        left: 13%;
+    }
+    @include max(420) { bottom: -14%; left: 10%; }
+    @include max(370) { left: 8%; }
 }
 
 @keyframes moving1 {
@@ -84,6 +126,7 @@
     z-index: 2;
     .bubble__content {
         padding-bottom: 20px;
+        @include max(768) { padding-right: 10px; }
     }
     .bubble__name, .bubble__value {
         color: #f68e56;
@@ -92,6 +135,18 @@
         animation: moving1 2500ms infinite;
         animation-delay: 1s;    
     }
+    @include xl(bottom, 15%);
+    @include max(768) {
+        width: 191px;
+        height: 163px;
+    }
+    @include max(500) {
+        width: 167px;
+        height: 140px;
+        left: -2%;
+        bottom: 17%;
+    }
+    @include max(370) { left: -5%; }
 }
 
 .bubble3 {        
@@ -110,6 +165,20 @@
         animation: moving3 2500ms infinite;
         animation-delay: 1s;    
     }
+    @include max(768) {
+        width: 165px;
+        height: 151px;
+        top: 5%;
+    }
+    @include max(500) {
+        width: 140px;
+        height: 123px;
+        top: 0%;
+        left: 10%;
+    }
+    @include max(450) { top: -3%; left: 8%; }
+    @include max(420) { top: -5%; left: 5%; }
+    @include max(370) { top: -8%; left: 2%; }
 }
 
 @keyframes moving3 {
@@ -139,6 +208,23 @@
         animation: moving4 2500ms infinite;
         animation-delay: 1s;    
     }
+    @include max(1100) { left: 23%;}
+    @include max(1000) { left: 24%;}
+    @include max(768) {
+        width: 152px;
+        height: 153px;
+        top: -23%;
+    }
+    @include sm(left, 26%);
+    @include max(500) {
+        width: 127px;
+        height: 127px;
+        top: -28%;
+        left: 31%;
+    }
+    @include max(450) { left: 29% }
+    @include max(370) { left: 26% }
+    @include max(360) { left: 29% }
 }
 
 @keyframes moving4 {
@@ -168,6 +254,22 @@
         animation: moving5 2500ms infinite;
         animation-delay: 1s;    
     }
+    @include max(1100) { left: 44%; }
+    @include max(1030) { left: 46%; }
+    @include max(1000) { left: 45%; }
+    @include max(890) { left: 47%; }
+    @include max(768) {
+        width: 188px;
+        height: 130px;        
+    }
+    @include sm(left, 51%);
+    @include max(500) {
+        width: 160px;
+        height: 111px;
+        left: 52%;
+        top: -4%;
+    }
+    @include max(360) { left: 55% }
 }
 
 @keyframes moving5 {
@@ -195,6 +297,25 @@
         animation: moving6 2500ms infinite;
         animation-delay: 1s;    
     }
+    @include xl(right, 8%);
+    @include max(1100) {left: 49%;}
+    @include max(1060) {left: 51%;}
+    @include max(1000) {left: 49%;}
+    @include lg(left, 51%);
+    @include max(890) { left: 53%; }
+    @include max(768) {
+        width: 192px;
+        height: 121px;
+        top: 28%;
+    }
+    @include sm(left, 57%);
+    @include max(500) {
+        width: 169px;
+        height: 106px;
+        top: 30%;
+    }
+    @include max(370) { left: 59% }
+    @include max(360) { left: 62% }
 }
 
 @keyframes moving6 {

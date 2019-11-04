@@ -23,7 +23,6 @@ body {
 
 .wrapper {
     overflow-x: hidden;
-    min-height: 100vh;
 }
 
 .title {
@@ -32,6 +31,21 @@ body {
     font-family: 'FuturaBold';
     font-weight: 700;
     line-height: 1;
+    @include max(1300) {
+        font-size: 56px;
+    }
+    @include max(1200) {
+        font-size: 52px
+    }
+    @include max(600) {
+        font-size: 46px;
+    }
+    @include max(500) {
+        font-size: 40px;
+    }
+    @include max(430) {
+        font-size: 36px;
+    }
 }
 
 .if-so {    
