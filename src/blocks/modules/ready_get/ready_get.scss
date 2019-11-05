@@ -9,6 +9,8 @@
     align-items: center;
     padding-left: 14%;
     position: relative;
+    @include max(1500) { padding-left: 18% }
+    @include lg(padding-left, 0)
 }
 
 .ready_get__illustration {
@@ -16,6 +18,25 @@
     height: 650px;
     margin-left: 100px;
     background: url(../../../img/ready_get.svg) center/contain no-repeat;
+    @include max(1700) { width: 560px; height: 550px; }
+    @include max(1500) { width: 500px; height: 490px; }
+    @include max(1400) { margin-left: 50px }
+    @include max(1300) { margin-left: 25px; width: 440px; height: 440px }
+    @include max(1300) { margin-left: 20px; width: 380px; height: 380px }
+    @include max(992) { @include size(12); margin-top: 50px; height: 500px }
+    @include max(768) { height: 450px; }
+    @include max(620) { height: 400px; }
+    @include max(480) { height: 350px; }
+    @include max(380) { margin-top: 15px; }
+}
+
+.ready_get__content {
+    @include max(992) { @include size(6) }
+    @include max(768) { @include size(7) }
+    @include max(620) { @include size(8) }
+    @include max(550) { @include size(9) }
+    @include max(480) { @include size(10) }
+    @include max(380) { @include size(12) }
 }
 
 .ready_get__title {
@@ -23,8 +44,15 @@
         font-family: 'FuturaBold';
         word-spacing: -5px;
         display: block;
+        @include xl(font-size, 48px);
+        @include sm(font-size, 42px);
+        @include max(460) { font-size: 36px; }
+        @include xs(font-size, 32px);
+        @include max(345) { font-size: 29px; }
         &:nth-child(2) {
             margin-left: 210px;
+            @include max(550) { margin-left: 150px; }
+            @include max(380) { margin-left: 110px; }
         }
     }
 }
@@ -33,11 +61,18 @@
     font-family: 'FuturaBold';
     font-size: 26px;
     padding-left: 85px;
+    @include xl(font-size, 24px);
+    @include lg(font-size, 22px);
+    @include md(font-size, 20px);
+    @include max(430) { padding-left: 65px; }
+    @include xs(font-size, 18px);
+    @include max(345) { font-size: 16px; }
 }
 
 .ready_get__button {
     margin-top: 50px;
     text-align: center;
+    @include max(480) { margin-top: 30px }
 }
 
 .ready_get__bubble1 {
@@ -47,6 +82,14 @@
     position: absolute;
     top: 20%;
     left: 50px;
+    @include max(1700) { width: 205px; height: 210px; }
+    @include max(1500) { width: 175px; height: 180px; }
+    @include max(1300) { width: 135px; height: 140px; }
+    @include max(1100) { width: 125px; height: 130px; }
+    @include lg(top, 10%);
+    @include max(768) { width: 100px; height: 90px; left: 10px; }
+    @include max(550) { width: 90px; height: 80px; top: 0; left: 5px }
+    @include max(380) { width: 80px; height: 70px; }
 }
 
 .ready_get__bubble2 {
@@ -56,4 +99,16 @@
     position: absolute;
     top: 56%;
     left: 250px;
+    @include max(1700) { width: 70px; height: 70px; }
+    @include max(1600) { width: 60px; height: 60px; left: 200px; }
+    @include max(1300) { width: 50px; height: 50px; left: 160px; }
+    @include max(1100) { width: 45px; height: 45px; left: 155px; top: 52% }
+    @include lg(top, 27%);
+    @include max(768) {
+        width: 30px;
+        height: 30px;
+        left: 100px;
+        top: 22%;
+    }
+    @include max(550) { width: 25px; height: 25px; top: 12%; left: 80px; }
 }
