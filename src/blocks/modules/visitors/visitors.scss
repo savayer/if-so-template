@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: relative;    
 }
 
 .visitors__illustration {
@@ -15,10 +15,53 @@
     height: 650px;
     background: url(../../../img/visitors.svg) center/contain no-repeat;
     margin-left: -8%;
+    @include max(1550) {
+        width: 640px;
+        height: 530px;    
+    }
+    @include max(1400) {
+        width: 550px;
+        height: 430px;
+    }
+    @include max(1150) {
+        width: 450px;
+        height: 340px;
+    }
+    @include max(992) {
+        @include size(7);
+        order: 2;
+        margin-top: 50px;
+        height: 440px;
+    }
+    @include max(850) { margin-top: 10px }
+    @include max(768) { 
+        margin-top: 0;
+        height: 380px;
+    }
+    @include max(680) {
+        @include size(9);
+        margin-top: 20px;
+    }
+    @include max(610) { @include size(12); }
+    @include max(500) { height: 300px }
+    @include max(460) { height: 260px; }
+    @include max(360) {
+        margin-top: 30;
+        height: 240px;
+    }
 }
 
 .visitors__content {
     margin-left: 40px;
+    @include max(992) {
+        @include size(7);
+        order: 1;
+    }
+    @include max(870) { @include size(8); }
+    @include max(768) { @include size(9); }
+    @include max(680) { @include size(10); }
+    @include max(610) { @include size(12); }
+    @include max(360) { margin-left: 10px; }
 }
 
 .visitors__title {
@@ -26,6 +69,11 @@
         font-family: 'FuturaBold';
         word-spacing: -6px;
         display: block;
+        @include xl(font-size, 48px);
+        @include sm(font-size, 42px);
+        @include max(460) { font-size: 36px; }
+        @include xs(font-size, 32px);
+        @include max(345) { font-size: 29px; }
         &:nth-child(2) {
             margin-left: 80px;
         }
@@ -38,6 +86,11 @@
         font-family: 'FuturaBold';
         font-size: 26px;
         display: block;
+        @include xl(font-size, 24px);
+        @include lg(font-size, 22px);
+        @include md(font-size, 20px);
+        @include xs(font-size, 18px);
+        @include max(345) { font-size: 16px; }
         &:nth-child(1) {
             margin-left: 40px;
         }
@@ -51,6 +104,38 @@
     right: 320px;
     bottom: 20%;
     background: url(../../../img/visitors_bubble1.svg) center/contain no-repeat;
+    @include max(1550) {
+        bottom: 10%;
+    }
+    @include max(1400) {
+        bottom: 2%;
+        width: 70px;
+        height: 70px;
+        right: 300px;
+    }
+    @include max(1150) {
+        bottom: -2%;
+        width: 50px;
+        height: 50px;
+        right: 240px;
+    }
+    @include max(992) { 
+        top: 17%;
+        right: 160px;
+    }
+    @include max(768) {
+        width: 30px;
+        height: 30px;
+        right: 120px;
+    }
+    @include max(576) {
+        width: 25px;
+        height: 25px;
+        right: 86px;
+    }
+    @include max(500) { top: 27%; }
+    @include max(400) { width: 14px; right: 58px; }
+    @include max(345) { right: 50px; }
 }
 
 .visitors__bubble2 {
@@ -60,4 +145,38 @@
     position: absolute;
     bottom: -5%;
     right: 40px;
+    @include max(1550) {
+        width: 225px;
+        height: 210px;
+        right: 50px;
+        bottom: -15%;
+    }
+    @include max(1400) {
+        width: 195px;
+        height: 170px;
+        right: 80px;
+        bottom: -25%;
+    }
+    @include max(1150) {
+        width: 145px;
+        height: 120px;
+    }
+    @include max(992) { 
+        top: 20%;
+        right: 10px 
+    }
+    @include max(768) {
+        width: 105px;
+        height: 90px;
+    }
+    @include max(576) {
+        width: 75px;
+        height: 65px;
+    }
+    @include max(500) { top: 27%; }
+    @include xs(width, 45px);
+    @include max(345) {
+        right: 0;
+        height: 45px;
+    }
 }
