@@ -3,15 +3,13 @@
     background-color: #32325d;    
     position: relative;
     padding: 190px 0 50px;
-    overflow: hidden;
-    &:before {
-        content: '';
+    overflow: hidden;    
+    svg {        
         position: absolute;
+        z-index: 11;
         top: -30px;
         width: 100%;
-        z-index: 11;
-        height: 190px;        
-        background: url(../../../img/svg/divider_up.svg);
+        height: 190px;
     }
 }
 
