@@ -59,8 +59,11 @@
         display: block;
         font-family: 'FuturaBold';
         word-spacing: -5px;
+        @include max(350) { font-size: 34px; }
         &:nth-child(2) {
             margin-left: 25px;
+            margin-bottom: 6px;
+            @include max(350) { margin-left: 15px; }
         }
         &:last-child {
             display: inline-block;
