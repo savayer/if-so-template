@@ -4,10 +4,13 @@
 
 .slider__title {
     text-align: center;
+    @include max(370) { font-size: 32px; }
+    @include max(330) { font-size: 30px; }
 }
 
 .slider__items {     
     margin: 100px -25px 0;
+    @include max(500) { margin-top: 60px }
 }
 
 .slider__item {
