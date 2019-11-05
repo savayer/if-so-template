@@ -186,7 +186,7 @@
         height: 25px;        
         @each $class, $image in $socials {
             &.#{$class} {
-                background: url(../../../img/social/#{$image}.png) center/contain no-repeat;
+                background: url(../../../img/social/#{$image}.svg) center/contain no-repeat;
             }
         }
     }

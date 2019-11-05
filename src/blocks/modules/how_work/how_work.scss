@@ -1,5 +1,7 @@
 .work_explain {
     margin-top: 300px;
+    @include md(margin-top, 200px);
+    
 }
 
 .work_explain__wrapper {
