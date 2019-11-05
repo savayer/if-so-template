@@ -46,6 +46,10 @@ body {
     @include max(430) {
         font-size: 36px;
     }
+    @include max(340) {
+        font-size: 32px !important;
+        span { font-size: 32px !important; }
+    }
 }
 
 .if-so {    
