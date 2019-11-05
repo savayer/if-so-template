@@ -163,7 +163,7 @@
         @include max(1300) { font-size: 24px; }
         @include max(1200) { font-size: 22px; }
         @include max(768) { font-size: 20px; }
-        @include max(440) { font-size: 18px; }
+        @include max(440) { font-size: 18px; margin-left: 0 !important}
         &:nth-child(1) {
             margin-left: 20px;
             @include max(460) { margin-left: 10px }
@@ -172,7 +172,7 @@
             margin-left: 40px;
             @include max(460) { margin-left: 20px }
         }
-    }
+    }    
 }
 
 .about__description {
@@ -209,7 +209,6 @@
     @include max(500) { font-size: 16px; }
     @include max(440) { 
         text-align: left;
-        padding-left: 21px; 
         span { margin-left: 0 !important } 
     }
 }

@@ -193,39 +193,8 @@
     @include max(620) {
         max-width: 88%;
     }
-/*     &:before {
-        content: '';
-        position: absolute;
-        background: transparent;
-        z-index: 10;
-        top: -100%;
-        width: 50%;
-        height: 300px;
-        background-image: linear-gradient(to top, #fcfcfc 0%, #fefefe 100%);
-        left: 0;
-        box-shadow: -40px 0 40px #fcfcfc;
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        background: transparent;        
-        z-index: 10;
-        top: -100%;
-        width: 90%;
-        height: 300px;
-        background-image: linear-gradient(to top, #fcfcfc 0%, #fefefe 100%);
-        left: 0;
-        box-shadow: 40px 0 40px 10px #fcfcfc;
-        @include max(1800) {
-            width: 80%;
-        }
-        @include max(1700) {
-            width: 70%;
-        }
-        @include max(1080) {
-            width: 63%;
-        }
-    } */
+    @include sm(margin-top, 50px);
+    @include max(440) { margin-top: 30px }
 }
 
 .header__title {    

@@ -95,7 +95,7 @@
 .work_explain__list {
     list-style: none;
     margin-left: 60px;
-    @include xs(margin-left, 20px);
+    @include max(440) { margin-left: 31px; }
 }
 
 .work_explain__list_item {
@@ -116,7 +116,9 @@
     }
     &:nth-child(2) {
         margin-left: 40px;
+        @include max(440) { margin-left: 0; }
     }
+
 }
 
 .list__number {    

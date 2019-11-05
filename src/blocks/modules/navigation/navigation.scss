@@ -11,6 +11,9 @@
     @include max(1200) {
         padding: 30px 40px;
     }
+    @include max(840) {
+        padding: 30px 20px;
+    }
     .try_it {
         @include max(1100) {
             display: none;
