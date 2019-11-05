@@ -43,13 +43,8 @@
             right: 0;
         }
         @include sm(right, -20px);
-        @include max(500) { bottom: -46%; }
-        @include max(420) { bottom: -50%; }
-        @include max(370) {
-            width: 160px;
-            height: 170px;
-            bottom: -40%;
-        }
+        @include max(460) { bottom: -36%; }
+        @include max(420) { width: 160px; }
     }
     &:before {
         content: '';
@@ -76,9 +71,7 @@
             left: -25px;
             top: -30%;
         }
-        @include max(500) { left: 12px; }
-        @include max(420) { left: -5px; }
-        @include max(400) { content: none }
+        @include max(500) { content: none }
     }
     @include max(1440) {
         margin-left: 0;
@@ -110,25 +103,26 @@
     display: flex;
     padding-right: 30px;
     @include max(768) {
-        min-height: 327px;
-        max-width: 490px;
-        padding-right: 10px;
-    }
-    @include max(500) {
-        min-height: 253px;
-        max-width: 370px;
-        padding-right: 0;
-        margin: auto;
-    }
-    @include max(390) {
-        min-height: 263px;
         max-width: 100%;
+        min-height: 380px;
     }
-    @include max(360) {
+    @include max(650) { min-height: 360px; }
+    @include max(600) { min-height: 350px; }
+    @include max(576) {
         max-width: 110%;
         width: 110%;
     }
-    @include max(330) { min-height: 250px }
+    @include max(490) { min-height: 332px }
+    @include max(460) { min-height: 320px }
+    @include max(440) {
+        max-width: 115%;
+        width: 115%;
+        min-height: 300px;
+    }
+    @include max(370) { min-height: 290px; }
+    @include max(355) { min-height: 280px; }
+    @include max(345) { min-height: 270px; }
+    @include max(335) { min-height: 260px; }
 }
 
 @import './bubbles';
