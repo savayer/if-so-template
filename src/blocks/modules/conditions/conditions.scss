@@ -10,9 +10,8 @@
 .cond__item {
     @include col();
     @include size(4);
-    @include size-lg(4);
-    @include size-md(6);
-    @include size-xs(12);
+    @include size-lg(6);
+    @include size-sm(12);
     margin-top: 60px;
     margin-bottom: 70px;    
     display: flex;
@@ -58,11 +57,17 @@
         display: block;
         font-family: 'FuturaBold';
         font-size: 26px;
+        @include xl(font-size, 24px);
+        @include lg(font-size, 22px);
+        @include md(font-size, 20px);
+        @include xs(font-size, 18px);
+        @include max(345) { font-size: 16px; }
         &:nth-child(1) {
             margin-left: -100px
         }
         &:nth-child(2) {
             margin-left: 110px;
+            @include max(380) { margin-left: 0; }
         }
     }
 }
@@ -84,10 +89,7 @@
     height: 60px;
     position: absolute;
     top: -50px;
-    right: 90px;
-    path {
-        //transform: translate(-12.94px, -35.65px);
-    }
+    left: 50%;
 }
 
 .cond__title {
