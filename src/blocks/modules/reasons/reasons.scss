@@ -1,10 +1,16 @@
 .reasons {
     background: $gray;
     margin-top: 280px;
-    padding: 80px 0;
-    position: relative;    
-    padding-right: 10%;
-    transform: skew(0, 4.4deg)
+    padding: 80px 10% 80px 0;
+    position: relative;
+    transform: skew(0, 4.4deg);
+    @include max(1200) { padding: 50px 10% 50px 0; }
+    @include max(1150) { padding: 50px 15% 50px 0; }
+    @include max(992) {
+        padding: 50px 0;
+        min-height: 850px;
+    }
+    @include xs(min-height, 820px);
 }
 
 .reasons__wrapper {
@@ -14,12 +20,34 @@
 
 .reasons__illustration {
     position: absolute;
-    z-index: 12;
-    right: -25%;
+    z-index: 12;    
+    right: calc(-10% - 280px );
     top: 0;
     width: 690px;
     height: 800px;
     background: url(../../../img/reason_love.svg) center/contain no-repeat;
+    @include max(1300) {
+        right: calc(-10% - 240px);
+        width: 620px;
+        height: 770px;
+    }
+    @include max(1200) {
+        width: 580px;
+        height: 610px;
+        top: 60px;
+    }
+    @include max(1150) {
+        right: calc(-16% - 240px);
+    }
+    @include max(992) {
+        top: 93%;
+        z-index: -1;
+        right: -160px;
+        width: 470px;
+        height: 490px;
+    }
+    @include max(576) { top: 96% }
+    @include max(500) { top: 98% }
 }
 
 .reasons__content {
@@ -43,6 +71,10 @@
 .reasons__list {
     list-style: none;
     padding-left: 160px;
+    @include max(1100) { padding-left: 80px; }
+    @include max(1050) { padding-left: 50px; }
+    @include lg(padding-left, 80px);
+    @include max(600) { padding-left: 40px; }
 }
 
 .reasons__list_item {
@@ -55,13 +87,26 @@
         margin: 8px 0;
         &:nth-child(2) {
             margin-left: 20px;
+            @include xs(margin-left, 10px);
         }
+        @include lg(font-size, 24px);
+        @include md(font-size, 22px);
+        @include sm(font-size, 20px);
+        @include xs(font-size, 18px);
     }
     margin: 30px 0;
-
+    @include max(440) {
+        &:nth-child(3) {
+            margin-left: 32px;
+        }
+    }
     @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
             margin-left: 40px * $i;
+            @include sm(margin-left, 25px * $i);
+            @include max(440) {
+
+            }
             position: relative;
             &:before {
                 content: '';
@@ -75,6 +120,9 @@
                 } @else {
                     background: url(../../../img/#{$i}_love.svg) center/contain no-repeat;
                 }
+                @include lg(top, 11px);
+                @include md(top, 9px);
+                @include sm(top, 7px);
             }
         }
     }
