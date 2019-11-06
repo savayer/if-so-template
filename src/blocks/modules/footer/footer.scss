@@ -105,6 +105,7 @@
         transition: .3s;
         @include xl(font-size, 14px);    
         @include max(775) { padding: 10px 10px 8px }
+        @include sm(padding, 10px 15px 8px);
     }
 }
 
