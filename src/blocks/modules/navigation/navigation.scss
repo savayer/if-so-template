@@ -40,7 +40,7 @@
 
 .menu__item {
     margin: 0 60px;
-    padding: 5px 18px 0;
+    padding: 5px 18px;
     transition: .3s;
     &.active {        
         background: $active_color;
@@ -71,10 +71,11 @@
 
 .menu__link {
     text-decoration: none;
-    font-weight: 700;
     font-size: 18px;
     line-height: 1.35;
-    font-family: 'FuturaBold';
+    //font-family: 'FuturaBold';
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
     text-transform: uppercase;
     &:hover {
         cursor: pointer;
