@@ -11,5 +11,5 @@ import "%modules%/footer/footer"
 import AOS from 'aos';
 
 AOS.init({
-    once: false
+    once: true
 })
