@@ -10,4 +10,6 @@ import "%modules%/ready_get/ready_get";
 import "%modules%/footer/footer"
 import AOS from 'aos';
 
-AOS.init()
+AOS.init({
+    once: false
+})

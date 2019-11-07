@@ -9,23 +9,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-left: 15%;
-    @include max(1730) {
-        padding-left: 5%;
-    }
-    @include max(1550) {
-        padding-left: 0;
+    padding-left: 6%;
+    @include max(1570) {
         max-width: 95%;
         margin-left: auto;
         margin-right: auto;
     }
-    @include max(1100) { order: 1; }
+    @include max(1199) { order: 1; padding-left: 0;}
     @include xs(max-width, 100%);
 }
 
 .work_explain__content {    
-    @include max(1550) { @include size(6); }
-    @include max(1100) { @include size(7); }
+    @include max(1570) { @include size(6); }
+    @include max(1199) { @include size(7); }
     @include max(992) { @include size(8); }
     @include max(768) { @include size(9); }
     @include max(600) { @include size(12); }
@@ -38,8 +34,8 @@
         @include xs(display, none);
     }
 
-    @include max(1550) { @include size(6); }
-    @include max(1100) {
+    @include max(1570) { @include size(6); }
+    @include max(1199) {
         @include size(9);
         order: 2;
     }
