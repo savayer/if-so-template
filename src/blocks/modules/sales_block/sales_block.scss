@@ -27,19 +27,20 @@
 }
 
 .sales__title {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 1.2;
-    color: #fff;
-    @include md(font-size, 40px);
-    @include max(420) { font-size: 30px; }
-    span {
-        font-weight: 700;
-        font-family: 'Open Sans', sans-serif;
-        color: #fff;
+    span {    
+        font-family: 'Open Sans', sans-serif;        
         line-height: 1.2;
-        display: block;
+        color: #fff;
+        font-size: 50px;
+        &:nth-child(1) {
+            font-weight: 800;    
+        }
+        &:nth-child(2) {
+            font-weight: 700;
+            display: block;
+        }
+        @include md(font-size, 40px);
+        @include max(420) { font-size: 30px; }
     }
 }
 
