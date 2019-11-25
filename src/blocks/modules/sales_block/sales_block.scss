@@ -1,0 +1,124 @@
+.sales {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    transform: skew(0, 4.4deg);
+    background: linear-gradient(-260deg, #8e61d8 0%, #7461d8 100%);
+    padding: 30px 0 70px;
+}
+
+.sales__wrapper {
+    transform: skew(0, -4.4deg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.sales__texts {
+    margin-right: 15px;
+}
+
+.sales__offer {
+    margin-left: 15px;
+}
+
+.sales__title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #fff;
+    span {
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+        color: #fff;
+        line-height: 1.2;
+        display: block;
+    }
+}
+
+.sales__secondtitle {
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.sales__digit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 34px;
+    line-height: 1;
+    span {
+        color: #fdc689;
+        font-family: "Open Sans", sans-serif;        
+        font-weight: 700;
+        &:nth-child(1) {
+            font-size: 202px;
+            margin-right: 20px;
+        }
+        &:nth-child(2) {
+            font-size: 96px;
+        }
+    }
+}
+
+.try_it--sale {
+    background-color: #fff;
+    transition: .3s;
+    border: none;
+    padding: 12px 18px 12px 30px;
+    &:active {
+        background: #e0e0e0;
+    }
+    .try_it__text {
+        color: #5f49d2;
+        font-size: 18px;                
+        @include max(500) {
+            font-size: 16px;
+        }
+    }
+    .try_it__arrow-container {
+        height: 18px;
+        margin-left: 15px;
+        @include max(500) {
+            height: 16px;
+        }
+    }
+    .try_it__arrow svg {
+        height: 18px;
+        @include max(500) {
+            height: 16px;
+        }
+    }
+}
+
+.sales__bubble--big {
+    background: url(../../../img/sales_big_bubble.svg) center center/contain no-repeat;
+    width: 150px;
+    height: 140px;
+    top: 65%;
+    right: -13%;
+}
+
+.sales__bubble--medium {
+    background: url(../../../img/sales_middle_bubble.svg) center center/contain no-repeat;
+    top: 35%;
+    right: -3%;
+    width: 80px;
+    height: 80px;
+}
+
+.sales__bubble--small {
+    background: url(../../../img/sales_small_bubble.svg) center center/contain no-repeat;
+    width: 30px;
+    height: 30px;
+    top: 70%;
+    right: 0;
+}
+
+.sales__bubble {
+    position: absolute;
+}
