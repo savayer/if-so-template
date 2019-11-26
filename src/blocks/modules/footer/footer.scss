@@ -1,6 +1,5 @@
 .footer {
-    margin-top: 60px;
-    background-color: #32325d;    
+    margin-top: 60px;    
     position: relative;
     padding: 190px 0 50px;
     overflow: hidden;    
@@ -19,6 +18,22 @@
         @include lg(top, 0);
         @include max(470) { height: 40px; }
     }
+}
+
+.footer--color1 {
+    background-color: #32325d;
+}
+
+.footer--color2 {
+    background-color: #44308a;
+}
+
+.footer--color3 {
+    background-color: #53308a;
+}
+
+.footer--color4 {
+    background-color: #544898;
 }
 
 .footer__wrapper {
