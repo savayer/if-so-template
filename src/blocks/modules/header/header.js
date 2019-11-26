@@ -3,7 +3,9 @@ window.onload = function() {
     const $rightUpper = document.getElementById('right_upper_cloud')
     const $right = document.getElementById('right_cloud')
 
-    $left.classList.add('active')
-    $rightUpper.classList.add('active')
-    $right.classList.add('active')
+    if ($left && $rightUpper && $right) {
+        $left.classList.add('active')
+        $rightUpper.classList.add('active')
+        $right.classList.add('active')
+    }
 }

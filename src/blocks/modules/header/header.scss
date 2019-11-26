@@ -2,7 +2,10 @@
     min-height: 684px;
     position: relative;    
     background-image: linear-gradient(to top, rgba(235, 235, 235, 0.39)0%, #fff 100%);
-    transform: $header_skew;    
+    transform: $header_skew;
+    .navigation {        
+        @extend %header_unskew;        
+    }
     @include min(1900) {
         min-height: 670px;
     }    
@@ -17,7 +20,7 @@
     }
     @include max(800) {
         min-height: 750px;
-    }
+    }    
 }
 
 .header__object {
@@ -189,8 +192,7 @@
     }
 }
 
-.try_it--button {    
-    border-color: $blue;
+.try_it--button {
     transition: .3s;
     border: none;
     background-color: $blue;

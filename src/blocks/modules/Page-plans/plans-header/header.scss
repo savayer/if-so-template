@@ -1,0 +1,208 @@
+.header--plans {
+    transform: none;
+    background: #fff;
+    .navigation {
+        transform: none;
+    }
+}
+
+.header__wrapper {
+    margin-top: 60px;
+}
+
+.header__title--plans {
+    text-align: center;
+}
+
+.header__description--bold {
+    margin: 12px 0;
+    font-family: 'FuturaBold', 'Futura', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header__plans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.plans__item {
+    min-width: 300px;
+    height: 400px;
+    padding: 30px 40px;
+    background-color: #fff;
+    box-shadow: 4px 7px 26px 1px rgba(0, 0, 0, 0.11);
+    border-radius: 36px;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+
+    &:nth-child(1) {
+        border: 2px solid rgba(240, 91, 109, 0.502);
+        z-index: 1;
+    }
+    &:nth-child(3) {
+        border: 2px solid rgba(245, 141, 86, 0.52);
+        z-index: 2;
+    }
+    &:nth-child(4) {
+        border: 2px solid rgba(189, 140, 191, 0.52);
+        z-index: 1;
+    }
+    &.active {
+        z-index: 10;
+        padding: 60px 35px;
+        height: 460px;
+        box-shadow: 4px 7px 44px 10px rgba(0, 0, 0, 0.25);        
+        border: 6px solid #fff;
+        background-color: #8975f8;
+        .plan__title {
+            color: #fff;
+            margin-bottom: auto;
+            margin-top: -4px;
+            &:after {
+                background: url(../../../../img/hr_white.svg) center center/contain no-repeat;
+            }
+        }
+        .plan__free_trial a {
+            color: #fff !important
+        }
+    }
+}
+
+.plan__title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: $text-color;
+    position: relative;
+    text-align: center;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -25px;
+        height: 12px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background: url(../../../../img/hr.svg) center center/contain no-repeat;
+    }
+}
+
+.plan__price {
+    margin-top: 50px;
+    color: #fff;    
+    font-size: 96px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'FuturaBold', 'Futura', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+        color: $text-color;
+        font-weight: 700;
+        font-family: 'FuturaBold', 'Futura', sans-serif;
+        &:nth-child(1) {
+            font-size: 30px;
+        }
+
+        &:nth-child(2) {
+            font-size: 60px;            
+        }
+    }
+}
+
+.plan__sale {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.plan__info {
+    font-family: "Open Sans", sans-serif;
+    margin: 20px 0 25px;
+    text-align: center;
+    strong {
+        font-family: "Open Sans", sans-serif;
+        display: block;
+    }
+}
+
+.plan__button {
+    margin-top: auto;
+    text-align: center;
+}
+
+.try_it--plan {    
+    transition: .3s;
+    border: none;
+    padding: 12px 18px 12px 30px;
+    @include md(padding, 12px 12px 12px 22px);
+    &:active {
+        opacity: .9;
+    }
+    .try_it__text {
+        color: #fff;
+        font-size: 18px;                
+        @include md(font-size, 16px);
+    }
+    .try_it__arrow-container {
+        height: 18px;
+        margin-left: 15px;
+        @include md(height, 16px);
+        @include md(margin-left, 10px);
+    }
+    .try_it__arrow svg {
+        height: 18px;
+        @include md(height, 16px);
+    }
+}
+
+.plan__free_trial {
+    margin-top: 20px;
+    text-align: center;
+    a {
+        font-size: 18px;
+        text-decoration: none;
+        border-bottom: 1px solid;
+        font-style: italic;
+        cursor: pointer;
+        &:hover {
+            text-decoration: none;
+            border-width: 2px;
+        }
+    }
+}
+
+$planColors: (
+    1: #f05b6d,
+    2: #4cb5d2,
+    3: #f68e56,
+    4: #bd8cbf
+);
+
+@each $i, $color in $planColors {
+    .plans__item:nth-child(#{$i}) {
+        .try_it--plan {
+            background: $color;
+        }   
+
+        .plan__sale {
+            color: $color;
+        }
+
+        .plan__free_trial a {
+            color: $color;
+            border-color: $color;             
+        }
+    }    
+}
