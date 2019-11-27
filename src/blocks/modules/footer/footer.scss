@@ -264,7 +264,7 @@
     background: #fff;
     border-radius: 25px;
     position: absolute;
-    bottom: -40px;
+    bottom: -40px;    
     right: 10%;
     cursor: pointer;
     @include max(1500) { right: 50px }
@@ -275,6 +275,7 @@
         height: 22px;
         position: absolute;
         bottom: 60px;
+        left: auto;
         right: calc(10% + 6px);
         transition: .4s;
     }
