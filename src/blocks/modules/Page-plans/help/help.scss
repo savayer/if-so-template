@@ -1,0 +1,67 @@
+.help_section {
+    margin-top: 100px;
+}
+
+.help_section__title {
+    text-align: center;
+    word-spacing: -10px;
+}
+
+.help_section__introtext {
+    color: $text_color;
+    margin: 18px 0;
+    font-family: 'FuturaBold', 'Futura', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 26px;        
+    @include max(1300) {
+        font-size: 24px;
+        margin: 12px 0;
+    }
+    @include max(1200) {
+        font-size: 22px;
+    }
+    @include max(600) {
+        font-size: 18px;
+    }
+    @include max(500) {
+        font-size: 17px;
+    }
+    @include max(430) {
+        font-size: 16px;
+    }
+}
+
+.help_section__button {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.help_section__helpers {
+    margin-top: 70px;
+}
+
+.helpers {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.helpers__item {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 30px 0;
+    width: 40%;    
+    &:before {
+        content: '';        
+        width: 30px;
+        height: 30px;
+        background: url(../../../../img/svg/checked.svg) center/contain no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+}
