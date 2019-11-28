@@ -88,6 +88,12 @@ img {
     text-align: center;
 }
 
+.img-center {
+    display: block;
+    max-width: 80%;    
+    margin: auto;
+}
+
 h2, .h2 {
     font-family: 'FuturaBold';
     font-size: 26px;
