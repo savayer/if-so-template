@@ -5,6 +5,7 @@ const removeOtherSelected = () => {
     $selected.forEach(el => {
         el.classList.remove('selected')
         el.querySelector('.faq__answer').style.height = 0
+        el.querySelector('.faq__answer').style.margin = 0
     })
 }
 
@@ -14,9 +15,11 @@ $items.forEach(item => {
         if (this.classList.contains('selected')) {
             this.classList.remove('selected')            
             $answer.style.height = 0
+            $answer.style.margin = 0
         } else {
             removeOtherSelected()
             this.classList.add('selected')
+            $answer.style.margin = '20px auto 40px'
             $answer.style.height = $answer.scrollHeight + 'px'
         }
     })

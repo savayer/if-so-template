@@ -43,6 +43,10 @@ a {
     }
 }
 
+.roman {
+    font-family: "Times New Roman";
+}
+
 .no_animation_line {
     &:after {
         content: none
