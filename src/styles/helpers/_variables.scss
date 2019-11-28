@@ -15,6 +15,12 @@ $header_skew: skew(0, 4.8deg);
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
+%noAnimationLine {
+    &:after {
+        content: none
+    }
+}
+
 $persp: rotateX(2deg) rotateZ(-10deg) rotateY(42deg);
 
 $font_path: '../../fonts/';

@@ -1,0 +1,135 @@
+.docs {
+    margin-top: 110px;
+}
+
+.docs__title {
+    padding-left: 10px;
+    span {
+        display: block;
+        font-family: 'FuturaBold';
+        word-spacing: -6px;
+        &:nth-child(1) {
+            margin-left: 40px;
+        }
+    }
+}
+
+.docs__introtext {
+    margin-top: 10px;
+    span {
+        font-family: 'FuturaBold';
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.1;
+        display: block;
+        @include xl(font-size, 24px);
+        @include lg(font-size, 22px);
+        @include md(font-size, 20px);
+        @include xs(font-size, 18px);
+        
+        &:nth-child(1) {
+            margin-left: 30px;            
+        }
+        &:nth-child(2) {
+            margin-left: 50px;            
+        }
+    }
+}
+
+.docs__container {
+    @include row-flex();
+}
+
+.docs__sidebar {
+    @include col();
+    @include size(3);
+}
+
+.docs__content {
+    @include col();
+    @include size(9);
+    padding: 0 20px;
+}
+
+.docs__texts {
+    margin-top: 40px
+}
+
+.widget {
+    margin: 80px 0;
+    &:first-child {
+        margin: 0;
+    }
+}
+
+.widget__content {
+    padding-right: 50px;
+}
+
+.widget__title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-left: 15px;
+}
+
+.widget__list {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.widget__list_item {
+    margin: 30px 0;
+    padding-left: 15px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -14px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: rgba(137, 117, 248, 0.3);
+    }
+    &:last-child:before {
+        content: none;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: calc(50% - 7px);
+        width: 6px;
+        height: 14px;
+        display: block;
+        transition: .2s;
+        background: url(../../../../img/svg/list-arrow.svg) center/contain no-repeat;
+    }
+    &.active {
+        color: #fd5b56;
+        &:after {
+            right: -10px;
+            background: url(../../../../img/svg/list-arrow-active.svg) center/contain no-repeat;
+        }
+        a {
+            color: #fd5b56
+        }
+    }
+    &:hover {
+        &:after {
+            right: -10px;
+        }
+    }
+    a {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: $text_color;
+        text-decoration: none;
+        @extend %noAnimationLine;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
