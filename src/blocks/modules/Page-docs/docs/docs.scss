@@ -50,7 +50,7 @@
 .docs__content {
     @include col();
     @include size(9);
-    padding: 0 20px;    
+    padding: 0 70px;    
 }
 
 .docs__bubble_sm {
@@ -92,10 +92,6 @@
     &:first-child {
         margin: 0;
     }
-}
-
-.widget__content {
-    padding-right: 50px;
 }
 
 .widget__title {

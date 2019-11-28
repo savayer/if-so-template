@@ -1,13 +1,16 @@
 .header--docs {
     background: #6665e7;
+    transform: skew(0, 2.8deg);
     min-height: 350px !important;
     .navigation {
         background: #fff;
+        transform: skew(0, -2.8deg) translateZ(0);
     }
 }
 
 .header__container--docs {
-    height: 320px
+    height: 240px;
+    transform: skew(0, -2.8deg) translateZ(0);
 }
 
 .header__title--docs {
@@ -41,11 +44,11 @@
 }
 
 .header--docs_bg {
-    width: 824px;
-    height: 341px;
+    width: 651px;
+    height: 280px;
     background: url(../../../../img/docs_header_bg.png) center/contain no-repeat;
     transform: rotate(-2.4deg);
     position: absolute;
     right: 40px;
-    bottom: -31px;
+    bottom: -29px;
 }
