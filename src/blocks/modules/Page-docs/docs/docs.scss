@@ -1,5 +1,6 @@
 .docs {
     margin-top: 110px;
+    position: relative;
 }
 
 .docs__title {
@@ -43,12 +44,43 @@
 .docs__sidebar {
     @include col();
     @include size(3);
+    position: relative;
 }
 
 .docs__content {
     @include col();
     @include size(9);
-    padding: 0 20px;
+    padding: 0 20px;    
+}
+
+.docs__bubble_sm {
+    width: 80px;
+    height: 80px;
+    position: absolute;    
+    top: 60%;
+    left: 330px;
+    display: block;
+    background: url(../../../../img/svg/docs_bubble_sm.svg) center/contain no-repeat;
+}
+
+.docs__bubble_lg {
+    width: 400px;
+    height: 400px;
+    position: absolute;    
+    top: 60%;
+    left: 70px;
+    display: block;
+    background: url(../../../../img/svg/docs_bubble_lg.svg) center/contain no-repeat;    
+}
+
+.visitors__bubble1--docs {
+    top: 25%;
+    right: 170px;
+}
+
+.visitors__bubble2--docs {
+    top: 25%;
+    right: -5%;
 }
 
 .docs__texts {
