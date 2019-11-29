@@ -11,18 +11,20 @@ const $bubble2 = document.querySelector('.visitors__bubble2')
 
 const $image = document.querySelector('.visitors__illustration')
 
-if (document.documentElement.clientWidth <= 992) {    
-    $subTitle1.setAttribute('data-aos-delay', 0)
-    $subTitle2.setAttribute('data-aos-delay', 50)
+if ($title && $introtext && $bubble1 && $bubble2 && $image) {
+    if (document.documentElement.clientWidth <= 992) {    
+        $subTitle1.setAttribute('data-aos-delay', 0)
+        $subTitle2.setAttribute('data-aos-delay', 50)
 
-    $intro1.setAttribute('data-aos-delay', 250)
-    $intro2.setAttribute('data-aos-delay', 350)
-    
-    
-    $image.setAttribute('data-aos-delay', 600)
-    
-    
-    $bubble2.setAttribute('data-aos-delay', 1000)
-    $bubble1.setAttribute('data-aos-delay', 1200)
-    
+        $intro1.setAttribute('data-aos-delay', 250)
+        $intro2.setAttribute('data-aos-delay', 350)
+        
+        
+        $image.setAttribute('data-aos-delay', 600)
+        
+        
+        $bubble2.setAttribute('data-aos-delay', 1000)
+        $bubble1.setAttribute('data-aos-delay', 1200)
+        
+    }
 }

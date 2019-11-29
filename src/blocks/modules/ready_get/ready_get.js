@@ -10,18 +10,20 @@ const $bubble2 = document.querySelector('.ready_get__bubble2')
 
 const $image = document.querySelector('.ready_get__illustration')
 
-if (document.documentElement.clientWidth <= 992) {    
-    $subTitle1.setAttribute('data-aos-delay', 0)
-    $subTitle2.setAttribute('data-aos-delay', 50)
+if ($title && $introtext && $button && $bubble1 && $bubble2 && $image) {
+    if (document.documentElement.clientWidth <= 992) {    
+        $subTitle1.setAttribute('data-aos-delay', 0)
+        $subTitle2.setAttribute('data-aos-delay', 50)
 
-    $introtext.setAttribute('data-aos-delay', 250)    
+        $introtext.setAttribute('data-aos-delay', 250)    
 
-    $button.setAttribute('data-aos-delay', 350)    
-    
-    $image.setAttribute('data-aos-delay', 600)
-    
-    
-    $bubble1.setAttribute('data-aos-delay', 1000)
-    $bubble2.setAttribute('data-aos-delay', 1100)
-    
+        $button.setAttribute('data-aos-delay', 350)    
+        
+        $image.setAttribute('data-aos-delay', 600)
+        
+        
+        $bubble1.setAttribute('data-aos-delay', 1000)
+        $bubble2.setAttribute('data-aos-delay', 1100)
+        
+    }
 }

@@ -13,20 +13,21 @@ const $list = document.querySelectorAll('.work_explain__list_item')
 const $button = document.querySelector('.work_explain__button')
 
 const $image = document.querySelector('.work_explain__illustration')
+if ($title && $introtext && $list && $button && $image) {
+    if (document.documentElement.clientWidth <= 1199) {
 
-if (document.documentElement.clientWidth <= 1199) {
+        $subTitle1.setAttribute('data-aos-delay', 50)
+        $subTitle2.setAttribute('data-aos-delay', 100)
+        
+        $intro1.setAttribute('data-aos-delay', 250)
+        $intro2.setAttribute('data-aos-delay', 300)
 
-    $subTitle1.setAttribute('data-aos-delay', 50)
-    $subTitle2.setAttribute('data-aos-delay', 100)
-    
-    $intro1.setAttribute('data-aos-delay', 250)
-    $intro2.setAttribute('data-aos-delay', 300)
+        $list.forEach((item, index) => {
+            item.setAttribute('data-aos-delay', (index+1) * 50 + 400 )
+        })
 
-    $list.forEach((item, index) => {
-        item.setAttribute('data-aos-delay', (index+1) * 50 + 400 )
-    })
+        $button.setAttribute('data-aos-delay', 800)
 
-    $button.setAttribute('data-aos-delay', 800)
-
-    $image.setAttribute('data-aos-delay', 1000)
+        $image.setAttribute('data-aos-delay', 1000)
+    }
 }
