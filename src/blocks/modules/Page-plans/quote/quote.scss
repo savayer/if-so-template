@@ -6,6 +6,7 @@
     .container {
         @extend %header_unskew;
     }
+    @include max(450) { padding: 110px 0 60px; }
 }
 
 .quote__text {
@@ -17,7 +18,12 @@
     color: $text-color;
     text-align: center;
     position: relative;
-
+    @include lg(font-size, 24px);
+    @include lg(max-width, 650px);
+    @include max(780) { max-width: 550px; font-size: 22px; }
+    @include max(600) { max-width: 85% }
+    @include sm(max-width, 92%);
+    @include xs(font-size, 20px);
     &::before {
         content: '';
         position: absolute;
@@ -26,6 +32,16 @@
         width: 103px;
         height: 91px;
         background: url(../../../../img/svg/quote_left.svg) center center/contain no-repeat;
+        @include max(992) {
+            width: 80px;
+            height: 70px;
+            left: -60px;
+        }
+        @include max(780) {
+            width: 70px;
+            height: 50px;
+            left: -30px;
+        }
     }
     &::after {
         content: '';
@@ -35,6 +51,17 @@
         width: 103px;
         height: 91px;
         background: url(../../../../img/svg/quote_right.svg) center center/contain no-repeat;
+        @include max(992) {
+            width: 80px;
+            height: 70px;
+            right: -60px;
+        }
+        @include max(780) {
+            width: 70px;
+            height: 50px;
+            right: -30px;
+            top: -56px;
+        }
     }
 }
 
@@ -43,6 +70,10 @@
     margin-top: 30px;
     text-align: center;
     font-style: oblique;
+    @include max(450) {
+        font-size: 16px;
+        margin-top: 80px;
+    }
 }
 
 .author__name {
