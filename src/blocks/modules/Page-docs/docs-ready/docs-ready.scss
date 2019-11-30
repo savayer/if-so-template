@@ -7,6 +7,8 @@
     transform: skew(0, 4.28deg);
     margin-bottom: -134px;
     box-shadow: inset 0 -34px 70px rgba(255, 255, 255, 0.24);
+    @include xl(margin-bottom, -114px);
+    @include max(1000) { margin-bottom: -100px; }
 }
 
 .docs_ready__wrapper {
@@ -35,6 +37,26 @@
     left: 30%;
     display: block;
     background: url(../../../../img/svg/docs_ready_bubble_sm.svg) center/contain no-repeat;
+    @include max(1550) { left: 23%; }
+    @include max(1200) {
+        width: 60px;
+        height: 60px;
+        top: -20px;
+    }
+    @include max(900) { left: 15% }
+    @include max(768) {
+        width: 40px;
+        height: 40px;
+        top: -40px;
+        left: 12%;
+    }
+    @include max(500) {
+        width: 35px;
+        opacity: .9;
+        top: 80px;
+        left: 80px;
+    }
+    @include xs(top, 50px);
 }
 
 .docs_ready__bubble_lg {
@@ -45,4 +67,15 @@
     left: 20%;
     display: block;
     background: url(../../../../img/svg/docs_ready_bubble_lg.svg) center/contain no-repeat;
+    @include max(1550) { left: 12%; }
+    @include max(1200) { width: 170px; height: 160px; }
+    @include max(900) { left: 2% }
+    @include max(768) { width: 120px; height: 160px; }
+    @include max(500) {
+        top: -50px;
+        z-index: -1;
+        opacity: .9;
+        width: 100px;
+    }
+    @include xs(top, -80px);
 }

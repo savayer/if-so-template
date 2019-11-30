@@ -12,7 +12,12 @@
         &:nth-child(1) {
             margin-left: 40px;
         }
+        @include max(500) {
+            margin-left: 0 !important;
+            display: inline;
+        }
     }
+    @include max(500) { padding-left: 0; }
 }
 
 .docs__introtext {
@@ -27,6 +32,9 @@
         @include lg(font-size, 22px);
         @include md(font-size, 20px);
         @include xs(font-size, 18px);
+        @include max(500) {
+            margin-left: 0 !important;
+        }
         
         &:nth-child(1) {
             margin-left: 30px;            
@@ -45,12 +53,23 @@
     @include col();
     @include size(3);
     position: relative;
+    @include max(800) {
+        @include size(12);
+        order: 2;
+        margin-top: 80px;
+    }
 }
 
 .docs__content {
     @include col();
     @include size(9);
     padding: 0 70px;    
+    @include max(800) {
+        @include size(12);
+        order: 1;
+    }
+    @include md(padding, 0 15px);
+    @include xs(padding, 0 7px);
 }
 
 .docs__bubble_sm {
@@ -59,8 +78,10 @@
     position: absolute;    
     top: 60%;
     left: 330px;
+    z-index: -1;
     display: block;
     background: url(../../../../img/svg/docs_bubble_sm.svg) center/contain no-repeat;
+    @include max(800) { display: none; }
 }
 
 .docs__bubble_lg {
@@ -70,17 +91,27 @@
     top: 60%;
     left: 70px;
     display: block;
+    z-index: -1;
     background: url(../../../../img/svg/docs_bubble_lg.svg) center/contain no-repeat;    
+    @include max(800) { display: none; }
 }
 
 .visitors__bubble1--docs {
-    top: 25%;
-    right: 170px;
+    z-index: -1;
+    top: 25% !important;
+    right: 170px !important;
+    @include max(1400) { right: 120px !important; }
+    @include max(1150) { right: 90px !important; }
+    @include max(900) { right: 100px !important; }
+    @include md(right, 70px !important);
+    @include xs(right, 25px !important);
+    @include max(350) { right: 35px !important }
 }
 
 .visitors__bubble2--docs {
-    top: 25%;
-    right: -5%;
+    z-index: -1;
+    top: 25% !important;
+    right: -5% !important;
 }
 
 .docs__texts {
@@ -110,6 +141,7 @@
 .widget__list_item {
     margin: 30px 0;
     padding-left: 15px;
+    padding-right: 15px;
     position: relative;
     &:before {
         content: '';
@@ -168,6 +200,8 @@
     li {
         display: inline-block;
         margin-right: 35px;
+        margin-bottom: 15px;
+        @include max(500) { margin-right: 0; }
         &:first-child {
             font-family: 'FuturaBold';
             font-size: 26px;
