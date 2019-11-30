@@ -134,6 +134,7 @@
     position: fixed;
     height: 100vh;
     min-width: 300px;
+    z-index: 9999;
     top: 0;
     right: 0;
     bottom: 0;
@@ -156,7 +157,7 @@
     display: none;
     margin-left: auto;
     position: relative;
-    z-index: 100;
+    z-index: 99999;
     cursor: pointer;
     @include max(840) {
         display: block;

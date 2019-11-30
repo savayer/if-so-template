@@ -63,6 +63,7 @@ a {
     font-family: 'FuturaBold';
     font-weight: 700;
     line-height: 1;
+    &.noindex { z-index: 0; }
     @include max(1300) {
         font-size: 56px;
     }

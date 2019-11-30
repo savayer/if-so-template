@@ -34,6 +34,7 @@
         @include xs(font-size, 18px);
         @include max(500) {
             margin-left: 0 !important;
+            display: inline;
         }
         
         &:nth-child(1) {
