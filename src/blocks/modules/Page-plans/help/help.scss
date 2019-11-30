@@ -1,10 +1,9 @@
-.help_section {
-    margin-top: 100px;
-}
-
 .help_section__title {
     text-align: center;
     word-spacing: -10px;
+    br {
+        @include max(600) { display: none; }
+    }
 }
 
 .help_section__introtext {
@@ -38,7 +37,8 @@
 }
 
 .help_section__helpers {
-    margin-top: 70px;
+    margin-top: 70px;    
+    @include xs(margin-top, 30px)
 }
 
 .helpers {
@@ -47,21 +47,33 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    @include max(800) {
+        margin-left: -80px;
+    }
+    @include max(500) {
+        margin-left: 0;
+        justify-content: center;
+    }
 }
 
 .helpers__item {
-    font-family: "Open Sans", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+    display: flex;
+    align-items: center;
+    span {
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        padding-left: 20px;
+        padding-right: 10px;
+    }
     margin: 30px 0;
-    width: 40%;    
-    &:before {
-        content: '';        
+    width: 40%;
+    @include max(500) { width: 80%; }
+    @include xs(width, 90%);
+    .checked {
         width: 30px;
         height: 30px;
         background: url(../../../../img/svg/checked.svg) center/contain no-repeat;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 20px;
+        display: block;
     }
 }

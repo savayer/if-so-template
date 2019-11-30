@@ -19,7 +19,11 @@ $items.forEach(item => {
         } else {
             removeOtherSelected()
             this.classList.add('selected')
-            $answer.style.margin = '20px auto 40px'
+            if (document.documentElement.clientWidth <= 400) {
+                $answer.style.margin = '12px auto 35px'
+            } else {
+                $answer.style.margin = '20px auto 40px'
+            }
             $answer.style.height = $answer.scrollHeight + 'px'
         }
     })

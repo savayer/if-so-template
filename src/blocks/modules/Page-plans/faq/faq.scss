@@ -1,6 +1,9 @@
 .faq {
     margin: 180px 0 140px;
     position: relative;
+    @include max(800) {
+        margin: 100px 0 140px;
+    }
 }
 
 .faq__title {
@@ -12,6 +15,7 @@
     padding: 0;
     list-style: none;
     max-width: 700px;
+    @include md(max-width, 90%);
 }
 
 .faq__item {
@@ -21,6 +25,9 @@
     text-align: center;
     margin: 30px 0;
     cursor: pointer;
+    position: relative;
+    z-index: 100;
+    @include xs(font-size, 18px);
 }
 
 .faq__answer {
@@ -33,6 +40,7 @@
     line-height: 1.6;
     position: relative;
     z-index: 100;
+    @include xs(font-size, 16px);
 }
 
 .faq__hr {
@@ -50,6 +58,7 @@
     width: 80px;
     height: 80px;
     background: url(../../../../img/svg/faq_bubble_sm.svg) center/contain no-repeat;
+    @include md(opacity, 0.6);
 }
 
 .faq__bubble_lg {
@@ -59,4 +68,5 @@
     width: 265px;
     height: 250px;
     background: url(../../../../img/svg/faq_bubble_lg.svg) center/contain no-repeat;
+    @include md(opacity, 0.6);
 }
