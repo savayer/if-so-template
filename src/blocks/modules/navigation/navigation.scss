@@ -58,13 +58,13 @@
     @include max(1550) {
         margin: 0 45px;
     }
-    @include max(1400) {
+    @include max(1420) {
         margin: 0 35px;
     }
-    @include max(1300) {
+    @include max(1320) {
         margin: 0 25px;
     }
-    @include max(1200) {
+    @include max(1210) {
         margin: 0 15px;
     }
 }
@@ -96,7 +96,7 @@
     background: #fff;
     border: 2px solid $text_color;
     border-radius: 40px;
-    padding: 10px 15px 10px 40px;
+    padding: 10px 15px 10px 35px;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;

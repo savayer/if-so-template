@@ -6,11 +6,26 @@
         background: #fff;
         transform: skew(0, -2.8deg) translateZ(0);
     }
+    @include xl(min-height, 300px !important)
 }
 
 .header__container--docs {
     height: 240px;
     transform: skew(0, -2.8deg) translateZ(0);
+    @include xl(height, 200px);
+    @include max(880) {
+        padding-right: 0;
+        padding-bottom: 10%;
+        height: 270px;
+    }
+    @include max(730) {
+        padding-bottom: 110px !important;        
+    }
+}
+
+.header__content--docs {
+    @include max(730) { max-width: 100% !important; margin-top: auto !important; }
+    @include max(450) { text-align: center; }
 }
 
 .header__title--docs {
@@ -51,4 +66,10 @@
     position: absolute;
     right: 40px;
     bottom: -29px;
+    @include max(1450) { right: 0; }
+    @include max(1400) { width: 530px; height: 240px; }
+    @include max(1200) { width: 450px; height: 210px; }
+    @include max(1030) { width: 400px; height: 195px; }
+    @include max(940) { width: 360px; height: 180px; }
+    @include max(370) { width: 320px; height: 167px; }
 }
