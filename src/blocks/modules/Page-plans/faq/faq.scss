@@ -28,6 +28,9 @@
     position: relative;
     z-index: 100;
     @include xs(font-size, 18px);
+    &.selected {
+        font-weight: 600;
+    }
 }
 
 .faq__answer {

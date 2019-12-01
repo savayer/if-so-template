@@ -160,7 +160,7 @@
 }
 
 .plan__price {
-    margin-top: 50px;
+    margin-top: 15px;
     color: #fff;    
     font-size: 96px;
     @include max(1100) {
@@ -170,19 +170,18 @@
     text-transform: uppercase;
     text-align: center;
     font-family: 'FuturaBold', 'Futura', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     span {
         color: $text-color;
         font-weight: 700;
-        font-family: 'FuturaBold', 'Futura', sans-serif;
-        &:nth-child(1) {
+        font-family: 'FuturaBold', 'Futura', sans-serif;        
+        font-size: 60px;
+        position: relative;
+        &:before {
+            content: '$';
+            position: absolute;
+            left: -20px;
             font-size: 30px;
-        }
-
-        &:nth-child(2) {
-            font-size: 60px;            
+            top: calc(60px/2 - 30px/2);
         }
     }
 }
