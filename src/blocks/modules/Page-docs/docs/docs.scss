@@ -69,6 +69,8 @@
 }
 
 .docs__content {
+    position: static;
+    z-index: -1;
     @include col();
     @include size(9);
     padding: 0 0 0 70px;    
