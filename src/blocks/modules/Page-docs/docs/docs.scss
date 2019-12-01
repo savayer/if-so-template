@@ -1,6 +1,13 @@
 .docs {
-    margin-top: 110px;
+    margin-top: 80px;
     position: relative;
+}
+
+.docs__wrapper {
+    margin: auto;
+    max-width: 1020px;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
 }
 
 .docs__title {
@@ -64,7 +71,7 @@
 .docs__content {
     @include col();
     @include size(9);
-    padding: 0 70px;    
+    padding: 0 0 0 70px;    
     @include max(800) {
         @include size(12);
         order: 1;

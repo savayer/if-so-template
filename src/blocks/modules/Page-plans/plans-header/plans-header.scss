@@ -28,7 +28,7 @@
     margin-top: 80px;
     padding-left: 290px;
     @include max(1500) { padding-left: 0; }
-    @include max(1200) { flex-wrap: wrap; }
+    @include max(1000) { flex-wrap: wrap; }
 }
 
 .plans__col {
@@ -50,18 +50,19 @@
             z-index: 1;
         }
     }
-    @include max(1200) {
+    @include max(1000) {
         @include col();
         @include size(5);
         margin-bottom: 50px;
     }
     @include max(900) { @include size(6) }
-    @include size-md(10);
+    @include max(650) {
+        @include size(10);
+    }
 }
 
 .plans__item {
     min-width: 300px;
-    max-width: 330px;
     height: 400px;
     padding: 30px 40px;
     background-color: #fff;
@@ -76,7 +77,36 @@
 
     @include max(1200) {
         padding: 30px 20px;   
-        margin: auto;     
+        min-width: 270px;
+        max-width: 290px;
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    @include max(1100) {
+        padding: 30px 8px;
+        &.active {
+            padding: 30px 10px;
+        }
+        min-width: 250px;
+        max-width: 270px;
+        margin-left: -2px;
+        margin-right: -2px;
+    }
+    @include max(1050) {
+        min-width: 230px;
+        max-width: 250px;
+        margin-left: -4px;
+        margin-right: -4px;
+        &.acitve {
+            max-width: 270px;
+        }
+    }
+    @include max(1000) {
+        padding: 30px 20px;
+        &.active { padding: 30px 20px; max-width: 290px; }
+        min-width: 270px;
+        max-width: 290px;
+        margin: auto;
     }
     @include xs(max-width, 100%);
     @include xs(min-width, auto);
@@ -132,7 +162,9 @@
     margin-top: 50px;
     color: #fff;    
     font-size: 96px;
-    @include xs(font-size, 86px);
+    @include max(1100) {
+        font-size: 86px;
+    }
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
