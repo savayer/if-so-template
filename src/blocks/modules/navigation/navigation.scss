@@ -18,6 +18,9 @@
             display: none;
         }
     }
+    &.fff {
+        background: #fff;
+    }
 }
 
 .menu {
@@ -131,7 +134,7 @@
 
 
 .navigation__menu_wrapper {
-    position: fixed;
+    position: absolute;
     height: 100vh;
     min-width: 300px;
     z-index: 9999;

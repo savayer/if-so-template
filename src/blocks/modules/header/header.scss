@@ -26,31 +26,25 @@
 .header__object {
     position: absolute;
     right: -30px;
-    top: -35px;
+    top: -135px;
     z-index: 9;
     z-index: -1;
     
     @extend %header_unskew;    
     @include min(1900) {    
-        top: -50px;
+        top: -155px;
     }
-    @include min(2200) {
-        top: -90px;
-    }    
-    @include max(1500) {        
-        top: -20px;
-    }    
     @include max(1300) {
         width: 830px;
-        top: -90px;
+        top: -215px;
     }
     @include max(1200) {
         width: 750px;
-        top: -87px;
+        top: -235px;
     }
     @include max(1000) {
         width: 680px;
-        top: -85px;
+        top: -240px;
     }
     @include max(700) {
         top: 15px;
@@ -88,10 +82,9 @@
     height: 69px;
     background: url(../../../img/cloud_left2.png) no-repeat;
     position: absolute;
-    top: 21%;
+    top: 6%;
     opacity: 0;
-    z-index: -1;
-    //left: -30px;
+    z-index: -1;    
     left: 25%;
     @extend %header_unskew;
     &.active {

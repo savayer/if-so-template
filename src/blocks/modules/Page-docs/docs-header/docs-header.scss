@@ -6,7 +6,13 @@
         background: #fff;
         transform: skew(0, -2.8deg) translateZ(0);
     }
-    @include xl(min-height, 300px !important)
+    margin-top: -104px;
+    padding-top: 104px;
+    @include xl(min-height, 300px !important);
+    @include max(1100) {
+        margin-top: -98px;
+        padding-top: 98px;
+    }
 }
 
 .header__container--docs {
