@@ -3,9 +3,6 @@
     position: relative;    
     background-image: linear-gradient(to top, rgba(235, 235, 235, 0.39)0%, #fff 100%);
     transform: $header_skew;
-    .navigation {        
-        @extend %header_unskew;        
-    }
     @include min(1900) {
         min-height: 670px;
     }    

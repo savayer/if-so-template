@@ -57,7 +57,7 @@ a {
     overflow-x: hidden;
 }
 
-.title {
+.title, .title span{
     color: $text_color;
     font-size: 60px;
     font-family: 'FuturaBold';
