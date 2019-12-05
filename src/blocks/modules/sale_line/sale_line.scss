@@ -9,7 +9,10 @@
     z-index: 100;
     strong {
         color: #fff;
+        font-size: 22px;
+        @include max(840) { font-size: 18px; }
         @include max(600) { display: block; }
+        @include max(400) { font-size: 16px; }
     }
     @include max(840) { font-size: 18px; }
     @include max(400) { font-size: 16px; }

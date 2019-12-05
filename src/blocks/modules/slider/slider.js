@@ -4,6 +4,7 @@ import 'slick-carousel';
 $('.slider__items').slick({
     slidesToScroll: 4,
     slidesToShow: 4,
+    arrows: false,
     infinite: true,
     autoplay: true,
     speed: 700,
