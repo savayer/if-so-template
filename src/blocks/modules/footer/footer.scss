@@ -201,16 +201,18 @@
                 margin-left: 0;
             }
         }
+
+        @each $class, $image in $socials {
+            &.#{$class} a {
+                background: url(../../../img/social/#{$image}.svg) center/contain no-repeat;
+            }
+        }
     }
     a {
         display: block;
         width: 30px;
-        height: 25px;        
-        @each $class, $image in $socials {
-            &.#{$class} {
-                background: url(../../../img/social/#{$image}.svg) center/contain no-repeat;
-            }
-        }
+        height: 25px;
+        font-size: 0;
     }
 }
 
