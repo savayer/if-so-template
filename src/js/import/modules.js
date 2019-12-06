@@ -11,6 +11,8 @@ import "%modules%/footer/footer";
 
 import "%modules%/Page-plans/faq/faq";
 
+import "%modules%/Free-trial-modal/modal";
+
 import AOS from 'aos';
 
 AOS.init({
