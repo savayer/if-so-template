@@ -1,5 +1,5 @@
 .examples {
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 .examples__item {
@@ -10,33 +10,50 @@
         .example__content {
             margin-left: 0;    
             margin-right: 80px;
+            @include lg(margin-right, 0);
         }
         .example__container {
             flex-direction: row-reverse;
+            @include lg(flex-direction, column);
         }
         .try_it--example {
             background-color: #4cb5d2;
         }
         .example__introtext span:nth-child(1) { margin-left: 0; }
-        .example__introtext span:nth-child(2) { margin-left: 15px; }
+        .example__introtext span:nth-child(2) { margin-left: 15px; @include sm(margin-left, 0); }
     }
+    @include sm(padding, 40px 0);
+    @include sm(margin, 30px 0);
 }
 
 .example__container {
     display: flex;
     align-items: center;
+    @include xl(flex-wrap, wrap);
+    @include xl(flex-direction, column);
 }
 
 .example__content {
     @include col();
     @include size(6);
-    margin-left: 80px;    
+    margin-left: 80px;  
     margin-right: 0;
+    @include size-lg(7);
+    @include lg(order, 1);
+    @include lg(margin-left, 0);
+    @include size-md(9);
+    @include size-sm(12);
 }
 
 .example__image {
     @include col();
     @include size(5);
+    @include size-lg(6);
+    @include lg(order, 2);
+    @include lg(margin-top, 40px);
+    @include size-md(8);
+    @include size-sm(10);
+    @include size-xs(12);
     img {
         width: 100%;
     }
@@ -45,9 +62,15 @@
 .example__title {
     font-family: 'FuturaBold';
     font-size: 50px;
+    word-spacing: -4px;
     font-weight: 700;
     color: $text-color;
     padding-left: 15px;
+    @include md(font-size, 46px);
+    @include sm(font-size, 40px);
+    @include sm(padding-left, 0);
+    @include xs(font-size, 36px);
+    @include max(360) { font-size: 32px; }
 }
 
 .example__introtext {
@@ -59,12 +82,16 @@
         display: block;
         &:nth-child(1) {
             margin-left: 15px;
+            @include sm(margin-left, 0);
         }
+        @include md(font-size, 16px);
+        @include sm(display, inline);
     }
 }
 
 .example__text {
     margin-top: 15px;
+    @include sm(margin-top, 5px);
     span {
         font-family: "Open Sans", sans-serif;
         font-size: 18px;
@@ -73,7 +100,10 @@
         display: block;
         &:nth-child(2) {
             margin-left: 15px;
+            @include lg(margin-left, 0);
         }
+        @include xl(font-size, 16px);
+        @include lg(display, inline);
     }
 }
 
