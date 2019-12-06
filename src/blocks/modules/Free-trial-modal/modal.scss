@@ -8,12 +8,12 @@
     height: 100vh;
     &.show-modal {
         opacity: 1;
-        z-index: 100;
+        z-index: 1000;
         .modal__overlay, .modal__form {
             transform: translateX(0);
         }
     }
-    .try_it--button {
+    .try_it--plan {
         background: #f05b6d;
     }
 }
@@ -28,7 +28,7 @@
     overflow: hidden;
     background: rgba(0, 0, 0, 0.85);
     transform: translateX(100%);
-    transition: .8s ease-out;
+    transition: .7s ease-out;
 }
 
 .modal__form {
@@ -37,25 +37,102 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 101;
+    z-index: 1001;
     background: #fff;
-    transition: .6 ease-in;
-    transform: translateX(30%);
+    transition: 1.3s ease-in;
+    transform: translateX(100%);
+}
+
+.modal__explanation {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    &--blur {
+        filter: blur(5px);
+    }
+}
+
+.m-explain__content {
+    margin: auto;
+    max-width: 70%;    
+}
+
+.m-explain__list {
+    padding: 0;
+    list-style: none;
+    margin-top: 15px;
+}
+
+.m-explain__list_item {
+    color: #fff;
+    font-size: 30px;
+    font-family: 'FuturaBold';
+    font-weight: 700;
+    position: relative;
+    line-height: 1.5;
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i+1}) {
+            margin-left: calc(40px * #{$i});            
+        }
+    }
+    .num {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: -55px;
+        top: 1px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        span {
+            margin: auto;
+            line-height: 1;
+            font-size: 30px;
+            color: #fff;
+            font-family: "Open Sans", sans-serif;
+        };
+    }
+}
+
+.m-explain__title {
+    span {
+        color: #fff;
+        display: block;
+        &:nth-child(2) {
+            margin-left: 40px;
+        }
+    }
 }
 
 .m-form__header {
     background: #6665e7;
-    min-height: 300px;
+    min-height: 220px;
     display: flex;
     position: relative;
 }
 
 .modal__close {
+    position: absolute;
+    z-index: 1001;
+    width: 16px;
+    height: 16px;
+    top: 25px;
+    left: 30px;
+    cursor: pointer;
+    &:hover {
+        &:before {
+            transform: rotate(135deg);
+        }
+        &:after {
+            transform: rotate(45deg);
+        }
+
+    }
     &:after, &:before {
         content: " ";
         position: absolute;
-        top: 15px;
-        left: 15px;
+        top: 0;
+        left: 7px;
         height: 16px;
         width: 2px;
         background-color: #fff;
@@ -71,13 +148,12 @@
     margin: auto;
     span {
         color: #fff;
-        text-align: center;
         font-size: 40px;
         font-family: 'FuturaBold';
         font-weight: 700;
         display: block;
         &:nth-child(2) {
-            margin-left: 20px;
+            margin-left: 85px;
         }
     }
 }
