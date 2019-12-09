@@ -9,37 +9,37 @@ import $ from 'jquery'
 function animateOverlay(el, dur, close = false, closeOverlay = false) {
     let fake = {}
 
-    fake.fake = close ? 0 : 100
+    fake.fake = close ? 0 : 125
     $(el).animate(fake, {
         step(now, fx) {
-            now = 100 - now
+            now = 125 - now
             $(this).css('transform', 'translateX(' + now + '%)');
         },
         done() {
             if (closeOverlay) {
                 $modal.classList.remove('showed')
-                document.body.classList.remove('overflow-hidden');
             }
         },
         duration: dur
-    }, 'ease-out')
+    }, 'cubic-bezier(0.55, 0.085, 0.68, 0.53)')
 }
 
 if ($links && $modal) {
     $links.forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault()
-            document.body.classList.add('overflow-hidden');
             $modal.classList.add('showed')
 
-            animateOverlay($modalOverlay, 670)
-            animateOverlay($modalForm, 1200)
+            animateOverlay($modalOverlay, 800)
+            animateOverlay($modalForm, 1500)
+            document.body.classList.add('overflow-hidden');
         })
     })
 }
 if ($closeModal) {
     $closeModal.addEventListener('click', () => {
         animateOverlay($modalOverlay, 500, true, true)
-        animateOverlay($modalForm, 400, true)
+        animateOverlay($modalForm, 350, true)
+        document.body.classList.remove('overflow-hidden');
     })
 }
