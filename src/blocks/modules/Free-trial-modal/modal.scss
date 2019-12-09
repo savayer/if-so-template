@@ -9,6 +9,9 @@
     &.showed {
         opacity: 1;
         z-index: 1000;
+        .m-form__title span {            
+            padding-top: 0;
+        }
     }
     .try_it--plan {
         background: #f05b6d;
@@ -24,25 +27,6 @@
     height: 100vh;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.95);
-}
-
-.modal__form {
-    width: 30%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1001;
-    background: #fff;
-}
-
-.modal__man {
-    position: fixed;
-    bottom: -30px;
-    left: -162px;
-    width: 220px;
-    height: 330px;
-    background: url(../../../img/modal/modal_man.png) center/contain no-repeat;
 }
 
 .modal__explanation {
@@ -115,178 +99,4 @@
     }
 }
 
-.m-form__header {
-    background: #6665e7;
-    min-height: 220px;
-    display: flex;
-    position: relative;
-}
-
-.m-form__body {
-    position: relative;
-    // height: calc(100vh - 220px);
-    padding: 40px 100px;
-}
-
-.modal__close {
-    position: absolute;
-    z-index: 1001;
-    width: 16px;
-    height: 16px;
-    top: 25px;
-    left: 30px;
-    cursor: pointer;
-    &:hover {
-        &:before {
-            transform: rotate(135deg);
-        }
-        &:after {
-            transform: rotate(45deg);
-        }
-    }
-    &:after,
-    &:before {
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 7px;
-        height: 16px;
-        width: 2px;
-        background-color: #fff;
-        transform: rotate(45deg);
-        transition: 0.2s;
-    }
-    &:after {
-        transform: rotate(-45deg);
-    }
-}
-
-.m-form__title {
-    margin: auto;
-    span {
-        color: #fff;
-        font-size: 40px;
-        font-family: 'FuturaBold';
-        font-weight: 700;
-        display: block;
-        &:nth-child(2) {
-            margin-left: 85px;
-        }
-    }
-}
-
-.m-form__list {
-    list-style: none;
-}
-
-.m-form__list_item {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 2.5;
-    letter-spacing: -0.17px;
-    position: relative;
-    &:before {
-        content: '';
-        position: absolute;
-        left: -35px;
-        top: 12px;
-        background: url(./../../../img/modal/modal_checkmark.svg) center/contain no-repeat;
-        width: 24px;
-        height: 18px;
-    }
-}
-
-.m-form__label {
-    font-family: "Open Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    margin: 25px 0 5px;
-    display: block;
-}
-
-.m-form__input {
-    margin: 15px 0;
-    border-radius: 32px;
-    border: 2px solid #1e0547;
-    background-color: #fff;
-    padding: 10px 20px;
-    width: 100%;
-    font-family: "Open Sans";
-    font-weight: 400;
-    font-size: 16px;
-    outline: none;
-    &::placeholder {
-        color: $text-color;
-        font-family: "Open Sans";
-        font-weight: 600;
-        font-style: italic;
-        font-size: 16px;
-    }
-}
-
-.m-form__group {
-    margin: 15px 0;
-}
-
-.m-form__button {
-    margin-top: 40px;
-}
-
-
-/****/
-
-.checkbox-wrapper {
-    &+span {
-        margin-left: 35px;
-    }
-    position: relative;
-    cursor: pointer;
-    font-size: 22px;
-    user-select: none;
-    input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-        &:checked~.border-arrow {
-            visibility: visible;
-        }
-        &:checked~.checkmark {
-            background-color: #fff;
-            &:hover {
-                background: transparent;
-            }
-        }
-        &:checked~.checkmark:after {
-            display: block;
-        }
-    }
-    .checkmark {
-        position: absolute;
-        top: 4px;
-        left: 0;
-        height: 20px;
-        width: 20px;
-        box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.11);
-        border-radius: 3px;
-        border: 1px solid #cccccc;
-        background-color: #ffffff;
-        &:after {
-            content: "";
-            position: absolute;
-            display: none;
-            left: 6px;
-            top: 3px;
-            width: 4px;
-            height: 8px;
-            border: solid #000;
-            border-width: 0 2px 2px 0;
-            transform: rotate(45deg);
-        }
-    }
-    &:hover input~.checkmark {
-        background-color: #e0e0e0;
-    }
-}
+@import 'modal_form';
