@@ -18,6 +18,7 @@ function animateOverlay(el, dur, close = false, closeOverlay = false) {
         done() {
             if (closeOverlay) {
                 $modal.classList.remove('showed')
+                document.body.classList.remove('overflow-hidden');
             }
         },
         duration: dur
@@ -38,7 +39,6 @@ if ($links && $modal) {
 }
 if ($closeModal) {
     $closeModal.addEventListener('click', () => {
-        document.body.classList.remove('overflow-hidden');
         animateOverlay($modalOverlay, 500, true, true)
         animateOverlay($modalForm, 400, true)
     })
