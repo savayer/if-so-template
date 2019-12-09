@@ -5,14 +5,15 @@ const $modalForm = document.querySelector('.modal__form')
 const $closeModal = document.querySelector('.modal__close')
 
 import $ from 'jquery'
+import '../../../../node_modules/jquery-ui/ui/effect'
 
-function animateOverlay(el, dur, close = false, closeOverlay = false) {
+function animateOverlay(el, dur, easing = 'linear', close = false, closeOverlay = false) {
     let fake = {}
 
     fake.fake = close ? 0 : 125
     $(el).animate(fake, {
         step(now, fx) {
-            now = 125 - now
+            now = 125 - now            
             $(this).css('transform', 'translateX(' + now + '%)');
         },
         done() {
@@ -20,8 +21,9 @@ function animateOverlay(el, dur, close = false, closeOverlay = false) {
                 $modal.classList.remove('showed')
             }
         },
+        easing,
         duration: dur
-    }, 'cubic-bezier(0.55, 0.085, 0.68, 0.53)')
+    })
 }
 
 if ($links && $modal) {
@@ -31,15 +33,15 @@ if ($links && $modal) {
             $modal.classList.add('showed')
 
             animateOverlay($modalOverlay, 800)
-            animateOverlay($modalForm, 1500)
+            animateOverlay($modalForm, 1300, 'easeOutQuad')
             document.body.classList.add('overflow-hidden');
         })
     })
 }
 if ($closeModal) {
     $closeModal.addEventListener('click', () => {
-        animateOverlay($modalOverlay, 500, true, true)
-        animateOverlay($modalForm, 350, true)
+        animateOverlay($modalOverlay, 500, '', true, true)
+        animateOverlay($modalForm, 350, '', true)
         document.body.classList.remove('overflow-hidden');
     })
 }

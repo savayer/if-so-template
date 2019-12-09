@@ -8,13 +8,14 @@
     &:nth-child(even) {
         background-color: #f6f9fb;
         .example__content {
-            margin-left: 0;    
+            margin-left: 0;
             margin-right: 80px;
-            @include lg(margin-right, 0);
+            @include lg(margin-right, 0.9375rem);
+            @include lg(margin-left, 0.9375rem);
         }
         .example__container {
             flex-direction: row-reverse;
-            @include lg(flex-direction, column);
+            @include max(800) { flex-direction: column; }
         }
         .try_it--example {
             background-color: #4cb5d2;
@@ -29,8 +30,8 @@
 .example__container {
     display: flex;
     align-items: center;
-    @include xl(flex-wrap, wrap);
-    @include xl(flex-direction, column);
+    flex-wrap: wrap;
+    @include max(800) { flex-direction: column; }
 }
 
 .example__content {
@@ -38,9 +39,12 @@
     @include size(6);
     margin-left: 80px;  
     margin-right: 0;
-    @include size-lg(7);
-    @include lg(order, 1);
-    @include lg(margin-left, 0);
+    @include lg(margin-left, 0.9375rem);
+    @include lg(margin-right, 0.9375rem);
+    @include max(800) {
+        order: 1;
+        @include size(7);
+    }
     @include size-md(9);
     @include size-sm(12);
 }
@@ -49,11 +53,13 @@
     @include col();
     @include size(5);
     @include size-lg(6);
-    @include lg(order, 2);
-    @include lg(margin-top, 40px);
-    @include size-md(8);
+    @include max(800) {
+        order: 2;
+        margin-top: 40px;
+    }
+    
     @include size-sm(10);
-    @include size-xs(12);
+    @include size-xs(12); 
     img {
         width: 100%;
     }
@@ -66,8 +72,8 @@
     font-weight: 700;
     color: $text-color;
     padding-left: 15px;
-    @include md(font-size, 46px);
-    @include sm(font-size, 40px);
+    @include lg(font-size, 46px);
+    @include max(850) { font-size: 40px }
     @include sm(padding-left, 0);
     @include xs(font-size, 36px);
     @include max(360) { font-size: 32px; }
@@ -84,7 +90,7 @@
             margin-left: 15px;
             @include sm(margin-left, 0);
         }
-        @include md(font-size, 16px);
+        @include max(850) { font-size: 16px; }
         @include sm(display, inline);
     }
 }
