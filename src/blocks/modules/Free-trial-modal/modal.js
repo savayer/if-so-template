@@ -32,8 +32,21 @@ if ($links && $modal) {
             e.preventDefault()
             $modal.classList.add('showed')
 
-            animateOverlay($modalOverlay, 800)
-            animateOverlay($modalForm, 1300, 'easeOutQuad')
+            let overlaySpeed, formSpeed;
+
+            if (document.documentElement.clientWidth <= 700) {
+                overlaySpeed = 550
+                formSpeed = 800
+            } else if (document.documentElement.clientWidth <= 350) {
+                overlaySpeed = 250
+                formSpeed = 600
+            } else {
+                overlaySpeed = 800
+                formSpeed = 1300
+            }
+
+            animateOverlay($modalOverlay, overlaySpeed)
+            animateOverlay($modalForm, formSpeed, 'easeOutQuad')
             document.body.classList.add('overflow-hidden');
         })
     })

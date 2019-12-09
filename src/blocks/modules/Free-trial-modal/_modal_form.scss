@@ -6,6 +6,13 @@
     right: 0;
     z-index: 1001;
     background: #fff;
+
+    @include max(1600) { width: 35% }
+    @include max(1350) { width: 45% }
+    @include max(800) { width: 60% }
+    @include max(600) { width: 70% }
+    @include max(500) { width: 80% }
+    @include max(350) { width: 90% }
 }
 
 .modal__man {
@@ -15,13 +22,42 @@
     width: 220px;
     height: 330px;
     background: url(../../../img/modal/modal_man.png) center/contain no-repeat;
+    @include max(1200) {
+        left: -127px;
+        width: 170px;
+        height: 270px;
+    }
+    @include max(930) {
+        left: -105px;
+        width: 140px;
+        height: 240px;
+    }
+    @include max(600) {
+        left: -90px;
+        width: 120px;
+        height: 220px;
+    }
+    @include max(420) {
+        left: -75px;
+        width: 100px;
+        height: 190px;
+    }
+    @include max(350) {
+        display: none;
+    }
 }
+
+$min-height-header: 220px;
+$min-height800-header: 170px;
+$min-height600-header: 150px;
 
 .m-form__header {
     background: #6665e7;
-    min-height: 220px;
+    min-height: $min-height-header;
+    @include max(800) { min-height: $min-height800-header }
+    @include max(600) { min-height: $min-height600-header; }
     display: flex;
-    position: relative;
+    position: relative;    
 }
 
 .modal__close {
@@ -55,6 +91,11 @@
     &:after {
         transform: rotate(-45deg);
     }
+
+    @include max(600) {
+        top: 15px;
+        left: 15px;
+    }
 }
 
 .m-form__title {
@@ -64,24 +105,44 @@
         font-size: 40px;
         font-family: 'FuturaBold';
         font-weight: 700;
-        display: block;
-        
-        @include transitionPadding(40px);
-        
+        display: block;        
+        @include transitionPadding(40px);                
         &:nth-child(2) {
             margin-left: 85px;
+            @include lg(margin-left, 65px);
+            @include max(410) { margin-left: 35px }
         }
+
+        @include max(1200) { @include transitionPadding(36px); }                
+        @include max(992) { @include transitionPadding(32px); }
+        @include max(500) { @include transitionPadding(28px); }
+        @include max(410) { @include transitionPadding(24px); }
     }
 }
 
 .m-form__body {
     position: relative;
-    // height: calc(100vh - 220px);
+    height: calc(100vh - #{$min-height-header});
+    overflow-y: scroll;    
+    &::-webkit-scrollbar { width: 0; }    
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+
     padding: 40px 100px;
+    @include max(1220) { padding: 40px 80px; }
+    @include max(1120) { padding: 40px 65px; }
+    @include max(1070) { padding: 40px 10px 40px 60px; }
+    @include max(930) { padding: 40px 20px 40px 40px; }
+    @include max(800) { height: calc(100vh - #{$min-height800-header}); }
+    @include max(600) { height: calc(100vh - #{$min-height600-header}); padding-top: 25px; }
+    @include max(430) { padding: 25px 16px 40px 32px }
 }
 
 .m-form__list {
     list-style: none;
+    @include max(930) {
+        padding-left: 30px;
+    }
 }
 
 .m-form__list_item {
@@ -91,6 +152,8 @@
     line-height: 2.5;
     letter-spacing: -0.17px;
     position: relative;    
+    @include lg(line-height, 2);
+    @include max(500) { font-size: 16px; }
 
     &:before {
         content: '';
@@ -100,6 +163,8 @@
         background: url(./../../../img/modal/modal_checkmark.svg) center/contain no-repeat;
         width: 24px;
         height: 18px;
+        @include lg(top, 9px);
+        @include max(500) { top: 6px }
     }
 }
 
@@ -109,6 +174,12 @@
     font-weight: 700;
     margin: 25px 0 5px;
     display: block;
+    @include lg(font-size, 18px);
+    @include max(830) { font-size: 16px }
+    @include max(410) {
+        margin: 25px 0 0px;
+        font-size: 14px;
+    }
 }
 
 .m-form__input {
@@ -122,6 +193,10 @@
     font-weight: 400;
     font-size: 16px;
     outline: none;
+    @include max(1200) {
+        padding: 12px 20px;
+        width: 95%;
+    }
     &::placeholder {
         color: $text-color;
         font-family: "Open Sans";
@@ -133,10 +208,12 @@
 
 .m-form__group {
     margin: 15px 0;
+    @include max(410) { margin: 10px 0 }
 }
 
 .m-form__button {
     margin-top: 40px;
+    @include max(410) { margin-top: 30px }
 }
 
 
