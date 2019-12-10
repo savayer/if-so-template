@@ -47,15 +47,15 @@
     }
 }
 
-$min-height-header: 220px;
-$min-height800-header: 170px;
+$min-height-header: 170px;
 $min-height600-header: 150px;
+$min-height400-header: 130px;
 
 .m-form__header {
     background: #6665e7;
     min-height: $min-height-header;
-    @include max(800) { min-height: $min-height800-header }
     @include max(600) { min-height: $min-height600-header; }
+    @include max(400) { min-height: $min-height400-header; }
     display: flex;
     position: relative;    
 }
@@ -133,9 +133,13 @@ $min-height600-header: 150px;
     @include max(1120) { padding: 40px 65px; }
     @include max(1070) { padding: 40px 10px 40px 60px; }
     @include max(930) { padding: 40px 20px 40px 40px; }
-    @include max(800) { height: calc(100vh - #{$min-height800-header}); }
     @include max(600) { height: calc(100vh - #{$min-height600-header}); padding-top: 25px; }
+    @include max(400) { height: calc(100vh - #{$min-height400-header}); }
     @include max(430) { padding: 25px 16px 40px 32px }
+    @include max(400) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 
 .m-form__list {

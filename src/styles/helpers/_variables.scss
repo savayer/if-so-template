@@ -24,42 +24,40 @@ $socials: ( //class: image
 'ln': 'ln', 'yt': 'yt', 'tw': 'tw', 'fb': 'fb', 'inst': 'inst', );
 $linesColors: ( 1: #5f49d2, 2: #4cb5d2, 3: #f87979, 4: #e9921b, 5: #f06edc, 6: #00aeef, 7: #f87979, 8: #836cfe, 9: #47b6d4, 10: #02a0fa, 11: #f68e56, 12: #f7941d);
 
-@mixin transitionPadding($height) {
-    max-height: $height;
-    overflow: hidden;
-    padding-top: $height;
+@mixin transitionProp {
     transition: 1s;
-    transition-delay: .15s;
-    font-size: $height;
+    transition-delay: .15s;    
     @include max(350) {
         transition: .8s;
     }
 }
 
+@mixin transitionPadding($height) {
+    max-height: $height;
+    overflow: hidden;
+    padding-top: $height;
+    font-size: $height;
+    @include transitionProp;
+}
+
 @mixin transitionPaddingList($height) {
     max-height: $height+4;
     overflow: hidden;
-    padding-top: $height+4;
-    transition: 1s;
-    transition-delay: .4s;
+    padding-top: $height+4;    
     font-size: $height;
     &:before {
         transform: translateY($height+4);
         transition: 1s;
         transition-delay: .4s;
     }
-    @include max(350) {
-        transition: .8s;
-    }
+    @include transitionProp;
 }
 
 @mixin transitionPaddingLabel($height) {
     overflow: hidden;
-    max-height: 30px;
     padding-top: 30px;
     opacity: 0;
-    transition: .7s;
-    transition-delay: .6s;
+    @include transitionProp;
 }
 
 @mixin transitionPaddingEmail($height) {
@@ -67,8 +65,7 @@ $linesColors: ( 1: #5f49d2, 2: #4cb5d2, 3: #f87979, 4: #e9921b, 5: #f06edc, 6: #
     max-height: $height+30;
     padding-top: 20px;
     opacity: 0;
-    transition: .7s;
-    transition-delay: .7s;
+    @include transitionProp;
 }
 
 @mixin transitionPaddingGroup2($height) {
@@ -76,8 +73,7 @@ $linesColors: ( 1: #5f49d2, 2: #4cb5d2, 3: #f87979, 4: #e9921b, 5: #f06edc, 6: #
     max-height: $height;
     padding-top: 30px;
     opacity: 0;
-    transition: .7s;
-    transition-delay: .9s;
+    @include transitionProp;
 }
 
 @mixin transitionPaddingGroup3($height) {
@@ -85,8 +81,7 @@ $linesColors: ( 1: #5f49d2, 2: #4cb5d2, 3: #f87979, 4: #e9921b, 5: #f06edc, 6: #
     max-height: $height;
     padding-top: 30px;
     opacity: 0;
-    transition: .7s;
-    transition-delay: 1.1s;
+    @include transitionProp;
 }
 
 @mixin transitionPaddingButton($height) {
@@ -94,6 +89,5 @@ $linesColors: ( 1: #5f49d2, 2: #4cb5d2, 3: #f87979, 4: #e9921b, 5: #f06edc, 6: #
     max-height: $height;
     padding-top: 30px;
     opacity: 0;
-    transition: .7s;
-    transition-delay: 1.4s;
+    @include transitionProp;
 }
