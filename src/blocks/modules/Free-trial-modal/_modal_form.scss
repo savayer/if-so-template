@@ -140,32 +140,34 @@ $min-height600-header: 150px;
 
 .m-form__list {
     list-style: none;
+    margin-left: -35px;
     @include max(930) {
         padding-left: 30px;
     }
 }
 
 .m-form__list_item {
+    @include transitionPaddingList(18px);
+    padding-left: 35px;    
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 2.5;
+    display: block;
+    line-height: 1.2;
     letter-spacing: -0.17px;
-    position: relative;    
-    @include lg(line-height, 2);
-    @include max(500) { font-size: 16px; }
-
+    font-size: 18px;        
+    margin: 18px 0;
+    position: relative;
     &:before {
         content: '';
         position: absolute;
-        left: -35px;
-        top: 12px;
+        left: 0;
+        top: 1px;
         background: url(./../../../img/modal/modal_checkmark.svg) center/contain no-repeat;
         width: 24px;
         height: 18px;
-        @include lg(top, 9px);
-        @include max(500) { top: 6px }
-    }
+        @include max(500) { top: -1px }
+    }    
+    @include max(500) { font-size: 16px; }    
 }
 
 .m-form__label {
@@ -174,12 +176,27 @@ $min-height600-header: 150px;
     font-weight: 700;
     margin: 25px 0 5px;
     display: block;
+    @include transitionPaddingLabel(20px);
+
     @include lg(font-size, 18px);
     @include max(830) { font-size: 16px }
     @include max(410) {
         margin: 25px 0 0px;
         font-size: 14px;
     }
+
+}
+
+.m-form__input_wrapper {
+    @include transitionPaddingEmail(52px);
+}
+
+.m-form__group--2 {
+    @include transitionPaddingGroup2(30px)
+}
+
+.m-form__group--3 {
+    @include transitionPaddingGroup3(30px)
 }
 
 .m-form__input {
@@ -214,6 +231,7 @@ $min-height600-header: 150px;
 .m-form__button {
     margin-top: 40px;
     @include max(410) { margin-top: 30px }
+    @include transitionPaddingButton(50px)
 }
 
 
