@@ -146,60 +146,59 @@
 .widget__list {
     list-style: none;
     margin-top: 30px;
-}
-
-.widget__list_item {
-    margin: 30px 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    &:before {
-        content: '';
-        position: absolute;
-        bottom: -14px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: rgba(137, 117, 248, 0.3);
-    }
-    &:last-child:before {
-        content: none;
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: calc(50% - 7px);
-        width: 6px;
-        height: 14px;
-        display: block;
-        transition: .2s;
-        background: url(../../../../img/svg/list-arrow.svg) center/contain no-repeat;
-    }
-    &.active {
-        color: #fd5b56;
+    li {
+        margin: 30px 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: rgba(137, 117, 248, 0.3);
+        }
+        &:last-child:before {
+            content: none;
+        }
         &:after {
-            right: -10px;
-            background: url(../../../../img/svg/list-arrow-active.svg) center/contain no-repeat;
+            content: '';
+            position: absolute;
+            right: 0;
+            top: calc(50% - 7px);
+            width: 6px;
+            height: 14px;
+            display: block;
+            transition: .2s;
+            background: url(../../../../img/svg/list-arrow.svg) center/contain no-repeat;
+        }
+        &.active {
+            color: #fd5b56;
+            &:after {
+                right: -10px;
+                background: url(../../../../img/svg/list-arrow-active.svg) center/contain no-repeat;
+            }
+            a {
+                color: #fd5b56
+            }
+        }
+        &:hover {
+            &:after {
+                right: -10px;
+            }
         }
         a {
-            color: #fd5b56
-        }
-    }
-    &:hover {
-        &:after {
-            right: -10px;
-        }
-    }
-    a {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 400;
-        font-size: 18px;
-        color: $text_color;
-        text-decoration: none;
-        @extend %noAnimationLine;
-        &:hover {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: $text_color;
             text-decoration: none;
+            @extend %noAnimationLine;
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }

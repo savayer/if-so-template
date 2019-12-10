@@ -46,14 +46,21 @@
             content: '/';
             color: #fff;
         }
+        &:last-child {
+            padding-left: 6px;
+        }
         &:last-child:after {
             content: none;
         }
     }   
     a {
-        color: #fff;
         margin: 0 6px;
+        color: #fff;
         font-family: "Open Sans", sans-serif;
+        span {
+            color: #fff;
+            font-family: "Open Sans", sans-serif;
+        }
         &:after {
             background: #fff;
         }
