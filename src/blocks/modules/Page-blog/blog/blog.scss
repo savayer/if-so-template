@@ -7,6 +7,11 @@
     margin: 1.75rem 0;
     @include md(margin, 2rem 0);
     justify-content: center;
+    &--current {
+        max-width: 680px;
+        margin: auto !important;
+        @include md(max-width, 90%);        
+    }
 }
 
 .post__image {
@@ -20,6 +25,10 @@
     img {
         width: 100%;
     }
+    &--full {
+        margin: 1rem 0;
+        width: 100% !important;
+    }
 }
 
 .post__content {
@@ -27,6 +36,10 @@
     @include size(8);
     @include size-sm(12);
     @include md(margin-top, 1.125rem);
+    &--full {
+        margin: 0;
+        width: 100% !important;
+    }
 }
 
 .post__title {
@@ -51,4 +64,9 @@
     font-size: 1.125em;
     line-height: 1.5;
     @include lg(font-size, 1em);
+    &--lg {
+        font-size: 1.5em;
+        @include lg(font-size, 1.25em);
+        @include md(font-size, 1em);
+    }
 }

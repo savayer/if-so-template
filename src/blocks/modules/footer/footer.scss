@@ -134,6 +134,7 @@
     list-style: none;
     display: flex;
     justify-content: center;
+    padding: 0;
     margin-top: -5px;
     @include xl(margin-top, -3px);
     @include max(520) { flex-direction: column; }
@@ -189,6 +190,7 @@
 }
 
 .social__menu {
+    padding: 0;
     list-style: none;
     display: flex;
     align-items: center;
