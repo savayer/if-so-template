@@ -1,0 +1,54 @@
+.blog {
+    margin-top: 100px;
+}
+
+.post {
+    @include row-flex();    
+    margin: 1.75rem 0;
+    @include md(margin, 2rem 0);
+    justify-content: center;
+}
+
+.post__image {
+    @include col();
+    @include size(4);
+    @include size-md(8);
+    @include size-sm(12);
+    a:after {
+        content: none;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.post__content {
+    @include col();
+    @include size(8);
+    @include size-sm(12);
+    @include md(margin-top, 1.125rem);
+}
+
+.post__title {
+    a {
+        font-family: 'FuturaBold';
+        font-size: 2em;
+        word-spacing: -4px;
+        color: $text-color;
+        @include xl(font-size, 1.75em);
+        @include lg(font-size, 1.5em);
+        @include xs(font-size, 1.4rem);
+        &:after {
+            content: none
+        }
+    }
+    margin-top: .25rem;
+    margin-bottom: 1rem;
+}
+
+.post__introtext {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.125em;
+    line-height: 1.5;
+    @include lg(font-size, 1em);
+}
