@@ -3,8 +3,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-ul {
+h6 {
     margin: 0;
     padding: 0;
 }
@@ -19,7 +18,7 @@ ul {
 
 * {
     box-sizing: border-box;
-    font-family: 'Futura';
+    font-family: 'Open Sans', sans-serif;
     color: $text_color;
 }
 
@@ -123,19 +122,25 @@ img {
     }
 }
 
-h2,
-.h2 {
+h2, .h2,
+h3, .h3 {
     font-family: 'FuturaBold';
     font-size: 26px;
     font-weight: 700;
     line-height: 1.1;
     word-spacing: -4px;
+    margin-top: 3rem;
+    margin-bottom: 1.4rem;
 }
 
-p {
-    font-family: "Open Sans", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+h3,.h3 {   
+    font-size: 22px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p, ol, ol li, ul, ul li{    
+    font-size: 18px;    
     line-height: 1.5;
     @include sm(font-size, 16px);
 }

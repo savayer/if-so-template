@@ -69,8 +69,6 @@
 }
 
 .docs__content {
-    position: static;
-    z-index: -1;
     @include col();
     @include size(9);
     padding: 0 0 0 70px;    
@@ -146,6 +144,7 @@
 .widget__list {
     list-style: none;
     margin-top: 30px;
+    padding: 0;
     li {
         margin: 30px 0;
         padding-left: 15px;
