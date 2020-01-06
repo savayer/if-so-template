@@ -18,3 +18,20 @@ import AOS from 'aos';
 AOS.init({
     once: true
 })
+
+document.addEventListener('transitionend', e => {
+    const t = e.target;
+    if (t.classList.contains('first_animation')) {
+        const $section = t.closest('section')
+
+        const $els = $section.querySelectorAll('[data-aos]')
+        $els.forEach(el => {
+            el.classList.add('aos-animate')
+        });
+        
+    } else if (t.classList.contains('first_img_animation')) {
+        const condItem = t.closest('.cond__item')
+
+        condItem.querySelector('.cond__content').classList.add('aos-animate')
+    }
+})
