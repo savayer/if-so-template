@@ -20,74 +20,42 @@ $header_skew: skew(0, 4.8deg);
 
 $persp: rotateX(2deg) rotateZ(-10deg) rotateY(42deg);
 $font_path: '../../fonts/';
+
 $socials: ( //class: image
-'ln': 'ln', 'yt': 'yt', 'tw': 'tw', 'fb': 'fb', 'inst': 'inst', );
-$linesColors: ( 1: #5f49d2, 2: #4cb5d2, 3: #f87979, 4: #e9921b, 5: #f06edc, 6: #00aeef, 7: #f87979, 8: #836cfe, 9: #47b6d4, 10: #02a0fa, 11: #f68e56, 12: #f7941d);
+    'ln': 'ln', 
+    'yt': 'yt', 
+    'tw': 'tw', 
+    'fb': 'fb', 
+    'inst': 'inst' 
+);
 
-@mixin transitionProp {
-    transition: 1s;
-    transition-delay: .15s;    
-    @include max(350) {
-        transition: .8s;
-    }
-}
+$linesColors: ( 
+    1: #5f49d2, 
+    2: #4cb5d2, 
+    3: #f87979, 
+    4: #e9921b, 
+    5: #f06edc, 
+    6: #00aeef, 
+    7: #f87979, 
+    8: #836cfe, 
+    9: #47b6d4, 
+    10: #02a0fa, 
+    11: #f68e56, 
+    12: #f7941d
+);
 
-@mixin transitionPadding($height) {
-    max-height: $height;
-    overflow: hidden;
-    padding-top: $height;
-    font-size: $height;
-    @include transitionProp;
-}
+$earnLinesColors: (
+    1: #5f49d2,
+    2: #02c602,
+    3: #fd5b56
+);
 
-@mixin transitionPaddingList($height) {
-    max-height: $height+4;
-    overflow: hidden;
-    padding-top: $height+4;    
-    font-size: $height;
-    &:before {
-        transform: translateY($height+4);
-        transition: 1s;
-        transition-delay: .4s;
-    }
-    @include transitionProp;
-}
-
-@mixin transitionPaddingLabel($height) {
-    overflow: hidden;
-    padding-top: 30px;
-    opacity: 0;
-    @include transitionProp;
-}
-
-@mixin transitionPaddingEmail($height) {
-    overflow: hidden;
-    max-height: $height+30;
-    padding-top: 20px;
-    opacity: 0;
-    @include transitionProp;
-}
-
-@mixin transitionPaddingGroup2($height) {
-    overflow: hidden;
-    max-height: $height;
-    padding-top: 30px;
-    opacity: 0;
-    @include transitionProp;
-}
-
-@mixin transitionPaddingGroup3($height) {
-    overflow: hidden;
-    max-height: $height;
-    padding-top: 30px;
-    opacity: 0;
-    @include transitionProp;
-}
-
-@mixin transitionPaddingButton($height) {
-    overflow: hidden;
-    max-height: $height;
-    padding-top: 30px;
-    opacity: 0;
-    @include transitionProp;
+%lines {
+    width: 110px;
+    height: 64px;
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
 }

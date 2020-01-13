@@ -9,3 +9,71 @@
         @content;
     }
 }
+
+@mixin transitionProp {
+    transition: 1s;
+    transition-delay: .15s;    
+    @include max(350) {
+        transition: .8s;
+    }
+}
+
+@mixin transitionPadding($height) {
+    max-height: $height;
+    overflow: hidden;
+    padding-top: $height;
+    font-size: $height;
+    @include transitionProp;
+}
+
+@mixin transitionPaddingList($height) {
+    max-height: $height+4;
+    overflow: hidden;
+    padding-top: $height+4;    
+    font-size: $height;
+    &:before {
+        transform: translateY($height+4);
+        transition: 1s;
+        transition-delay: .4s;
+    }
+    @include transitionProp;
+}
+
+@mixin transitionPaddingLabel($height) {
+    overflow: hidden;
+    padding-top: 30px;
+    opacity: 0;
+    @include transitionProp;
+}
+
+@mixin transitionPaddingEmail($height) {
+    overflow: hidden;
+    max-height: $height+30;
+    padding-top: 20px;
+    opacity: 0;
+    @include transitionProp;
+}
+
+@mixin transitionPaddingGroup2($height) {
+    overflow: hidden;
+    max-height: $height;
+    padding-top: 30px;
+    opacity: 0;
+    @include transitionProp;
+}
+
+@mixin transitionPaddingGroup3($height) {
+    overflow: hidden;
+    max-height: $height;
+    padding-top: 30px;
+    opacity: 0;
+    @include transitionProp;
+}
+
+@mixin transitionPaddingButton($height) {
+    overflow: hidden;
+    max-height: $height;
+    padding-top: 30px;
+    opacity: 0;
+    @include transitionProp;
+}

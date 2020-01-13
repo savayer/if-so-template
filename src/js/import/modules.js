@@ -32,7 +32,11 @@ document.addEventListener('transitionend', e => {
         
     } else if (t.classList.contains('first_img_animation')) {
         const condItem = t.closest('.cond__item')
-
-        condItem.querySelector('.cond__content').classList.add('aos-animate')
+        const earnItem = t.closest('.earn__step')
+        if (condItem) {
+            condItem.querySelector('.cond__content').classList.add('aos-animate')
+        } else if (earnItem) {
+            earnItem.querySelector('.earn__content').classList.add('aos-animate')
+        }
     }
 })

@@ -72,7 +72,7 @@
     }
 }
 
-.cond__image {
+.cond__image, .earn__image {
     position: relative;
     margin-bottom: 45px;
     img {
@@ -83,16 +83,10 @@
 }
 
 .cond__lines {
-    width: 110px;
-    height: 64px;
-    width: 100px;
-    height: 60px;
-    position: absolute;
-    top: -50px;
-    left: 50%;
+    @extend %lines;
 }
 
-.cond__title {
+.cond__title, .earn__title {
     font-family: 'FuturaBold';
     font-size: 28px;
     margin-bottom: 15px;
@@ -100,7 +94,7 @@
     text-align: center;
 }
 
-.cond__description {
+.cond__description, .earn__description {
     font-family: "Open Sans";
     font-size: 20px;
     text-align: center;

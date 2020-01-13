@@ -1,0 +1,96 @@
+.earn-promo {
+    margin-top: 200px;
+}
+
+.earn-promo__title {
+    text-align: center;
+    span {
+        display: block;
+        font-family: 'FuturaBold';
+        word-spacing: -6px;
+        &:nth-child(1) {
+            margin-left: -150px;
+        }
+    }
+}
+
+.earn-promo__introtext {
+    margin-top: 10px;
+    text-align: center;
+    span {
+        font-family: 'FuturaBold';
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.1;
+        display: block;
+        @include xl(font-size, 24px);
+        @include lg(font-size, 22px);
+        @include md(font-size, 20px);
+        @include xs(font-size, 18px);
+
+        &:nth-child(2) {
+            margin-left: -170px;
+        }
+    }
+}
+
+.earn__lines {
+    @extend %lines;
+}
+
+.earn-promo__steps.earn {
+    margin-top: 80px;
+    @include row-flex();
+}
+
+.earn__step {
+    @include col();
+    @include size(4);
+    @include size-lg(6);
+    @include size-sm(12);
+    margin-top: 60px;
+    margin-bottom: 70px;    
+    display: flex;
+    flex-direction: column;
+}
+
+.earn__content {
+    margin-top: auto;
+}
+
+.earn__description {
+    max-width: 285px;
+    min-height: 70px;
+}
+
+@each $num, $color in $earnLinesColors {
+    .earn__step:nth-child(#{$num}) {
+        .line1, .line2 {
+            use {    
+                fill: transparent;
+                stroke: $color;
+                stroke-width: .8px;
+                stroke-dashoffset: 50;
+                stroke-dasharray: 50;
+            }
+            &.aos-animate use {
+                animation: drawLine 1300ms forwards;
+                animation-delay: 150ms;
+            }
+        }
+        .line2.aos-animate use {            
+            opacity: .5;
+            animation-delay: 400ms;
+            animation-duration: 1.5s;
+        }
+    }
+}
+
+.earn__link {    
+    color: #008aff;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1px;
+    &:hover {
+        background-size: 0 1px;
+    }
+}
