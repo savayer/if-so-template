@@ -14,7 +14,7 @@
     justify-content: center;
 }
 
-.about__view {
+.about__view, .view {
     @include col();
     @include size(6);
     @include size-xl(7);
@@ -91,7 +91,7 @@
     @include max(500) { margin-left: 0 }
 }
 
-.view__per {
+.view__perspective {
     background: url(../../../img/about.svg) no-repeat;
     background-size: contain;
     min-height: 417px;

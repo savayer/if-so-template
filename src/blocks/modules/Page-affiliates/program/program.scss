@@ -1,0 +1,68 @@
+.program {
+    margin-top: 150px;
+}
+
+.program__wrapper {
+    @include row-flex();
+}
+
+.program__content {
+    @include col();
+    @include size(6);
+}
+
+.program__title {
+    span {
+        display: block;
+        font-family: 'FuturaBold';
+        word-spacing: -6px;   
+        &:nth-child(2) {
+            margin-left: 70px;
+        }
+    }
+}
+
+.program__view, .view__absolute {
+    &:after {
+        content: none;
+    }
+    &:before {
+        content: none;
+    }
+}
+
+/* .view__perspective--absolute {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: none;
+    z-index: 1;
+    &:before {
+        content: none;
+    }
+} */
+
+.view__perspective--program {
+    background: url(../../../../img/aff/affiliate.png) center/contain no-repeat;
+    box-shadow: 1px 34px 80px #ccc;
+    position: relative;
+    z-index: 100;
+}
+
+.bubble100 {
+    position: absolute;
+}
+
+.bubble100--lg {
+    right: -60px;
+    top: -62px;
+}
+
+.bubble100--sm {
+    top: -62px;
+    right: 46%
+}
