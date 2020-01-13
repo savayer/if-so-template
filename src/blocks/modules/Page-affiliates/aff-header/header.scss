@@ -2,93 +2,73 @@
     background: #43d094;
 }
 
-@media (max-width: 1500px) {
-    .header--aff {
-        min-height: 585px;
-    }
-}
-@media (max-width: 1300px) {
-	.header--aff {
-		min-height: 474px;
-	}
-	.header--aff__object {
-		width: 900px;
-		top: -175px;
-	}
-}
-@media (max-width: 1200px) {
-	.header--aff__object {
-		width: 900px;
-		top: -175px;
-	}
-}
-@media (max-width: 1000px) {
-	.header--aff__object {
-		width: 900px;
-		top: -175px;
-	}
-}
-@media (max-width: 840px) {
-	.header--aff__object {
-		width: 800px;
-		top: -185px;
-	}
-	.header--aff__container {
-		height: 430px;
-	}
-	.header--aff {
-		min-height: 434px;
-	}
-}
-@media (max-width: 800px) {
-	.header--aff {
-		min-height: 580px;
-	}
-	.header--aff__object {
-		width: 1085px;
-		top: -123px;
-		left: 20%;
+.header {
+	&.header--aff {
+		min-height: 565px;
+		@include max(1300) { min-height: 474px; }
+		@include max(840) { min-height: 434px; }
+		@include max(800) { min-height: 580px; }
+		@include max(720) { min-height: 610px; }		
+		@include max(450) { min-height: 590px; }
 	}
 }
 
-@media (max-width: 720px) {
-	.header--aff {
-		min-height: 610px;
-	}
-	.header--aff__object {
-		width: 1200px;
-		height: 779px;
-		top: -124px;
-		left: 10%;
-	}
+.header--aff__object {
+	@include max(1900) { top: -155px; }
+	@include max(1300) { width: 900px; top: -175px; }
+	@include max(1200) { width: 900px; top: -175px; }
+	@include max(1000) { width: 900px; top: -175px; }
+	@include max(840) { width: 800px; top: -185px; }
+	@include max(800) { width: 1085px; top: -123px; left: 20%; }
+	@include max(720) { width: 1200px; height: 779px; top: -124px; left: 10%; }
+	@include max(700) { top: -124px; left: 10%; }
+	@include max(600) { left: 0; }
+	@include max(500) { left: -20%; }
+	@include max(450) { bottom: -115px }
+	@include max(430) { width: 1100px; }
 }
 
-@media (max-width: 700px) {
-	.header--aff__object {
-		top: -124px;
-		left: 10%;
-	}
+.header--aff__container {
+	@include max(840) { height: 430px; }
 }
-@media (max-width: 600px) {
-	.header--aff__object {
-		left: 0;
-	}
+
+.aff_bg_wrapper {
+	position: absolute;
+	width: 800px;	
+	height: 700px;
+	top: 10%;
+	right: 10px;
+    transform: skew(0, -4deg); 
 }
-@media (max-width: 500px) {
-	.header--aff__object {
-		left: -20%;
-	}
+
+.aff_bg {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../../../../img/aff/aff-bg.png) center/contain no-repeat;
 }
-@media (max-width: 450px) {
-	.header--aff {
-		min-height: 590px;
-	}
-	.header--aff__right_bg {
-		bottom: -115px
-	}
+
+.aff_bg__logo {
+	position: absolute;
+	top: 33%;
+    right: calc(64% - 3px);
+    transform: rotate(-10deg);
+	max-width: 120px;
+    max-height: 120px;
 }
-@media (max-width: 430px) {
-	.header--aff__object {
-		width: 1100px;
+
+.aff_bg__ifso {
+	position: absolute;
+	top: 30%;
+	right: calc(40% + 5px);
+	// background: url(../../../../img/aff/if-so-transform.png) center/contain no-repeat;
+	width: 58px;
+	height: 28px;
+	transform: rotate(10deg);
+	.current-color {
+		fill: #1e0546 !important;
+	}
+	.arrow-if-so {
+		fill: #fd5b56;                                        
 	}
 }
