@@ -20,3 +20,6 @@ $('.slider_articles').slick({
         }
     ]
 })
+
+const height = $('.slick-track').height();
+$('.related_article').css('height', height + 'px' );

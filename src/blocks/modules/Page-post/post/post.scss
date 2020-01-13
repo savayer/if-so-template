@@ -13,7 +13,7 @@
 }
 
 .related_article {
-    padding: 0 1.125rem;
+    padding: 0 .4rem;
     @include max(850) {
         max-width: 225px;
     }
@@ -32,6 +32,11 @@
     }
 }
 
+.related_article__equal_height {
+    height: 100%;
+    background: #f4f7fa;
+}
+
 .related_article__img {
     img {
         width: 100%;
@@ -47,12 +52,9 @@
 }
 
 .slider-prev {
-    left: -1.5rem;
-    @include max(700) {
-        left: -2rem;
-    }
+    left: -2rem;
 }
 
 .slider-next {
-    right: -1.5rem;
+    right: -2rem;
 }
