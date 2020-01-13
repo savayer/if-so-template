@@ -242,8 +242,12 @@ $min-height400-header: 130px;
 /****/
 
 .checkbox-wrapper {
-    &+span {
-        margin-left: 35px;
+    span {
+        &:last-child {
+            font-family: "Futura";
+            font-size: 16px;
+            padding-left: 35px;
+        }
     }
     position: relative;
     cursor: pointer;
@@ -270,7 +274,7 @@ $min-height400-header: 130px;
     }
     .checkmark {
         position: absolute;
-        top: 4px;
+        top: 8px;
         left: 0;
         height: 20px;
         width: 20px;
