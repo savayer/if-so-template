@@ -14,6 +14,8 @@ import "%modules%/Page-plans/faq/faq";
 import "%modules%/Free-trial-modal/modal";
 import "%modules%/Page-post/post/post";
 
+import "%modules%/Page-affiliates/earn-promo/earn-promo";
+
 import AOS from 'aos';
 
 AOS.init({

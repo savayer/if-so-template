@@ -75,12 +75,12 @@
             }
             &.aos-animate use {
                 animation: drawLine 1300ms forwards;
-                animation-delay: 150ms;
+                animation-delay: $num*100 + 150ms; //250, 350, 450
             }
         }
         .line2.aos-animate use {            
             opacity: .5;
-            animation-delay: 400ms;
+            animation-delay: $num*100 + 400ms; // 500, 600, 700
             animation-duration: 1.5s;
         }
     }
