@@ -9,7 +9,7 @@
 
     &.aos-animate {        
         .bubble100--lg {
-            animation: movingUpLg linear 4s 1s forwards;
+            animation: movingUpLg linear 10s 1s forwards;
         }
         /* .bubble100--sm {
             animation: movingUpSm linear 4s 5.3s forwards;            
@@ -56,7 +56,7 @@
     transform: translateY(140%);
     opacity: 0;
     &.activeLgAnimation {
-        animation: movingUpLg linear 4s forwards;
+        animation: movingUpLg linear 10s forwards;
     }
 }
 
@@ -68,7 +68,7 @@
     transform: translateY(205%);
     opacity: 0;
     &.activeSmAnimation {
-        animation: movingUpSm linear 4s forwards;
+        animation: movingUpSm linear 10s forwards;
     }
 }
 
@@ -176,13 +176,36 @@
     }
 }
 
-.man_on_wheel {
-    background: url(../../../../img/aff/man_on_wheel.png) center/contain no-repeat;
-    width: 400px;
-    height: 300px;
+.man_on_wheel_wrapper {
     position: absolute;
     bottom: -20px;
     left: 40px;
+}
+
+.man_on_wheel {
+    background: url(../../../../img/aff/man_on_wheel.png) center/contain no-repeat;
+    width: 400px;
+    height: 300px;    
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 60px;
+        right: -30px;
+        background: url(../../../../img/aff/man_on_wheel_arrow.png) center/contain no-repeat;
+        width: 120px;
+        height: 50px;
+    }
+
+    &__text {
+        position: absolute;
+        top: 120px;
+        right: -130px;
+        text-align: center;
+        max-width: 150px;
+        font-size: 1.25em;
+        font-family: 'MV Boli';
+    }
 }
 
 .view__perspective--program {

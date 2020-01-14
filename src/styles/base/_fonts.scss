@@ -22,3 +22,12 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+	font-family: 'MV Boli';
+	src: url($font_path + 'mv-boli/9077.eot');
+    src: local('☺'), url($font_path + 'mv-boli/9077.woff') format('woff'), 
+        url($font_path + 'mv-boli/9077.ttf') format('truetype'), url($font_path + 'mv-boli/9077.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

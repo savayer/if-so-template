@@ -34,9 +34,9 @@
 
 .aff_bg_wrapper {
 	position: absolute;
-	width: 850px;
+	width: 880px;
     height: 700px;
-    top: -1%;
+    top: -3%;
 	right: 10px;
     transform: skew(0, -4deg); 
 }
@@ -46,6 +46,26 @@
 	width: 100%;
 	height: 100%;
 	background: url(../../../../img/aff/aff-bg.png) center/contain no-repeat;
+
+	&__text {
+		font-family: 'MV Boli';
+		font-size: 2.5em;
+		transform: rotate(-31deg) skew(0, 4deg);
+		display: block;
+		font-weight: bold;
+		position: absolute;
+		top: 10%;	
+		left: 0;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: 14%;
+		top: 17%;
+		width: 40px;			
+		height: 40px;
+		background: url(../../../../img/aff/arrow-man.png) center/contain no-repeat;
+	}
 }
 
 .aff_bg__logo {
