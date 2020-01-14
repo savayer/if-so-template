@@ -169,7 +169,13 @@
     background: url(../../../../img/aff/program_aff_bg.svg) center/contain no-repeat;
     background-position: 0 0;
     &:before {
-        content: none;
+        content: '';
+        position: absolute;
+        background: url(../../../../img/aff/arrow-program.svg) center/contain no-repeat;
+        width: 280px;
+        height: 170px;
+        top: -50px;
+        left: 100px;
     }
     &:after {
         content: none;
