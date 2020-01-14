@@ -8,7 +8,7 @@
     @include max(420) { padding: 50px 0 85px; }
 }
 
-.sales__wrapper {
+.sales__wrapper, .join__wrapper {
     transform: skew(0, -4.4deg);
     display: flex;
     flex-wrap: wrap;
@@ -18,15 +18,15 @@
     @include max(1100) { flex-direction: column; }
 }
 
-.sales__texts {
+.sales__texts, .join__texts {
     margin-right: 15px;
 }
 
-.sales__offer {
+.sales__offer, .join__offer {
     margin-left: 15px;
 }
 
-.sales__title {
+.sales__title, .join__title{
     span {    
         font-family: 'Open Sans', sans-serif;        
         line-height: 1.2;
@@ -54,7 +54,7 @@
     @include max(420) { font-size: 20px; }
 }
 
-.sales__digit {
+.sales__digit, .join__digit {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,63 +106,59 @@
     }
 }
 
-.sales__bubble--big {
-    background: url(../../../img/svg/sales_big_bubble.svg) center center/contain no-repeat;
-    width: 150px;
-    height: 140px;
-    top: 65%;
-    right: -13%;
-    @include max(1600) { right: -10% }
-    @include max(1500) { right: 1%; top: 86%; }
-    @include max(1200) { right: 0; top: 92%; width: 120px; height: 110px; }
-    @include max(1100) { right: 0; top: 22%; }
-    @include max(768) { width: 100px; height: 90px;  }
-    @include max(630) { width: 70px; height: 60px }
-    @include sm(top, 90%);
-    @include max(420) { top: 110% }
-}
-
-.sales__bubble--medium {
-    background: url(../../../img/svg/sales_middle_bubble.svg) center center/contain no-repeat;
-    top: 35%;
-    right: -3%;
-    width: 80px;
-    height: 80px;
-    @include max(1600) { right: 0 }
-    @include max(1500) { right: 13%; top: 70%; }
-    @include max(1200) { right: 11%; top: 77%; width: 60px; height: 60px }
-    @include max(1100) { right: 10%; top: 10%; }
-    @include max(1000) { right: 12% }
-    @include max(850) { right: 13% }
-    @include max(768) { width: 45px; height: 45px;  }
-    @include max(630) { width: 35px; height: 35px }
-    @include sm(top, 80%);
-    @include max(460) { right: 15% }
-    @include max(420) { top: 102%; right: 18% }
-    @include max(380) { right: 20% }
-    @include max(340) { right: 24% }
-}
-
-.sales__bubble--small {
-    background: url(../../../img/svg/sales_small_bubble.svg) center center/contain no-repeat;
-    width: 30px;
-    height: 30px;
-    top: 70%;
-    right: 0;
-    @include max(1600) { right: 3% }
-    @include max(1500) { right: 16%; top: 104%; }
-    @include max(1200) { right: 14%; width: 20px; height: 20px }
-    @include max(1100) { right: 12%; top: 27%; }
-    @include max(1000) { right: 14% }
-    @include max(850) { right: 16% }
-    @include sm(top, 95%);
-    @include max(460) { right: 19% }
-    @include max(420) { top: 117%; right: 22% }
-    @include max(380) { right: 24% }
-    @include max(340) { top: 119%; right: 26% }
-
-}
-
-.sales__bubble {
+.sales__bubble, .join__bubble {
     position: absolute;
+    &--small {
+        background: url(../../../img/svg/sales_small_bubble.svg) center center/contain no-repeat;
+        width: 30px;
+        height: 30px;
+        top: 70%;
+        right: 0;
+        @include max(1600) { right: 3% }
+        @include max(1500) { right: 16%; top: 104%; }
+        @include max(1200) { right: 14%; width: 20px; height: 20px }
+        @include max(1100) { right: 12%; top: 27%; }
+        @include max(1000) { right: 14% }
+        @include max(850) { right: 16% }
+        @include sm(top, 95%);
+        @include max(460) { right: 19% }
+        @include max(420) { top: 117%; right: 22% }
+        @include max(380) { right: 24% }
+        @include max(340) { top: 119%; right: 26% }
+    }
+    &--medium {
+        background: url(../../../img/svg/sales_middle_bubble.svg) center center/contain no-repeat;
+        top: 35%;
+        right: -3%;
+        width: 80px;
+        height: 80px;
+        @include max(1600) { right: 0 }
+        @include max(1500) { right: 13%; top: 70%; }
+        @include max(1200) { right: 11%; top: 77%; width: 60px; height: 60px }
+        @include max(1100) { right: 10%; top: 10%; }
+        @include max(1000) { right: 12% }
+        @include max(850) { right: 13% }
+        @include max(768) { width: 45px; height: 45px;  }
+        @include max(630) { width: 35px; height: 35px }
+        @include sm(top, 80%);
+        @include max(460) { right: 15% }
+        @include max(420) { top: 102%; right: 18% }
+        @include max(380) { right: 20% }
+        @include max(340) { right: 24% }
+    }
+    &--big {
+        background: url(../../../img/svg/sales_big_bubble.svg) center center/contain no-repeat;
+        width: 150px;
+        height: 140px;
+        top: 65%;
+        right: -13%;
+        @include max(1600) { right: -10% }
+        @include max(1500) { right: 1%; top: 86%; }
+        @include max(1200) { right: 0; top: 92%; width: 120px; height: 110px; }
+        @include max(1100) { right: 0; top: 22%; }
+        @include max(768) { width: 100px; height: 90px;  }
+        @include max(630) { width: 70px; height: 60px }
+        @include sm(top, 90%);
+        @include max(420) { top: 110% }
+    }
 }
