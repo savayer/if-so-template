@@ -4,7 +4,7 @@
 
 .header {
 	&.header--aff {
-		min-height: 565px;
+		min-height: 530px;
 		@include max(1300) { min-height: 474px; }
 		@include max(840) { min-height: 434px; }
 		@include max(800) { min-height: 580px; }
@@ -13,8 +13,10 @@
 	}
 }
 
-.header--aff__object {
-	@include max(1900) { top: -155px; }
+.header--aff__object {	
+	@include min(1900) { top: -190px; }
+	@include max(1900) { top: -190px; }
+	@include max(1600) { top: -178px; width: 1100px; }
 	@include max(1300) { width: 900px; top: -175px; }
 	@include max(1200) { width: 900px; top: -175px; }
 	@include max(1000) { width: 900px; top: -175px; }
@@ -29,6 +31,7 @@
 }
 
 .header--aff__container {
+	@include max(1500) { padding-right: 44%; }
 	@include max(840) { height: 430px; }
 }
 
@@ -36,9 +39,12 @@
 	position: absolute;
 	width: 880px;
     height: 700px;
-    top: -3%;
+    top: -10%;
 	right: 10px;
-    transform: skew(0, -4deg); 
+	transform: skew(0, -4deg); 
+	
+	@include max(1750) { width: 780px; height: 620px; top: 0; }
+	@include max(1600) { width: 680px; height: 550px; top: 13%; }
 }
 
 .aff_bg {
@@ -56,14 +62,16 @@
 		position: absolute;
 		top: 10%;	
 		left: 0;
+
+		@include max(1600) { top: 8% }
 	}
 	&:after {
 		content: '';
 		position: absolute;
 		left: 14%;
 		top: 17%;
-		width: 40px;			
-		height: 40px;
+		width: 30px;			
+		height: 30px;
 		background: url(../../../../img/aff/arrow-man.png) center/contain no-repeat;
 	}
 }

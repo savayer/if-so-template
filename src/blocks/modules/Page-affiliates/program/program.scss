@@ -7,12 +7,12 @@
     max-width: 1500px;
     margin: auto;
 
-    &.aos-animate {        
+    &.aos-animate {
         .bubble100--lg {
-            animation: movingUpLg linear 10s 1s forwards;
+            animation: movingUp 10s linear 1s, explode .1s linear 11s;
         }
         /* .bubble100--sm {
-            animation: movingUpSm linear 4s 5.3s forwards;            
+            animation: movingUp linear 10s 11s forwards;            
         } */
     }
 }
@@ -53,10 +53,9 @@
     top: -62px;
     width: 185px;
     height: 187px;
-    transform: translateY(140%);
     opacity: 0;
     &.activeLgAnimation {
-        animation: movingUpLg linear 10s forwards;
+        animation: movingUp 10s linear 1s, explode .1s linear 11s;
     }
 }
 
@@ -65,14 +64,13 @@
     right: 46%;
     width: 140px;
     height: 142px;
-    transform: translateY(205%);
     opacity: 0;
     &.activeSmAnimation {
-        animation: movingUpSm linear 10s forwards;
+        animation: movingUp 8s linear 1s, explode .1s linear 9s;        
     }
 }
 
-@keyframes movingUpLg {
+@keyframes movingUp {
     0% {
         opacity: 0;
         transform: translateY(140%);
@@ -82,43 +80,25 @@
         opacity: 1;
     }
 
-    90% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    99% {
-        transform: scale(1.2);
-    }
-
     100% {
-        opacity: 0;
-    }
+        opacity: 1;
+        transform: translateY(0%);
+    }    
 }
 
-@keyframes movingUpSm {
+@keyframes explode {
     0% {
-        opacity: 0;
-        transform: translateY(200%);
-    }
-
-    30% {
-        opacity: 1;
-    }
-
-    90% {
         opacity: 1;
         transform: translateY(0);
     }
-
-    99% {
+    80% {
         transform: scale(1.2);
     }
 
     100% {
         opacity: 0;
+        transform: scale(1.2);
     }
-    
 }
 
 .program__content {
