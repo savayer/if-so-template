@@ -1,7 +1,16 @@
 const text = document.querySelector('.aff_bg__text')
 let left = 0;
+const w = document.documentElement.clientWidth
 
-if (document.documentElement.clientWidth <= 1600) {
+if (w <= 1600) {
+    left = -4;
+}
+
+if (w <= 1050) {
+    left = -2;
+}
+
+if (w <= 500) {
     left = -4;
 }
 

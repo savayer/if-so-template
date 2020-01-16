@@ -41,6 +41,7 @@
 .earn-promo__steps.earn {
     margin-top: 80px;
     @include row-flex();
+    justify-content: center;
 }
 
 .earn__step {
