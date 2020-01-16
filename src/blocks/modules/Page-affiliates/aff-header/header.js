@@ -3,7 +3,7 @@ const setLogoPostion = () => {
     const text = document.querySelector('.aff_bg__text')
     const w = document.documentElement.clientWidth
     let left = 0;
-    
+
     if (w <= 1600) {
         left = -4;
     }
