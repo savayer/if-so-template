@@ -1,0 +1,65 @@
+.base-max-width {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.job {
+    margin-bottom: 100px;
+}
+
+.job__item.selected {
+    .job__expand {
+        top: -3px;
+        &:before {
+            content: '\2013';
+        }
+    }
+}
+
+.job__title {
+    cursor: pointer;
+    margin-bottom: 7px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.job__expand {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    &:before {
+        content: '+';
+        transition: .4s;
+    }    
+}
+
+.job__hr {    
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #732bcb;
+    opacity: .4;
+    margin-bottom: 20px;
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -25px;
+        left: 26px;
+        border: 12px solid #732bcb;        
+        border-color: #732bcb transparent transparent;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 999;
+        left: 28.5px;
+        border: 10px solid #fff;
+        border-color: #fff transparent transparent;
+    }
+}
+
+.job__content {
+    height: 0;
+    overflow: hidden;
+    transition: .4s;
+    margin: -18px 0;
+}
