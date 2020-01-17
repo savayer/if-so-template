@@ -10,7 +10,11 @@ const removeOtherSelected = () => {
 }
 
 $items.forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function(e) {
+        const t = e.target
+        if (t.closest('.job__content')) {
+            return false;
+        }
         let $answer = this.querySelector('.job__content')
         if (this.classList.contains('selected')) {
             this.classList.remove('selected')            
