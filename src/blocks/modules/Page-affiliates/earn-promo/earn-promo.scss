@@ -76,12 +76,51 @@
             }
             &.aos-animate use {
                 animation: drawLine 1300ms forwards;
-                animation-delay: $num*100 + 150ms; //250, 350, 450
+                @if $num == 1 {
+                    animation-delay: 250ms;
+                }
+                @if $num == 2 {
+                    animation-delay: 550ms;
+                }
+                @if $num == 3 {
+                    animation-delay: 850ms;
+                }
+                @include max(576) {
+                    @if $num == 1 {
+                        animation-delay: 50ms;
+                    }
+                    @if $num == 2 {
+                        animation-delay: 150ms;
+                    }
+                    @if $num == 3 {
+                        animation-delay: 250ms;
+                    }
+                }
             }
         }
         .line2.aos-animate use {            
             opacity: .5;
-            animation-delay: $num*100 + 400ms; // 500, 600, 700
+            //animation-delay: $num*100 + 400ms; // 500, 600, 700
+            @if $num == 1 {
+                animation-delay: 400ms;
+            }
+            @if $num == 2 {
+                animation-delay: 700ms;
+            }
+            @if $num == 3 {
+                animation-delay: 1000ms;
+            }
+            @include max(576) {
+                @if $num == 1 {
+                    animation-delay: 200ms;
+                }
+                @if $num == 2 {
+                    animation-delay: 300ms;
+                }
+                @if $num == 3 {
+                    animation-delay: 400ms;
+                }
+            }
             animation-duration: 1.5s;
         }
     }

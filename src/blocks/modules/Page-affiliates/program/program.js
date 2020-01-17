@@ -27,14 +27,16 @@ const setTextPosition = () => {
     if (text) {
         const w = document.documentElement.clientWidth
         let right = 0, $r
-
+        if (w <= 1300) {
+            right = 9
+        }
         if (w <= 780) {
             right = 15
         }
         if (w <= 530) {
             right = 5
         }
-        if (w <= 450) {
+        if (w <= 500) {
             right = 15
         }
 
