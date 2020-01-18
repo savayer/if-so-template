@@ -23,6 +23,9 @@
                 transform: translateY(0);
             }
         }
+        .man__hand {
+            animation: shakeHand 2s linear .15s forwards;
+        }
     }
     .try_it--plan {
         background: #f05b6d;

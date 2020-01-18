@@ -17,11 +17,8 @@
 
 .modal__man {
     position: fixed;
-    bottom: -30px;
-    left: -162px;
-    width: 220px;
-    height: 330px;
-    background: url(../../../img/modal/modal_man.png) center/contain no-repeat;
+    bottom: -3px;
+    left: -153px;
     @include max(1200) {
         left: -127px;
         width: 170px;
@@ -44,6 +41,38 @@
     }
     @include max(350) {
         display: none;
+    }
+}
+
+.man__body {
+    width: 160px;
+    height: 290px;
+    background: url(../../../img/modal/modal_man2.png) center/contain no-repeat;    
+    position: relative;
+}
+
+.man__hand {
+    width: 185px;
+    height: 190px;
+    background: url(../../../img/modal/hand.png) center/contain no-repeat;
+    position: absolute;
+    bottom: 13px;
+    left: 2px;
+    transform-origin: 0px 174px 0px;
+}
+
+@keyframes shakeHand {
+    25% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(0);
     }
 }
 
