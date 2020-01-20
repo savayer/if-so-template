@@ -24,6 +24,92 @@
     @include max(500) { left: -98px; }
     @include max(450) { left: -85px; }
     @include max(350) { display: none; }
+    transition: .15s;
+    opacity: 1;
+    &.unactive {
+        opacity: 0;
+    }
+}
+
+.modal__sad_man {
+    width: 170px;
+    height: 300px;
+    background: url(../../../img/modal/sad_man.png) center/contain no-repeat;
+    position: absolute;
+    bottom: -7px;
+    left: -164px;
+    opacity: 0;
+    transition: .3s;
+    &.active {
+        opacity: 1;
+    }
+    @include max(1200) {
+        width: 150px;
+        height: 270px;
+        left: -146px;
+    }
+    @include max(930) {
+        width: 130px;
+        height: 240px;
+        left: -128px;
+    }
+    @include max(500) {
+        width: 90px;
+        height: 180px;
+        left: -90px;
+    }
+    @include max(350) {
+        display: none;
+    }
+}
+
+.modal__speech {
+    position: absolute;
+    left: -570px;
+    bottom: 170px;
+    width: 620px;
+    height: 280px;
+    background: url(../../../img/modal/speech_bubble.png) center/contain no-repeat;
+    display: flex;
+    &_text {
+        margin: auto;
+        color: #fff;
+        font-size: 1.8em;
+        font-family: cursive;
+        text-align: center;
+        max-width: 80%;
+        padding-right: 15%;
+        padding-bottom: 6%;
+        transform: rotate(-11deg);
+        @include max(1200) { font-size: 1.4em; }
+        @include max(1020) { font-size: 1.2em; }
+    }
+
+    @include max(1350) {
+        left: -500px;
+        width: 550px;
+        height: 240px;
+    }
+    @include max(1200) {
+        left: -425px;
+        width: 480px;
+        height: 200px;
+    }
+    @include max(1020) {
+        left: -355px;
+        width: 420px;
+        height: 170px;
+        bottom: 175px;
+    }
+    @include max(930) {
+        bottom: 150px
+    }
+    @include max(840) {
+        left: -304px;
+        width: 360px;
+        height: 150px;
+    }
+    @include max(800) { display: none; }
 }
 
 .man__body {

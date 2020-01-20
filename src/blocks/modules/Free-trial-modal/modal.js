@@ -53,8 +53,37 @@ if ($links && $modal) {
 }
 if ($closeModal) {
     $closeModal.addEventListener('click', () => {
+        returnMan()
         animateOverlay($modalOverlay, 500, '', true, true)
         animateOverlay($modalForm, 350, '', true)
         document.body.classList.remove('overflow-hidden');
+    })
+
+    function changeMan() {
+        $modal.querySelector('.m-explain__content').classList.add('hide')
+        $modal.querySelector('.modal__man').classList.add('unactive')
+        $modal.querySelector('.modal__sad_man').classList.add('active')
+    }
+
+    function returnMan() {
+        $modal.querySelector('.m-explain__content').classList.remove('hide')
+        $modal.querySelector('.modal__man').classList.remove('unactive')
+        $modal.querySelector('.modal__sad_man').classList.remove('active')
+    }
+
+    document.addEventListener('mouseleave', (e) => {
+        changeMan()
+    })
+
+    document.addEventListener('mouseenter', () => {
+        returnMan()
+    })
+
+    $closeModal.addEventListener('mouseenter', () => {
+        changeMan()
+    })
+
+    $closeModal.addEventListener('mouseleave', () => {
+        returnMan()
     })
 }
