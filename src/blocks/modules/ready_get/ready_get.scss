@@ -28,6 +28,28 @@
     @include max(620) { height: 400px; }
     @include max(480) { height: 350px; }
     @include max(380) { margin-top: 15px; }
+    position: relative;
+    .stars {
+        opacity: 0;
+        transition: .5s;
+        background: url(../../../img/stars.png) center/contain no-repeat;
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        top: -60px;
+        left: 16px;
+        &.active {
+            opacity: 1;
+        }
+    }
+    &--magic {
+        background: url(../../../img/svg/ready_get_magic.svg) center/contain no-repeat;
+        transition: .3s;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
 }
 
 .ready_get__content {

@@ -221,7 +221,7 @@ $min-height400-header: 130px;
         font-family: 'FuturaBold';
         font-weight: 700;
         display: block;        
-        @include transitionPadding(40px);                
+        @include transitionPadding(40px);
         &:nth-child(2) {
             margin-left: 85px;
             @include lg(margin-left, 65px);
