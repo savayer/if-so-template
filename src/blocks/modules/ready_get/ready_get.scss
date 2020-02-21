@@ -17,7 +17,7 @@
     width: 660px;
     height: 650px;
     margin-left: 100px;
-    background: url(../../../img/svg/ready_get.svg) center/contain no-repeat;
+    /* background: url(../../../img/svg/ready_get.svg) center/contain no-repeat; */
     @include max(1700) { width: 560px; height: 550px; }
     @include max(1500) { width: 500px; height: 490px; }
     @include max(1400) { margin-left: 50px }
@@ -29,35 +29,61 @@
     @include max(480) { height: 350px; }
     @include max(380) { margin-top: 15px; }
     position: relative;
+}
+
+.ready_get__svg {
+    width: 100%;
+    height: 100%;
     .stars {
         opacity: 0;
-        transition: .5s;
-        background: url(../../../img/stars.png) center/contain no-repeat;
-        position: absolute;
-        width: 80%;
-        height: 100%;
-        top: -60px;
-        left: 16px;
+        &.active {
+            animation: showStars 1s forwards;
+        }
+    }
+    .magician {
+        opacity: 0;
+        transition: 1s;
         &.active {
             opacity: 1;
         }
     }
-    &--magic {
-        background: url(../../../img/svg/ready_get_magic.svg) center/contain no-repeat;
-        transition: .3s;
-        display: none;
-        &.active {
-            display: block;
+    .usual-man {
+        transition: 1s;
+        opacity: 1;
+        &.unactive {
+            opacity: 0;
         }
     }
 }
 
+@keyframes showStars {
+    from {
+        opacity: 0;
+        transform: scale(0.32);
+        transform-origin: center center;
+    }
+    80% {
+        transform: scale(1.02);
+        transform-origin: center center;
+
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        transform-origin: center center;
+    }
+}
+
 .ready_get__content {
+    min-width: 465px;
+    @include xl(min-width, 425px);
     @include max(992) { @include size(6) }
     @include max(768) { @include size(7) }
     @include max(620) { @include size(8) }
+    @include sm(min-width, 345px);
     @include max(550) { @include size(9) }
     @include max(480) { @include size(10) }
+    @include xs(min-width, 300px);
     @include max(380) { @include size(12) }
 }
 
@@ -75,6 +101,17 @@
             margin-left: 210px;
             @include max(550) { margin-left: 150px; }
             @include max(380) { margin-left: 110px; }
+        }
+    }
+    transition: .4s;
+    &.hide {
+        opacity: 0;
+    }
+    &.magic {
+        span:nth-child(2) {
+            margin-left: 180px;
+            @include max(550) { margin-left: 120px; }
+            @include max(380) { margin-left: 90px; }
         }
     }
 }
@@ -121,6 +158,7 @@
     position: absolute;
     top: 56%;
     left: 250px;
+    z-index: -1;
     @include max(1700) { width: 70px; height: 70px; }
     @include max(1600) { width: 60px; height: 60px; left: 200px; }
     @include max(1300) { width: 50px; height: 50px; left: 160px; }
