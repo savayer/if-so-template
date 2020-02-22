@@ -5,6 +5,9 @@
     transform: $header_skew;
     @include min(1900) {
         min-height: 670px;
+        &--new {
+            min-height: 565px !important;
+        }
     }    
     @include min(2200) {
         min-height: 631px;
@@ -17,7 +20,144 @@
     }
     @include max(800) {
         min-height: 750px;
-    }    
+    }
+    &--new {
+        min-height: 585px !important;
+        .header__content {
+            max-width: 600px;
+        }
+        @include max(1300) {
+            .header__object {
+                width: 900px !important;
+                top: -125px !important;
+            }
+        }
+        @include xl-block {
+            margin-bottom: 300px;
+            .header__content {
+                padding-bottom: 3%;
+            }
+        }
+        @include lg-block {
+            min-height: 685px !important;
+            .header__container {
+                padding-right: 0;
+            }
+            .header__object {
+                width: 1260px !important;
+                top: -108px !important;
+                right: -26% !important;
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.header__perspective {
+    perspective: 1000px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    @include max(1800) { left: 10%; }
+    @include max(1600) { left: 18%; }
+    @include max(1400) { left: 25%; }
+    @include max(1300) { left: 15%; }
+    @include max(850) { left: 22%; }
+    @include max(780) { left: 29%; }
+    @include lg-block {
+        bottom: -30px;
+    }
+    .pointer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 110px;
+        height: 130px;
+        background: url(../../../img/new_header/pointer_bg.svg) center/contain no-repeat;
+        display: flex;
+        @include max(1500) { width: 90px;}
+        span {
+            margin: auto;
+            font-size: 4em;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            padding-bottom: 40px;
+            padding-right: 17px;
+            @include max(1500) { padding-bottom: 35px; font-size: 3.25em; }
+        }
+    }
+    .layer1 {
+        transform: rotateX(0deg) rotateZ(7deg) rotateY(-12deg);
+        background: url(../../../img/new_header/layer1.png) no-repeat;
+        background-size: contain;
+        min-height: 360px;
+        width: 270px;
+        position: absolute;
+        z-index: 2;
+        bottom: -120px;
+        left: 10%;
+        .pointer {
+            top: -100px;
+        }
+        @include max(1500) { min-height: 320px; width: 240px; left: 14%; }
+        @include max(1300) { left: 4%; }
+        @include lg-block {
+            left: 0;
+        }
+    }
+    .layer2 {
+        transform: rotateX(0deg) rotateZ(7deg) rotateY(-12deg);
+        background: url(../../../img/new_header/layer2.png) no-repeat;
+        background-size: contain;
+        min-height: 395px;
+        border-radius: 40px;
+        width: 570px;
+        box-shadow: 1px 26px 73px #acacac, inset 0px 2px 7px #ccc;
+        margin: auto;
+        position: absolute;
+        z-index: 1;
+        bottom: 30px;
+        left: 0;
+        right: 150px;
+        .pointer {
+            top: 10px
+        }
+        @include max(1500) {min-height: 350px; width: 510px; }
+        @include lg-block {
+            right: 600px;
+        }
+    }
+    .layer3 {
+        transform: rotateX(0deg) rotateZ(7deg) rotateY(-12deg);
+        background: #fff url(../../../img/new_header/layer3.png) no-repeat;
+        background-position: center 20px;
+        background-size: contain;
+        min-height: 250px;
+        width: 410px;
+        box-shadow: 1px 15px 60px #727272;
+        margin: auto;
+        position: absolute;
+        z-index: 2;
+        bottom: -80px;
+        right: 14%;
+        .pointer {
+            top: -105px
+        }        
+        @include max(1500) {
+            min-height: 220px;
+            width: 340px;            
+            bottom: -70px;
+            right: 22%;
+        }
+        @include max(1300) { right: 15%; }
+        @include lg-block {
+            right: 43%;
+        }
+    }
 }
 
 .header__object {
