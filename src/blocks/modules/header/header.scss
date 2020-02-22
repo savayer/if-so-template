@@ -70,13 +70,30 @@
     @include lg-block {
         bottom: -30px;
     }
+    &.loaded .pointer {
+        opacity: 1;
+        transform: translateY(0);        
+    }
+    &.loaded {
+        .layer1 .pointer {
+            animation: movePointers 1s 1s linear alternate infinite;
+        }
+        .layer2 .pointer {
+            animation: movePointers 1s 1.2s linear alternate infinite;
+        }
+        .layer3 .pointer {
+            animation: movePointers 1s 1.4s linear alternate infinite;
+        }
+    }
     .pointer {
+        opacity: 0;
+        transform: translateY(-10px);
         position: absolute;
         left: 0;
         right: 0;
         margin: auto;
         width: 110px;
-        height: 130px;
+        height: 130px;        
         background: url(../../../img/new_header/pointer_bg.svg) center/contain no-repeat;
         display: flex;
         @include max(1500) { width: 90px;}
@@ -102,6 +119,7 @@
         left: 10%;
         .pointer {
             top: -100px;
+            transition: .5s linear;
         }
         @include max(1500) { min-height: 320px; width: 240px; left: 14%; }
         @include max(1300) { left: 4%; }
@@ -124,7 +142,8 @@
         left: 0;
         right: 150px;
         .pointer {
-            top: 10px
+            top: 20px;
+            transition: .5s linear .5s;
         }
         @include max(1500) {min-height: 350px; width: 510px; }
         @include lg-block {
@@ -145,7 +164,8 @@
         bottom: -80px;
         right: 14%;
         .pointer {
-            top: -105px
+            top: -105px;
+            transition: .5s linear 1s;
         }        
         @include max(1500) {
             min-height: 220px;
@@ -157,6 +177,15 @@
         @include lg-block {
             right: 43%;
         }
+    }
+}
+
+@keyframes movePointers {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-3px);
     }
 }
 
