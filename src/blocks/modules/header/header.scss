@@ -79,52 +79,7 @@
     }
 }
 
-.header__perspective {
-    perspective: 1000px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    @include max(1800) { left: 10%; }
-    @include max(1600) { left: 18%; }
-    @include max(1400) { left: 25%; }
-    @include max(1300) { left: 15%; }
-    @include max(850) { left: 22%; }
-    @include max(780) { left: 29%; }
-    @include max(700) { left: 32%; }
-    @include max(640) { left: 36%; }
-    @include max(600) { left: 5%; }
-    @include max(550) { left: 12%; }
-    @include max(500) { left: 18%; }
-    @include max(470) { left: 22%; }
-    @include max(440) { left: 24%; }
-    @include max(430) { left: 7%; }
-    @include max(410) { left: 9%; }
-    @include max(400) { left: 11%; }
-    @include max(390) { left: 14%; }
-    @include max(380) { left: 15%; }
-    @include max(370) { left: 2%; }
-    @include max(360) { left: 4%; }
-    @include max(350) { left: 7%; }
-    @include max(330) { left: 10%; }
-    @include max(320) { left: 11%; }
-    @include lg-block {
-        bottom: -30px;
-    }
-    &.loaded .pointer {
-        opacity: 1;
-        transform: translateY(0);        
-    }
-    &.loaded {
-        .layer1 .pointer {
-            animation: movePointers 1s 1s linear alternate infinite;
-        }
-        .layer2 .pointer {
-            animation: movePointers 1s 1.2s linear alternate infinite;
-        }
-        .layer3 .pointer {
-            animation: movePointers 1s 1.4s linear alternate infinite;
-        }
-    }
+.header--new {
     .pointer {
         opacity: 0;
         transform: translateY(-10px);
@@ -157,6 +112,56 @@
             @include max(430) { font-size: 2.25em; padding-bottom: 22px; padding-right: 11px; }
         }
     }
+    &.loaded .pointer {
+        opacity: 1;
+        transform: translateY(0);        
+    }
+    &.loaded {
+        .layer1 .pointer {
+            animation: movePointers 1s 1s linear alternate infinite;
+        }
+        .layer2 .pointer {
+            animation: movePointers 1s 1.2s linear alternate infinite;
+        }
+        .layer3 .pointer {
+            animation: movePointers 1s 1.4s linear alternate infinite;
+        }
+    }
+}
+.perspective_wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    @include max(1800) { left: 10%; }
+    @include max(1600) { left: 18%; }
+    @include max(1400) { left: 25%; }
+    @include max(1300) { left: 15%; }
+    @include max(850) { left: 22%; }
+    @include max(780) { left: 29%; }
+    @include max(700) { left: 32%; }
+    @include max(640) { left: 36%; }
+    @include max(600) { left: 5%; }
+    @include max(550) { left: 12%; }
+    @include max(500) { left: 18%; }
+    @include max(470) { left: 22%; }
+    @include max(440) { left: 24%; }
+    @include max(430) { left: 7%; }
+    @include max(410) { left: 9%; }
+    @include max(400) { left: 11%; }
+    @include max(390) { left: 14%; }
+    @include max(380) { left: 15%; }
+    @include max(370) { left: 2%; }
+    @include max(360) { left: 4%; }
+    @include max(350) { left: 7%; }
+    @include max(330) { left: 10%; }
+    @include max(320) { left: 11%; }
+    @include lg-block {
+        bottom: -30px;
+    }
+}
+.header__perspective {
+    perspective: 1000px;    
+
     .layer1 {
         transform: rotateX(0deg) rotateZ(7deg) rotateY(-12deg);
         background: url(../../../img/new_header/layer1.png) no-repeat;
@@ -209,6 +214,9 @@
         @include max(600) { min-height: 250px; width: 360px; border-radius: 16px; }
         @include max(430) { min-height: 210px; width: 310px; }
     }
+}
+.layer3_wrapper {
+    perspective: 1000px;
     .layer3 {
         transform: rotateX(0deg) rotateZ(7deg) rotateY(-12deg);
         background: #fff url(../../../img/new_header/layer3.png) no-repeat;
@@ -241,7 +249,6 @@
         }
     }
 }
-
 @keyframes movePointers {
     from {
         transform: translateY(0);

@@ -3,7 +3,7 @@ window.onload = function() {
     const $rightUpper = document.getElementById('right_upper_cloud')
     const $right = document.getElementById('right_cloud')
 
-    const headerNew = document.querySelector('.header__perspective')
+    const headerNew = document.querySelector('.header--new')
 
     if (headerNew) {
         headerNew.classList.add('loaded')
