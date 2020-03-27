@@ -1,5 +1,5 @@
 .footer {
-    margin-top: 60px;    
+    margin-top: 60px;
     position: relative;
     padding: 175px 0 60px;
     overflow: hidden;    
@@ -7,6 +7,17 @@
     @include lg(padding-top, 90px);
     @include max(470) { padding-top: 40px; }
     @include max(430) { padding-bottom: 80px; }
+}
+
+.footer--straight {
+    .footer__bg {
+        transform: none;
+        background-color: #4a4a6a;
+    }
+    margin-top: 150px;
+    padding: 100px 0 60px !important;
+    @include max(520) { padding-top: 40px !important; }
+    @include max(430) { padding-bottom: 80px !important; }
 }
 
 .footer__bg {
