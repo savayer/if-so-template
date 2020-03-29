@@ -169,10 +169,11 @@
 
 .dropdown__more {
     margin-top: auto;
-    a {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 14px;
-    }
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-transform: none;
+    font-weight: 400;
+    color: #bd51b7;
 }
 
 .menu__link {
