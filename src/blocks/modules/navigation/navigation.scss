@@ -54,7 +54,7 @@
         }
     }
     &:hover {
-        .menu__dropdown {
+        .menu__dropdown, .sub-menu {
             opacity: 1;
             z-index: 9999;
             visibility: visible;
@@ -80,7 +80,7 @@
     }
 }
 
-.menu__dropdown {
+.menu__dropdown, .sub-menu {
     display: flex;
     list-style: none;
     position: absolute;    
@@ -92,26 +92,63 @@
     transition: .3s;
     cursor: default;
     visibility: hidden;
+    @include max(1630) { right: -225px; }
+    @include max(1200) { right: -235px; }
+    @include max(1100) { right: -77px; }
+    @include max(999) {
+        flex-wrap: wrap;
+        width: 600px;
+        right: -112px;
+        top: calc(100% - 20px);
+    }
+    
+    @include max(840) {
+        display: none;
+    }
     li {
         width: 260px;
         margin: 0 10px;
         border: 2px solid rgba(240, 91, 109, 0.502);
         padding: 22px 24px;
-        box-shadow: 4px 7px 26px 1px rgba(0, 0, 0, 0.11);
+        box-shadow: 4px 7px 56px 1px rgba(0, 0, 0, 0.4);
         border-radius: 36px;
         background: #fff;
         display: flex;
+        transition: .2s;
+        &:hover {
+            transform: scale(1.05);
+            @include max(999) {
+                transform: scale(1.02);
+            }
+        }
         &:nth-child(3) {
             border: 2px solid rgba(245, 141, 86, 0.52);
         }
         &:nth-child(4) {
             border: 2px solid rgba(189, 140, 191, 0.52);
         }
+        @include max(1200) {
+            margin: 0 7px;
+        }
+        @include max(1100) {
+            width: 230px;
+            padding: 20px 18px;
+        }
+        @include max(999) {
+            margin: 5px;
+        }
+    }
+
+    .menu__item.active {
+        background: #fff;
     }
 }
 
 .dropdown__block {
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .dropdown__title {
@@ -130,9 +167,12 @@
     margin-bottom: 10px;
 }
 
-.dropdown__more a {
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
+.dropdown__more {
+    margin-top: auto;
+    a {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
 }
 
 .menu__link {
