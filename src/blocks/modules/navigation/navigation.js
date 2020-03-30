@@ -10,5 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
         $menuWrapper.classList.toggle('active');        
         $body.classList.toggle('overflow-hidden');
         $wrapper.classList.toggle('overflow-hidden');
-    })    
+    })
+
+    const parent = document.querySelectorAll('.menu-item-has-children')[1]
+    const link = parent.children[0]
+
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        link.nextElementSibling.classList.toggle('active')
+    })
 })
