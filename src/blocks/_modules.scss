@@ -1,17 +1,17 @@
 @import "modules/sale_line/sale_line";
 @import "modules/navigation/navigation";
 @import "modules/header/header";
-@import "modules/about/about";
+/* @import "modules/about/about";
 @import "modules/reasons/reasons";
 @import "modules/how_work/how_work";
 @import "modules/slider/slider";
 @import "modules/visitors/visitors";
 @import "modules/conditions/conditions";
 @import "modules/ready_get/ready_get";
-@import "modules/sales_block/sales_block";
+@import "modules/sales_block/sales_block"; */
 @import "modules/footer/footer";
 @import "modules/Free-trial-modal/modal";
-
+/*
 @import "modules/Page-plans/plans-header/plans-header";
 @import "modules/Page-plans/quote/quote";
 @import "modules/Page-plans/features/features";
@@ -25,7 +25,6 @@
 @import "modules/Page-examples/ex-header/ex-header";
 @import "modules/Page-examples/ex-section/ex-section";
 
-
 @import "modules/Page-blog/blog/blog";
 @import "modules/Page-post/post/post";
 
@@ -35,4 +34,12 @@
 @import "modules/Page-affiliates/program/program";
 
 @import "modules/Page-careers/careers";
-@import "modules/404/404";
+@import "modules/404/404";*/
+
+@import "modules/Page-google/google-header/google-header.html";
+@import "modules/Page-google/google-about/google-about.html";
+@import "modules/Page-google/google-experience/google-experience.html";
+@import "modules/Page-google/google-simple/google-simple.html";
+@import "modules/Page-google/google-usage/google-usage.html";
+@import "modules/Page-google/google-quote/google-quote.html";
+@import "modules/Page-google/google-try-it/google-try-it.html";
