@@ -40,11 +40,11 @@ if (man) {
                 animated = true
                 setTimeout(() => {
                     svg.querySelector('.stars').classList.add('active')
-                }, 3000)
+                }, 1250)
                 setTimeout(() => {
                     svg.querySelector('.usual-man').classList.add('unactive')
                     svg.querySelector('.magician').classList.add('active')
-                }, 3800)
+                }, 2500)
                 setTimeout(() => {
                     title.classList.add('hide')
                     title.addEventListener('transitionend', function(e) {
@@ -55,7 +55,7 @@ if (man) {
                             title.classList.remove('hide')
                         }
                     })
-                }, 5000)
+                }, 3250)
             }
         });
     };
