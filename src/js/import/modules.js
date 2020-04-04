@@ -18,6 +18,8 @@ import "%modules%/Page-affiliates/aff-header/header";
 import "%modules%/Page-affiliates/earn-promo/earn-promo";
 import "%modules%/Page-affiliates/program/program";
 
+import "%modules%/Page-google/google-header/google-header";
+
 import "%modules%/Page-careers/careers";
 
 import AOS from 'aos';

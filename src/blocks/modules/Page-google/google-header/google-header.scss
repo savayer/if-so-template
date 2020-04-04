@@ -41,8 +41,8 @@
             bottom: 36%;
             left: -23%;
             padding-top: 22px;
-            font-family: Arial, sans-serif;
             padding-left: 90px;
+            padding-right: 20px;
             font-size: 24px;
             user-select: none;
             color: #5c5c5c;
@@ -86,4 +86,19 @@
         @include max(600) { min-height: 250px; width: 360px; border-radius: 16px; }
         @include max(430) { min-height: 210px; width: 310px; }
     }
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+}
+
+.layer__search_text {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: type 2s steps(60, end);
+    animation-fill-mode: forwards;
+    font-family: Arial, sans-serif;
 }
