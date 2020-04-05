@@ -1,0 +1,15 @@
+.about--google {
+    margin-top: 200px;
+    .about__title, .about__introtext, .about__content {
+        text-align: center;
+    }
+    .about__introtext {
+        font-size: 24px;
+        font-family: 'FuturaBold';
+    }
+    .about__content {
+        padding-top: 0;
+        width: 100%;
+        margin: 1.5rem 0 0 0;
+    }
+}
