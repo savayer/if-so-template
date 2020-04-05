@@ -6,8 +6,15 @@ $gray: #e1e1e1;
 $footer_color: #32325d;
 $link_color: #ec008c;
 $header_skew: skew(0, 4.8deg);
+$big_skew: skew(0, 8deg);
 %header_unskew {
     transform: skew(0, -4.8deg) translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+%big_unskew {
+    transform: skew(0, -8deg) translateZ(0);
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
 }

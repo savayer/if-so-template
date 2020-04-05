@@ -1,0 +1,34 @@
+.simple_ads {
+    margin-top: 150px;
+    text-align: center;
+    .title {
+        line-height: 1.2;
+    }
+    img {
+        max-width: 100%;
+        display: block;
+        margin: 5rem auto;
+    }
+}
+
+.simple_ads__content {
+    @include row-flex();
+    margin-top: 4.5rem;
+}
+
+.simple_ads__step {
+    @include col();
+    @include size(4);
+}
+
+.step__title {
+    font-family: 'FuturaBold';
+    font-size: 26px;
+    text-align: left;
+    word-spacing: -4px;
+}
+
+.step__description {
+    font-size: 1.25rem;
+    text-align: left;
+}

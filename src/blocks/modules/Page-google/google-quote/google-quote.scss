@@ -1,0 +1,26 @@
+.quote--google {
+    margin-top: 200px;
+    .quote__text {
+        font-size: 46px;
+        max-width: 1150px;
+        &::before {
+            width: 90px;
+            height: 80px;
+            bottom: -100px;
+            background: url(../../../../img/google-hero/quote_left.png) center center/contain no-repeat;
+        }
+        &::after {
+            width: 90px;
+            height: 80px;
+            top: -80px;
+            background: url(../../../../img/google-hero/quote_right.png) center center/contain no-repeat;
+        }
+
+    }
+    .author__name {
+        font-family: 'FuturaBold';
+    }
+    .quote__author {
+        font-style: normal;
+    }
+}
