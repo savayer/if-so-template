@@ -4,32 +4,36 @@ const texts = [
     'elegant shoes'   
 ]
 
-const restartAnimaion = el => {
-    el.classList.remove('.layer__search_text')
-    void el.offsetWidth
-    el.classList.add('.layer__search_text')
+const typeText = (parentNode, text, shoes) => {
+    let i = 1;
+    let currentTimeout;
+    parentNode.innerHTML = ''
+    for (let letter of text) {
+        currentTimeout = i * 80;
+        setTimeout(() => {
+            parentNode.innerHTML += letter            
+        }, currentTimeout)   
+        i++
+
+        if (i === text.length) {
+            setTimeout(() => {
+                document.querySelectorAll('.layer__image').forEach(item => item.style.display = 'none')
+                document.querySelector('.layer__image--'+shoes).style.display = 'block'
+            }, currentTimeout + 500)
+        }
+    }
 }
 
 const showQueriesAnimation = () => {
     const searching = document.querySelector('.layer__search_text')
-    searching.addEventListener('animationend', e => {
-        if (e.animationName !== 'type') return;
-        if (e.srcElement.innerText.includes(window.currentShoes)) {
-            document.querySelectorAll('.layer__image').forEach(item => item.style.display = 'none')
-            document.querySelector('.layer__image--'+window.currentShoes).style.display = 'block'
-        }
-    })
     if (searching) {
-        searching.innerHTML = texts[0]
-        restartAnimaion(searching)
-        window.currentShoes = 'running'
-
+        typeText(searching, texts[0], 'running')
         setTimeout(() => {
-            searching.innerHTML = texts[1]
-            restartAnimaion(searching)
-            window.currentShoes = 'women'
-        }, 4000)
-        
+            typeText(searching, texts[1], 'women')
+        }, 2500)
+        setTimeout(() => {
+            typeText(searching, texts[2], 'elegant')
+        }, 5000)
     }
 }
 

@@ -95,10 +95,5 @@
 }
 
 .layer__search_text {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    animation: type 2s steps(60, end);
-    animation-fill-mode: forwards;
     font-family: Arial, sans-serif;
 }
