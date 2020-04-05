@@ -1,6 +1,6 @@
 # If-So template
 
-[demo](https://testing.savayer.me/if-so/)
+[demo](http://if-so.savayer.me/)
 
 To install dependencies
 
