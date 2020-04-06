@@ -1,6 +1,9 @@
 .google_try {
     margin: 300px 0 150px;
     text-align: center;
+    @include max(450) {
+        margin: 200px 0 100px;
+    }
 }
 
 .google_try__title {

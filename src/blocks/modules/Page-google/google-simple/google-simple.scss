@@ -13,12 +13,18 @@
 
 .simple_ads__content {
     @include row-flex();
+    justify-content: center;
     margin-top: 4.5rem;
 }
 
 .simple_ads__step {
     @include col();
-    @include size(4);
+    @include size(4);    
+    @include size-lg(12);    
+    margin-bottom: 2.5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .step__title {
@@ -26,9 +32,11 @@
     font-size: 26px;
     text-align: left;
     word-spacing: -4px;
+    @include lg(text-align, center);
 }
 
 .step__description {
     font-size: 1.25rem;
     text-align: left;
+    @include lg(text-align, center);
 }

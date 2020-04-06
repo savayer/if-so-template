@@ -6,6 +6,9 @@
         display: block;
         margin: 4.5rem auto;
     }
+    @include max(450) {
+        margin-top: 150px;
+    }
 }
 
 .ex_google__introtext {

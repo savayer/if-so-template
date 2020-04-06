@@ -8,6 +8,10 @@
         padding-top: 40px;
     }
     text-align: center;
+    @include sm-block {
+        margin-top: 100px;
+        padding: 80px 0;
+    }
 }
 
 .usage__introtext {
@@ -25,10 +29,14 @@
         flex-direction: row-reverse;
     }
     align-items: center;
+    justify-content: center;
     margin: 6rem 0;
     &:nth-child(2) {
         .list__image img {
             max-width: 450px;
+            @include lg(max-width, 400px);
+            @include max(850) { max-width: 370px; }
+            @include max(800) { max-width: 440px; }
         }
     }
 }
@@ -36,29 +44,63 @@
 .list__content {
     @include col();
     @include size(6);
+    padding-left: 62px;
+    @include max(800) {
+        @include size(10);
+    }
+    @include max(600) {
+        @include size(12);
+    }
+    @include max(450) {
+        padding-left: 0;
+    }
 }
 
 .list__title {
     word-spacing: -12px;
     text-align: left;
+    position: relative;
     &:before {
         content: attr(data-number);
+        position: absolute;
+        left: -78px;
+        @include max(1100) { left: -62px; }
+        @include lg(left, -50px);
+        @include max(450) {
+            position: static;
+        }
     }
+    @include max(1100) {
+        word-spacing: -10px;
+        font-size: 44px;        
+    }
+    @include lg(font-size, 36px !important);
+    @include sm(font-size, 30px !important);
 }
 
 .list__description {
     font-size: 1.25em;
     margin-top: 1rem;
     text-align: left;
-    padding-left: 14%;
+    @include lg(font-size, 1.125rem);
 }
 
 .list__image {
     @include col();
     @include size(6);
+    @include max(800) {
+        @include size(10);
+        margin-top: 2rem;
+    }
+    @include max(600) {
+        @include size(12);
+    }
     img {
         max-width: 350px;
         display: block;
         margin: auto;
+        @include lg(max-width, 300px);
+        @include sm(width, 70%);
+        @include xs(width, 100%);
     }
 }

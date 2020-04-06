@@ -8,14 +8,54 @@
             height: 80px;
             bottom: -100px;
             background: url(../../../../img/google-hero/quote_left.png) center center/contain no-repeat;
+            @include max(1100) {
+                left: -40px;
+                bottom: -120px;
+            }
+            @include max(700) {
+                width: 60px;
+                height: 70px;
+            }
+            @include max(450) {
+                bottom: -70px;
+                left: -20px;
+            }
         }
         &::after {
             width: 90px;
             height: 80px;
             top: -80px;
             background: url(../../../../img/google-hero/quote_right.png) center center/contain no-repeat;
+            @include max(1100) {
+                right: -40px;
+                top: -100px;
+            }
+            @include max(700) {
+                width: 60px;
+                height: 110px;
+            }
+            @include max(450) {
+                right: -20px;
+            }
         }
-
+        @include max(1400) {
+            font-size: 36px;
+            max-width: 840px;
+        }
+        @include max(950) {
+            font-size: 30px;
+            max-width: 85%;
+        }
+        @include max(700) {
+            font-size: 26px;
+        }
+        @include max(500) {
+            font-size: 24px;
+        }
+        @include max(450) {
+            font-size: 22px;
+            max-width: 95%;
+        }
     }
     .author__name {
         font-family: 'FuturaBold';

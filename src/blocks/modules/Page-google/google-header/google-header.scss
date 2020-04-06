@@ -54,6 +54,7 @@
         @include max(325) { left: 29%; }
     }
     @include max(650) { min-height: 585px !important; }
+    @include sm(margin-bottom, 210px);
     @include max(540) { min-height: 500px !important; }
     @include max(430) { min-height: 450px !important; }
     @include max(400) { min-height: 417px !important; }

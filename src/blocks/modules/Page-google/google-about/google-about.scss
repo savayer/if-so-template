@@ -12,4 +12,12 @@
         width: 100%;
         margin: 1.5rem 0 0 0;
     }
+
+    iframe {
+        @include lg(height, 500px);
+        @include md(height, 400px);
+        @include sm(height, 300px);
+        @include max(500) { height: 250px; }
+        @include xs(height, 200px);
+    }
 }
