@@ -2,17 +2,70 @@
     font-size: 26px;  
     margin-bottom: 10px;
     word-spacing: -4px;
+    @include max(400) { font-size: 24px; }
+    @include max(370) { font-size: 22px !important; }
 }
 
 .header--google {
     .header__description {
         font-size: 20px;
+        @include max(350) {
+            font-size: 18px;
+        }
     }
     .header__content {
         max-width: 460px;
+        padding-bottom: 40px;
     }
     .header__container {
         padding-right: 37%;
+        @include max(400) {
+            height: 400px;
+        }
+    }
+    .header__object {
+        @include max(650) {
+            width: 1110px !important;
+            top: -112px !important;
+            right: -56% !important;
+        }
+        @include max(540) {
+            width: 981px !important;
+            top: -116px !important;
+            right: -66% !important;
+        }        
+    }
+    .perspective_wrapper {
+        @include max(650) { left: 8%; }
+        @include max(620) { left: 15%; }
+        @include max(600) { left: 2%; }
+        @include max(560) { left: 6%; }
+        @include max(520) { left: 12%; }
+        @include max(490) { left: 15%; }
+        @include max(470) { left: 18%; }
+        @include max(450) { left: 20%; }
+        @include max(430) { left: 2%; }
+        @include max(410) { left: 5%; }
+        @include max(400) { left: 7%; }
+        @include max(390) { left: 9%; }
+        @include max(370) { left: 22%; }
+        @include max(350) { left: 25%; }
+        @include max(335) { left: 27%; }
+        @include max(325) { left: 29%; }
+    }
+    @include max(650) { min-height: 585px !important; }
+    @include max(540) { min-height: 500px !important; }
+    @include max(430) { min-height: 450px !important; }
+    @include max(400) { min-height: 417px !important; }
+}
+
+.header--google.header--new {
+    .header__object {
+        @include max(400) {
+            width: 850px !important;
+            top: -117px !important;
+            right: -98% !important;
+        }
     }
 }
 
@@ -31,6 +84,16 @@
         bottom: -14px;
         left: 0;
         right: 150px;
+        @include max(1500) {min-height: 410px; width: 595px; height: 120px; }
+        @include max(1200) { min-height: 380px; width: 550px; right: 70px; }
+        @include max(1100) { right: 50%; }
+        @include max(940) { right: 40%; }
+        @include max(650) { min-height: 320px; width: 464px; border-radius: 18px; }
+        @include max(540) { min-height: 270px; width: 394px; }
+        @include max(450) { min-height: 238px; width: 345px; }
+        @include max(430) { right: 50%; }
+        @include max(390) { min-height: 200px; width: 290px; bottom: 20px }
+        @include max(370) { right: 100%; }
         &__search {
             background: url(../../../img/google-hero/search_input.png) no-repeat;
             background-size: contain;
@@ -48,6 +111,39 @@
             color: #5c5c5c;
             box-shadow: 0 5px 8px 0px #9c9c9c;
             border-radius: 50px;
+            @include max(1500) { bottom: 30%; }
+            @include max(1200) { width: 343px; height: 70px; }
+            @include max(650) {
+                width: 280px;
+                height: 57px;
+                padding-top: 18px;
+                padding-left: 70px;
+                font-size: 20px;
+                left: -18%;
+            }
+            @include max(540) {
+                width: 245px;
+                height: 50px;
+                bottom: 28%;
+                padding-top: 14px;
+                padding-left: 61px;
+                font-size: 18px;
+            }
+            @include max(450) {
+                width: 220px;
+                height: 45px;
+                padding-top: 15px;
+                padding-left: 55px;
+                font-size: 16px;
+            }
+            @include max(390) {
+                width: 205px;
+                height: 44px;
+                bottom: 23%;
+                padding-top: 12px;
+                padding-left: 51px;                
+                left: -50px;
+            }
         }
         &__shoes_bg {
             background: url(../../../img/google-hero/shoes_bg.png) center/cover no-repeat;
@@ -60,6 +156,12 @@
             top: 105px;
             z-index: 2;
             display: flex;
+            @include max(1500) { height: 130px; }
+            @include max(1200) { height: 110px; }
+            @include max(650) { top: 75px; }
+            @include max(540) { top: 65px; height: 90px; }
+            @include max(450) { top: 60px; height: 80px; }
+            @include max(390) { top: 47px; height: 70px; }
         }
         &__image {
             margin: auto;
@@ -69,22 +171,26 @@
             background: url(../../../img/google-hero/running.png) center/contain no-repeat;
             width: 160px;
             height: 120px;
+            @include max(1500) { width: 100px; height: 100px; }
+            @include max(540) { width: 80px; height: 80px; }
+            @include max(450) { width: 70px; height: 50px; }
         }
         &__image--2 {
             background: url(../../../img/google-hero/women.png) center/contain no-repeat;
             width: 100px;
             height: 110px;
+            @include max(1500) { width: 90px; height: 80px; }
+            @include max(540) { width: 70px; height: 60px; }
+            @include max(450) { width: 60px; height: 50px; }
         }
         &__image--3 {
             background: url(../../../img/google-hero/elegant.png) center/contain no-repeat;
             width: 150px;
             height: 80px;
-        }
-        @include max(1500) {min-height: 350px; width: 510px; }
-        @include lg-block { right: 600px; }
-        @include max(700) { min-height: 320px; width: 460px; }
-        @include max(600) { min-height: 250px; width: 360px; border-radius: 16px; }
-        @include max(430) { min-height: 210px; width: 310px; }
+            @include max(1500) { width: 110px; height: 70px; }
+            @include max(540) { width: 90px; height: 60px; }
+            @include max(450) { width: 70px; height: 50px; }
+        }        
     }
 }
 
