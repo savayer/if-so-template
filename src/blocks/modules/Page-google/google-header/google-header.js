@@ -1,4 +1,4 @@
-const texts = [
+/* const texts = [
     'running shoes',
     'women shoes',
     'elegant shoes'   
@@ -35,8 +35,44 @@ const showQueriesAnimation = () => {
             typeText(searching, texts[2], 'elegant')
         }, 5000)
     }
-}
+} */
+
+const shoes = [
+    'running shoes',
+    'women shoes',
+    'elegant shoes'
+];
 
 window.addEventListener('load', e => {
-    showQueriesAnimation()
+    const s = document.querySelector('.layer-start-animation-js')    
+    if (s) {
+        window.counter = 1;
+        const text = s.querySelector('.layer__search_text')
+        text.classList.add('animate')
+        text.innerHTML = shoes[counter-1]
+        
+        text.addEventListener('animationend', e => {
+            if (e.animationName !== 'type') return;
+            if (document.querySelector('.layer__image.block')) {
+                document.querySelector('.layer__image.block').classList.remove('block')
+            }
+            document.querySelector('.layer__image--'+counter).classList.add('block')
+            counter++;
+            if (counter >= 4) {
+                counter = 1;
+            }
+            
+            setTimeout(() => {
+                restartAnimation(text)
+            }, 1000)
+
+        })
+
+        const restartAnimation = el => {
+            el.classList.remove('animate')
+            text.innerHTML = shoes[counter-1]
+            void el.offsetWidth
+            el.classList.add('animate')
+        }
+    }
 })

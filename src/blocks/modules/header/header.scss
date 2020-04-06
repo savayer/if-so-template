@@ -5,9 +5,6 @@
     transform: $header_skew;
     @include min(1900) {
         min-height: 670px;
-        &--new {
-            min-height: 565px !important;
-        }
     }    
     @include min(2200) {
         min-height: 631px;

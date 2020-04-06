@@ -28,7 +28,7 @@
         margin: auto;
         position: absolute;
         z-index: 1;
-        bottom: 30px;
+        bottom: -14px;
         left: 0;
         right: 150px;
         &__search {
@@ -65,17 +65,17 @@
             margin: auto;
             display: none;
         }
-        &__image--running {
+        &__image--1 {
             background: url(../../../img/google-hero/running.png) center/contain no-repeat;
             width: 160px;
             height: 120px;
         }
-        &__image--women {
+        &__image--2 {
             background: url(../../../img/google-hero/women.png) center/contain no-repeat;
             width: 100px;
             height: 110px;
         }
-        &__image--elegant {
+        &__image--3 {
             background: url(../../../img/google-hero/elegant.png) center/contain no-repeat;
             width: 150px;
             height: 80px;
@@ -96,4 +96,18 @@
 
 .layer__search_text {
     font-family: Arial, sans-serif;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: none;
+    &.animate {
+        display: block;
+        animation: type 2s steps(50, end) forwards;
+    }    
+}
+
+.layer__image {
+    &.block {
+        display: block;
+    }
 }
