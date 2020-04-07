@@ -27,7 +27,7 @@
     @include xl(width, 280px);
     @include max(1100) { right: -15%; }
     @include max(992) {
-        top: 88%;
+        top: 91%;
         width: 200px;
         right: 4%;
     }
@@ -35,7 +35,7 @@
         background: url('../../../img/laughing/shield.png') center/contain no-repeat;
         width: 300px;
         height: 750px;
-        @include max(992) { height: 550px; }
+        @include max(992) { height: 550px; top: 88%; }
     }
     svg {
         width: 100%;

@@ -20,7 +20,10 @@
     .header__container {
         padding-right: 37%;
         @include max(1100) {
-            padding-right: 35%;
+            padding-right: 40%;
+        }
+        @include max(899) {
+            padding-right: 25%;
         }
         @include max(800) {
             padding-right: 15%;
@@ -34,12 +37,12 @@
     }
     .header__object {
         @include max(1100) {
-            width: 1150px !important;
+            width: 1040px !important;
         }
-        @include max(992) {
+        @include max(899) {
             width: 1280px !important;
         }
-        @include max(650) {
+        @include max(670) {
             width: 1110px !important;
             top: -112px !important;
             right: -56% !important;
@@ -53,8 +56,7 @@
     .perspective_wrapper {
         @include max(780) { left: 23%;}
         @include max(700) { left: 26%;}
-        @include max(670) { left: 34% }
-        @include max(650) { left: 13%; }
+        @include max(670) { left: 13%; }
         @include max(600) { left: 2%; }
         @include max(570) { left: 5%; }
         @include max(530) { left: 12%; }
@@ -70,13 +72,14 @@
         @include max(330) { left: 29%; }
         @include max(325) { left: 30%; }
     }
-    @include max(1100) { min-height: 602px !important; }
-    @include max(992) { min-height: 685px !important; }
-    @include max(650) { min-height: 585px !important; }
-    @include sm(margin-bottom, 210px);
+    @include xl(margin-bottom, 200px);
+    @include max(1100) { min-height: 533px !important; }
+    @include max(899) { min-height: 685px !important; margin-bottom: 250px; }
+    @include max(670) { min-height: 585px !important; }    
     @include max(540) { min-height: 500px !important; }
     @include max(430) { min-height: 450px !important; }
     @include max(400) { min-height: 417px !important; }
+    @include max(390) { margin-bottom: 200px; }
 }
 
 .header--google.header--new {
@@ -104,21 +107,28 @@
         bottom: -14px;
         left: 0;
         right: 150px;
-        @include max(1500) {min-height: 410px; width: 595px; height: 120px; }
-        @include max(1200) { min-height: 380px; width: 550px; right: 70px; }
+        @include max(1500) { min-height: 455px; width: 655px; bottom: 6px; right: 5%; }
+        @include max(1350) { right: -10%; }
+        @include max(1200) { min-height: 434px; width: 630px; right: -10%; }
         @include max(1100) { 
-            transform: rotateX(0deg) rotateZ(4deg) rotateY(-11deg);
-            right: 31%;  
-            bottom: 60px;
+            transform: rotateX(0deg) rotateZ(5deg) rotateY(-11deg);
+            right: 24%;
+            bottom: 70px;
+        }
+        @include max(1050) {
+            right: 15%;
         }
         @include max(992) {
-            right: 22%;
+            right: 0;
         }
-        @include max(940) { right: 16%; }
+        @include max(899) {
+            right: 22%;
+            bottom: 0;
+        }
         @include max(850) { right: 25%; }
-        @include max(700) { bottom: 10px; }
-        @include max(670) { right: 40%; }
-        @include max(650) { min-height: 320px; width: 464px; border-radius: 18px; }
+        @include max(730) { right: 20%; }
+        @include max(700) { bottom: -30px; }
+        @include max(670) { min-height: 320px; width: 464px; border-radius: 18px; right: 40%; }
         @include max(540) { min-height: 270px; width: 394px; }
         @include max(450) { min-height: 238px; width: 345px; }
         @include max(430) { right: 50%; }
@@ -141,9 +151,9 @@
             color: #5c5c5c;
             box-shadow: 0 5px 8px 0px #9c9c9c;
             border-radius: 50px;
-            @include max(1500) { bottom: 30%; }
+            @include max(1500) { bottom: 35%; }
             @include max(1200) { width: 343px; height: 70px; }
-            @include max(650) {
+            @include max(670) {
                 width: 280px;
                 height: 57px;
                 padding-top: 18px;
@@ -186,9 +196,7 @@
             top: 105px;
             z-index: 2;
             display: flex;
-            @include max(1500) { height: 130px; }
-            @include max(1200) { height: 110px; }
-            @include max(650) { top: 75px; }
+            @include max(670) { top: 75px; height: 110px; }
             @include max(540) { top: 65px; height: 90px; }
             @include max(450) { top: 60px; height: 80px; }
             @include max(390) { top: 47px; height: 70px; }
