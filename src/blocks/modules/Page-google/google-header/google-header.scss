@@ -36,22 +36,22 @@
         }        
     }
     .perspective_wrapper {
-        @include max(650) { left: 8%; }
-        @include max(620) { left: 15%; }
+        @include max(670) { left: 34% }
+        @include max(650) { left: 13%; }
         @include max(600) { left: 2%; }
-        @include max(560) { left: 6%; }
-        @include max(520) { left: 12%; }
+        @include max(570) { left: 5%; }
+        @include max(530) { left: 12%; }
         @include max(490) { left: 15%; }
         @include max(470) { left: 18%; }
         @include max(450) { left: 20%; }
-        @include max(430) { left: 2%; }
-        @include max(410) { left: 5%; }
-        @include max(400) { left: 7%; }
-        @include max(390) { left: 9%; }
+        @include max(430) { left: 3%; }
+        @include max(410) { left: 6%; }
+        @include max(400) { left: 9%; }
+        @include max(380) { left: 14%; }
         @include max(370) { left: 22%; }
-        @include max(350) { left: 25%; }
-        @include max(335) { left: 27%; }
-        @include max(325) { left: 29%; }
+        @include max(350) { left: 27%; }
+        @include max(330) { left: 29%; }
+        @include max(325) { left: 30%; }
     }
     @include max(650) { min-height: 585px !important; }
     @include sm(margin-bottom, 210px);
@@ -87,13 +87,18 @@
         right: 150px;
         @include max(1500) {min-height: 410px; width: 595px; height: 120px; }
         @include max(1200) { min-height: 380px; width: 550px; right: 70px; }
-        @include max(1100) { right: 50%; }
+        @include max(1100) { 
+            transform: rotateX(0deg) rotateZ(4deg) rotateY(-11deg);
+            right: 50%;  
+            bottom: 60px;
+        }
         @include max(940) { right: 40%; }
+        @include max(700) { bottom: 10px; }
         @include max(650) { min-height: 320px; width: 464px; border-radius: 18px; }
         @include max(540) { min-height: 270px; width: 394px; }
         @include max(450) { min-height: 238px; width: 345px; }
         @include max(430) { right: 50%; }
-        @include max(390) { min-height: 200px; width: 290px; bottom: 20px }
+        @include max(390) { min-height: 200px; width: 290px; bottom: 45px; }
         @include max(370) { right: 100%; }
         &__search {
             background: url(../../../img/google-hero/search_input.png) no-repeat;
@@ -139,7 +144,7 @@
             }
             @include max(390) {
                 width: 205px;
-                height: 44px;
+                height: 42px;
                 bottom: 23%;
                 padding-top: 12px;
                 padding-left: 51px;                
