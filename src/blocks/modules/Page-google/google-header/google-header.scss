@@ -19,11 +19,26 @@
     }
     .header__container {
         padding-right: 37%;
+        @include max(1100) {
+            padding-right: 35%;
+        }
+        @include max(800) {
+            padding-right: 15%;
+        }
+        @include max(700) {
+            padding-right: 0;
+        }
         @include max(400) {
             height: 400px;
         }
     }
     .header__object {
+        @include max(1100) {
+            width: 1150px !important;
+        }
+        @include max(992) {
+            width: 1280px !important;
+        }
         @include max(650) {
             width: 1110px !important;
             top: -112px !important;
@@ -36,6 +51,8 @@
         }        
     }
     .perspective_wrapper {
+        @include max(780) { left: 23%;}
+        @include max(700) { left: 26%;}
         @include max(670) { left: 34% }
         @include max(650) { left: 13%; }
         @include max(600) { left: 2%; }
@@ -53,6 +70,8 @@
         @include max(330) { left: 29%; }
         @include max(325) { left: 30%; }
     }
+    @include max(1100) { min-height: 602px !important; }
+    @include max(992) { min-height: 685px !important; }
     @include max(650) { min-height: 585px !important; }
     @include sm(margin-bottom, 210px);
     @include max(540) { min-height: 500px !important; }
@@ -89,11 +108,16 @@
         @include max(1200) { min-height: 380px; width: 550px; right: 70px; }
         @include max(1100) { 
             transform: rotateX(0deg) rotateZ(4deg) rotateY(-11deg);
-            right: 50%;  
+            right: 31%;  
             bottom: 60px;
         }
-        @include max(940) { right: 40%; }
+        @include max(992) {
+            right: 22%;
+        }
+        @include max(940) { right: 16%; }
+        @include max(850) { right: 25%; }
         @include max(700) { bottom: 10px; }
+        @include max(670) { right: 40%; }
         @include max(650) { min-height: 320px; width: 464px; border-radius: 18px; }
         @include max(540) { min-height: 270px; width: 394px; }
         @include max(450) { min-height: 238px; width: 345px; }
