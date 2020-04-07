@@ -18,6 +18,49 @@
     transform: skew(0, -4.4deg)
 }
 
+.reasons__character {
+    position: absolute;
+    z-index: 12;
+    right: -10%;
+    top: 5%;
+    width: 320px;
+    @include xl(width, 280px);
+    @include max(1100) { right: -15%; }
+    @include max(992) {
+        top: 88%;
+        width: 200px;
+        right: 4%;
+    }
+    &--shield {
+        background: url('../../../img/laughing/shield.png') center/contain no-repeat;
+        width: 300px;
+        height: 750px;
+        @include max(992) { height: 550px; }
+    }
+    svg {
+        width: 100%;
+    }
+    #banner text {
+        font-family: 'Futura', sans-serif;
+        font-weight: bold;
+    }
+    #mouth, #banner, #expressions { 
+        transition: 0.1s opacity ease; 
+        opacity: 0 
+    }
+    #laughing_character__main.hovered #mouth,
+    #laughing_character__main.hovered #expressions { 
+        opacity: 1 
+    }
+    #banner { 
+        opacity: 1 
+    }
+    #laughing_character__main.hovered #banner, 
+    #laughing_character__main.hovered #fix { 
+        opacity: 0 
+    }
+}
+
 .reasons__illustration {
     position: absolute;
     z-index: 12;    

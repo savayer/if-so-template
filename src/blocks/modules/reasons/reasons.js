@@ -21,3 +21,19 @@ if ($title && $list && $image) {
         $image.setAttribute('data-aos-delay', 600)
     }
 }
+
+const svg =  document.getElementById('laughing_character');    
+if (svg) {
+    const main = document.getElementById('laughing_character__main');
+    svg.pauseAnimations();
+    
+    main.onmouseover = function() {
+        svg.unpauseAnimations();
+        this.setAttribute('class', 'hovered showMouth');
+    }
+    
+    main.onmouseout = function() {
+        svg.pauseAnimations();
+        this.setAttribute('class', 'showMouth');
+    }
+}
