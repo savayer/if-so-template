@@ -23,4 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
             link.nextElementSibling.classList.toggle('active')
         })
     }
+
+    window.addEventListener('load', function() {
+        var menuIcons = document.querySelectorAll('.menu__icon');
+        if (menuIcons) {
+            menuIcons.forEach(function(icon) {
+                icon.classList.add('active')        
+            })
+        }
+    })
 })

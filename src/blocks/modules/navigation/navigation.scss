@@ -80,6 +80,17 @@
     }
 }
 
+.menu__icon {
+    position: absolute;
+    top: 0px;
+    left: -28px;
+    transition: .2s;
+    opacity: 0;
+    &.active {
+        opacity: 1;
+    }
+}
+
 .menu__dropdown, .sub-menu {
     display: flex;
     list-style: none;
