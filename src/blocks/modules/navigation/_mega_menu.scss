@@ -1,0 +1,70 @@
+.menu__item:hover .mega-sub-menu {
+    opacity: 1;
+    z-index: 9999;
+    visibility: visible;
+}
+
+.mega-sub-menu {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: .3s;
+    position: absolute;
+    left: 0;
+    top: calc(100% - 10px);    
+
+    min-width: 700px;
+    padding-top: 30px;
+    @include max(900) {
+        min-width: 670px;
+    }
+    &__wrapper {
+        display: flex;
+        border: 2px solid rgba(240, 91, 109, 0.502);
+        border-radius: 36px;
+        box-shadow: 4px 7px 56px 1px rgba(0, 0, 0, 0.4);    
+        padding: 22px 26px;
+        background: #fff;
+    }
+}
+
+.mega-sub-menu__col {
+    &--1 {
+        width: 65%;
+        border-right: 1px solid #b1b1b1;
+    }
+
+    &--2 {
+        width: 35%;
+        padding-left: 5%;
+    }
+}
+
+.mega-sub-menu__title {
+    font-size: 18px;
+    font-family: 'FuturaBold';
+}
+
+.mega-sub-menu__list {
+    list-style: none;
+    padding: 0;
+    li {
+        margin: 4px 10px 0 0;
+        padding: 0;
+    }
+    a {
+        color: $text-color;
+        font-family: 'Futura';
+    }
+
+    &.cols2 {
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 310px;
+        align-content: space-between;
+        width: 100%;
+        li {
+            width: 45%;
+        }
+    }
+}
