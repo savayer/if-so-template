@@ -67,4 +67,17 @@
             width: 45%;
         }
     }
+
+    .menu__item.active {
+        background: none;
+        border-radius: 0;
+        a {
+            color: #fff;
+            background: #1e0547;
+            border-radius: 17px;
+            padding: 5px 10px;
+            white-space: nowrap;
+            margin-left: -10px;  
+        }
+    }
 }
