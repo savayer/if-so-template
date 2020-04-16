@@ -13,9 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    if (document.querySelectorAll('.menu-item-has-children')) {
-        const parent = document.querySelectorAll('.menu-item-has-children')[1]
-        if (!parent) return;
+    const parent = document.querySelector('.menu-item-46668') || document.querySelector('.menu-item-35821')
+    if (parent) {
         const link = parent.children[0]
         
         link.addEventListener('click', e => {
