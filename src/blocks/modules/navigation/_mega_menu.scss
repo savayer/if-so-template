@@ -10,7 +10,7 @@
     z-index: -1;
     transition: .3s;
     position: absolute;
-    left: 0;
+    left: -40px;
     top: calc(100% - 10px);    
 
     min-width: 700px;
@@ -50,7 +50,8 @@
     padding: 0;
     li {
         margin: 4px 10px 0 0;
-        padding: 0;
+        padding: 0 0 0 10px;
+        line-height: 2.2;
     }
     a {
         color: $text-color;
