@@ -3,10 +3,6 @@ window.addEventListener('load', e => {
     const modal = document.querySelector('.if-so-user-modal')
     const openModalButton = document.querySelector('.open_if-so-user-modal__button.open-modal')
     const closeModalButton = document.querySelector('.if-so-user-modal__close')
-
-    const closeIconOnHand = document.querySelector('.open_if-so-user-modal__button_close')
-    const buttons = document.querySelector('.open_if-so-user-modal__buttons')
-
     const closeButtonHideTheHand = document.querySelector('.open_if-so-user-modal__close')
     const neverShowButton = document.querySelector('.open_if-so-user-modal__never-show')
 
@@ -26,18 +22,11 @@ window.addEventListener('load', e => {
     openModalButton.addEventListener('click', () => {
         modal.classList.add('opened')
         handOpenModal.classList.remove('active')
+        document.body.classList.add('overflow-hidden')
     })
-    /* if (closeIconOnHand && buttons) {
-        closeIconOnHand.addEventListener('mouseover', e => {
-            buttons.classList.add('active')
-        })
-
-        buttons.addEventListener('mouseout', e => {
-            buttons.classList.remove('active')
-        })
-    } */
 
     closeModalButton.addEventListener('click', () => {
         modal.classList.remove('opened')
+        document.body.classList.remove('overflow-hidden')
     })
 })

@@ -11,6 +11,12 @@
     display: flex;
     direction: rtl;
     transition: opacity .5s;
+
+    @include max(992) {
+        padding-top: 25px;
+        overflow: auto;
+    }
+    
     &.opened {
         visibility: visible;
         opacity: 1;
@@ -23,12 +29,26 @@
         background: #fff;
         position: relative;
         padding: 3rem 6rem 3rem 3rem;
+        @include xl(max-width, 70%);
+        @include max(650) {
+            margin-left: 50px;
+            margin-right: auto;
+            max-width: 80%;
+        }
+        @include max(500) {
+            padding: 2rem;
+            margin: auto;
+        }
+        @include max(400) {
+            max-width: 90%;
+        }
     }
 
     &__buttons {
         display: flex;
         justify-content: center;
         margin-top: 50px;
+        flex-wrap: wrap;
     }
 
     &__button {
@@ -38,11 +58,20 @@
         padding: 0.8rem 2.5rem;
         cursor: pointer;
         transition: .2s;
+        margin: 0 .75rem;
+        margin-bottom: 1rem;
+        @include max(650) {
+            text-align: center;
+            margin: 0 0 1rem 0;
+        }
+        @include max(500) {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        }
     }
 
     &__button--green {
         background-color: #00a651;
-        margin-right: 1.5rem;        
         &:hover {
             background-color: #038f46;
         }
@@ -77,6 +106,9 @@
         right: calc(-250px / 1.5);
         //top: 20px;
         bottom: -20px;
+        @include max(500) {
+            display: none;
+        }
     }
 }
 
@@ -104,6 +136,9 @@
     bottom: -7px;
     right: 100px;
     width: 250px;
+    @include xl(right, 40px);
+    @include max(800) { right: 0; }
+
     &__hand-flag {
         background: url(../../../img/user-modal/hand_flag.png) center/contain no-repeat;
         width: 185px;
