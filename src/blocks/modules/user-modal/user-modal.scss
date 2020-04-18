@@ -134,30 +134,32 @@
 
     position: fixed;
     bottom: -7px;
-    right: 100px;
+    right: -20px;
     width: 250px;
-    @include xl(right, 40px);
     @include max(800) { right: 0; }
 
     &__hand-flag {
         background: url(../../../img/user-modal/hand_flag.png) center/contain no-repeat;
-        width: 185px;
-        height: 250px;
+        width: 155px;
+        height: 180px;
     }
 
     &__info-button {
         position: absolute;
         bottom: 20px;
-        right: 100px;
+        right: 110px;
     }
 
     &__button {
         margin: 3px 0;
         padding: 3px 10px;
-        font-weight: bold;
+        &.open-modal {
+            padding: 0 10px 3px 10px;
+        }
+        text-align: center;
         background: #fff;
         border-radius: 30px;
-        border: 2px solid $text_color;
+        border: 1px solid $text_color;
         color: $text_color;
         position: relative;
         cursor: pointer;
@@ -174,7 +176,7 @@
     &__button_close {
         position: absolute;
         bottom: 52px;
-        right: 82px;
+        right: 92px;
         width: 15px;
         height: 15px;
         background: url(../../../img/user-modal/close_man_hand.png) center/contain no-repeat;
@@ -182,6 +184,9 @@
         &:hover + .open_if-so-user-modal__buttons {
             opacity: 1;
             visibility: visible;
+        }
+        &:hover ~ .open_if-so-user-modal__info-button span {
+            display: none;
         }
     }
 
@@ -196,11 +201,14 @@
 
         position: absolute;
         bottom: 20px;
-        right: 95px;
+        right: 105px;
         padding-right: 15px;
         &:hover {
             opacity: 1;
             visibility: visible;
+        }
+        &:hover + .open_if-so-user-modal__info-button span {
+            display: none;
         }
     }
 
@@ -209,7 +217,7 @@
     }
 
     &__never-show {
-        border: 2px solid #ff0000;
+        border: 1px solid #ff0000;
         &:hover {
             background: #ff0000;
         }
