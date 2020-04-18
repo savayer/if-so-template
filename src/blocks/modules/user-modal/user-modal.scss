@@ -223,3 +223,30 @@
         }
     }
 }
+
+.open_if-so-user-modal--hebrew {
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: .7s linear;
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+    &.active {
+        z-index: 9999;
+        opacity: 1;        
+        transform: translateY(0);
+    }
+}
+
+.open_if-so-user-modal__il-icon {
+    background: url(../../../img/user-modal/il.png) center/contain no-repeat;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+
+    & + .open_if-so-user-modal__button_close {
+        bottom: 60px;
+        right: -20px;
+    }
+}
