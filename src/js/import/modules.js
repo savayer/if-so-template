@@ -22,8 +22,6 @@ import "%modules%/Page-google/google-header/google-header";
 
 import "%modules%/Page-careers/careers";
 
-import "%modules%/user-modal/user-modal";
-
 import AOS from 'aos';
 
 AOS.init({

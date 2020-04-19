@@ -12,15 +12,17 @@ document.addEventListener('DOMContentLoaded', function() {
             $wrapper.classList.toggle('overflow-hidden');
         })
     }
-
-    const parent = document.querySelector('.menu-item-46668') || document.querySelector('.menu-item-35821')
+    
+    const parent = document.querySelectorAll('.menu-item-46668')[1] || document.querySelectorAll('.menu-item-35890')[1]
     if (parent) {
-        const link = parent.children[0]
+        const link = parent.children[0]        
         
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            link.nextElementSibling.classList.toggle('active')
-        })
+        if (link.nodeName === 'A') {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                link.nextElementSibling.classList.toggle('active')
+            })
+        }
     }
 
     window.addEventListener('load', function() {
