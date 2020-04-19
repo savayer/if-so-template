@@ -136,8 +136,9 @@
     bottom: -7px;
     right: -20px;
     width: 250px;
-    @include max(800) { right: 0; }
-
+    @include max(800) { right: -60px; }
+    @include xs(right, -70px);
+    
     &__hand-flag {
         background: url(../../../img/user-modal/hand_flag.png) center/contain no-repeat;
         width: 155px;
