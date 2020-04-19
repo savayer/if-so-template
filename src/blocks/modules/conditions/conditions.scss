@@ -5,11 +5,13 @@
 .conditions__items {
     margin-top: 80px;
     @include row-flex();
+    justify-content: center;
 }
 
 .cond__item {
     @include col();
-    @include size(4);
+    @include size(3);
+    @include size-xl(4);
     @include size-lg(6);
     @include size-sm(12);
     margin-top: 60px;
@@ -74,16 +76,28 @@
 
 .cond__image, .earn__image {
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 45px;    
     img {
         margin: 0 auto;
         display: block;
-        min-height: 78px;
+        height: 65px;
+    }
+}
+
+.cond__image {
+    margin: 0 auto;
+    img {
+        min-height: auto;
+        height: 65px;
     }
 }
 
 .cond__lines {
     @extend %lines;
+    width: 70px;
+    height: 30px;
+    top: -30px;
+    left: 50%;
 }
 
 .cond__title, .earn__title {
@@ -92,6 +106,10 @@
     margin-bottom: 15px;
     word-spacing: -7px;
     text-align: center;
+}
+
+.cond__title {
+    margin-top: 10px;
 }
 
 .cond__description, .earn__description {
