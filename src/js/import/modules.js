@@ -11,6 +11,8 @@ import "%modules%/footer/footer";
 
 import "%modules%/Page-plans/faq/faq";
 
+import "%modules%/Page-docs/docs/docs";
+
 import "%modules%/Free-trial-modal/modal";
 import "%modules%/Page-post/post/post";
 

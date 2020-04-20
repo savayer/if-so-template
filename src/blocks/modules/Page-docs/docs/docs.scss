@@ -12,6 +12,7 @@
 
 .docs__title {
     padding-left: 10px;
+    margin-top: 0;
     span {
         display: block;
         font-family: 'FuturaBold';
@@ -127,9 +128,13 @@
 }
 
 .widget {
-    margin: 80px 0;
-    &:first-child {
-        margin: 0;
+    margin: 40px 0;
+    &:first-of-type {
+        margin-top: 20px;
+    }
+
+    &.selected &__expand::before {
+        content: '\2013';
     }
 }
 
@@ -138,7 +143,27 @@
     font-weight: 800;
     font-size: 18px;
     text-transform: uppercase;
-    padding-left: 15px;
+    padding-left: 30px;
+    position: relative;
+
+    cursor: pointer;
+}
+
+.widget__expand {
+    position: absolute;
+    left: 12px;
+    top: -2px;
+    font-size: 20px;
+    &::before {
+        content: '+';
+        transition: .4s;
+    }
+}
+
+.widget__content {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
 }
 
 .widget__list {
@@ -176,16 +201,19 @@
         &.active {
             color: #fd5b56;
             &:after {
-                right: -10px;
+                /* right: -10px; */
                 background: url(../../../../img/svg/list-arrow-active.svg) center/contain no-repeat;
             }
             a {
                 color: #fd5b56
             }
+            &:hover:after {
+                animation: none;
+            }
         }
         &:hover {
             &:after {
-                right: -10px;
+                animation: moveArrowWidgetListItem .4s forwards;
             }
         }
         a {
@@ -199,6 +227,12 @@
                 text-decoration: none;
             }
         }
+    }
+}
+
+@keyframes moveArrowWidgetListItem {
+    50% {
+        right: 4px;
     }
 }
 

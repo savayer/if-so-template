@@ -318,7 +318,7 @@ $min-height400-header: 130px;
     @include transitionPaddingGroup3(30px)
 }
 
-.m-form__input {
+.m-form__input, .form-input {
     margin: 15px 0;
     border-radius: 32px;
     border: 2px solid #1e0547;
@@ -340,6 +340,10 @@ $min-height400-header: 130px;
         font-style: italic;
         font-size: 16px;
     }
+}
+
+.form-input {
+    padding: 8px 20px;
 }
 
 .m-form__group {
