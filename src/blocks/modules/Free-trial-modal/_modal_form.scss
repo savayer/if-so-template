@@ -342,9 +342,49 @@ $min-height400-header: 130px;
     }
 }
 
-.form-input {
-    padding: 8px 20px;
+.input_wrapper {
+    position: relative;
+    button[type="reset"] {
+        position: absolute;
+        top: 7px;
+        bottom: 10px;
+        right: 28px;
+        color: #fd5b56;
+        border: 0;
+        background: transparent;
+        display: none;
+        font-size: 24px;
+        outline: none;
+        font-weight: bold;
+    }
+
+    .form-search-button {
+        padding: 0;
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        right: 7px;
+        border: none;
+        background: transparent;
+        outline: none;
+        cursor: pointer;
+        span {
+            color: #b7b7b7;
+        }
+
+    }
+    
+    .form-input {
+        padding: 8px 48px 8px 12px;
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
+        &:valid ~ button[type="reset"] {
+            display: block;
+        }  
+    }
 }
+
 
 .m-form__group {
     margin: 15px 0;
