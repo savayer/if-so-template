@@ -56,6 +56,18 @@
     a {
         color: $text-color;
         font-family: 'Futura';
+        &:after {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 13px;
+            width: 6px;
+            height: 13px;
+            display: block;
+            -webkit-transition: .2s;
+            transition: .2s;
+            background: url(../../../img/svg/list-arrow.svg) center/contain no-repeat;
+        }
     }
 
     &.cols2 {
@@ -73,12 +85,11 @@
         background: none;
         border-radius: 0;
         a {
-            color: #fff;
-            background: #1e0547;
-            border-radius: 17px;
-            padding: 5px 10px;
+            color: #fd5b56;
             white-space: nowrap;
-            margin-left: -10px;  
+            &:after {
+                background: url(../../../img/svg/list-arrow-active.svg) center/contain no-repeat;
+            }
         }
     }
 }
