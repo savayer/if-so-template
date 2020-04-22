@@ -1,0 +1,49 @@
+.preloader_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    display: flex;
+    z-index: 999999;
+    transition: opacity .7s;
+    &.unactive {
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.preloader {
+    margin: auto;
+    width: 200px;
+}
+
+.preloader__arrow {
+    fill: #fd5b56;
+    animation: spinAndMoveArrow 2s infinite;
+    transform-origin: 19px 8px;
+}
+
+.preloader__text {
+    fill: $text-color;
+}
+
+@keyframes spinAndMoveArrow {
+    40% {
+        transform: rotate(360deg);
+    }
+
+    60% {
+        transform: translateX(1px);
+    }
+
+    80% {
+        transform: translateX(-1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -26,14 +26,24 @@ const svg =  document.getElementById('laughing_character');
 if (svg) {
     const main = document.getElementById('laughing_character__main');
     svg.pauseAnimations();
-    
+    let interval;
+
     main.onmouseover = function() {
         svg.unpauseAnimations();
         this.setAttribute('class', 'hovered showMouth');
+        this.classList.remove('ready-to-shield-next-time')        
+        clearInterval(interval)
     }
     
     main.onmouseout = function() {
         svg.pauseAnimations();
         this.setAttribute('class', 'showMouth');
+        this.classList.add('ready-to-shield-next-time')
+        this.querySelector('.reasons__character #banner').style.opacity = 0
+        interval = setTimeout(() => {
+            this.classList.remove('ready-to-shield-next-time')
+            this.querySelector('.reasons__character #banner').style.opacity = 1
+        }, 2000)
+        
     }
 }

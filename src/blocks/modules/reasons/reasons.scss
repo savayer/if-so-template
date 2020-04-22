@@ -44,10 +44,17 @@
         font-family: 'Futura', sans-serif;
         font-weight: bold;
     }
+    .will_be_ready {
+        opacity: 0;
+    }
+    #laughing_character__main.ready-to-shield-next-time .will_be_ready {
+        opacity: 1; // i'll be ready for you next time
+    }
     #mouth, #banner, #expressions { 
         transition: 0.1s opacity ease; 
         opacity: 0 
     }
+
     #laughing_character__main.hovered #mouth,
     #laughing_character__main.hovered #expressions { 
         opacity: 1 

@@ -24,6 +24,8 @@ import "%modules%/Page-google/google-header/google-header";
 
 import "%modules%/Page-careers/careers";
 
+import "%modules%/preloader/preloader";
+
 import AOS from 'aos';
 
 AOS.init({
