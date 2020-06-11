@@ -42,17 +42,17 @@
 .join__bubble {
     z-index: -1;
     &--small {
-        background: url(../../../img/aff/aff_small_bubble.svg) center center/contain no-repeat;
+        background: url(../img/aff/aff_small_bubble.svg) center center/contain no-repeat;
         @include max(576) { top: 18% !important }
     }
     &--medium {
-        background: url(../../../img/aff/aff_middle_bubble.svg) center center/contain no-repeat;
+        background: url(../img/aff/aff_middle_bubble.svg) center center/contain no-repeat;
         @include max(1100) { top: 5% }
         @include max(576) { top: 0 !important }
         @include max(380) { top: -7% !important }
     }
     &--big {
-        background: url(../../../img/aff/aff_big_bubble.svg) center center/contain no-repeat;
+        background: url(../img/aff/aff_big_bubble.svg) center center/contain no-repeat;
         @include max(576) { top: 12% !important }
     }
 }

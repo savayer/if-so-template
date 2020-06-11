@@ -60,7 +60,7 @@
 	}
 }
 
-.aff_bg_wrapper {
+.affiliate_bg_wrapper {
 	position: absolute;
 	width: 880px;
     height: 700px;
@@ -78,11 +78,11 @@
 	@include max(400) { width: 310px; }
 }
 
-.aff_bg {
+.affiliate_bg {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background: url(../../../../img/aff/aff-bg.png) center/contain no-repeat;
+	background: url(../img/aff/aff-bg.png) center/contain no-repeat;
 
 	&__text {
 		font-family: 'MV Boli';
@@ -106,14 +106,14 @@
 		top: 17%;
 		width: 30px;			
 		height: 30px;
-		background: url(../../../../img/aff/arrow-man.png) center/contain no-repeat;
+		background: url(../img/aff/arrow-man.png) center/contain no-repeat;
 
 		@include max(1050) { left: 13%; top: 24%; }
 		@include max(500) { width: 20px; height: 20px; left: 13%; top: 17%; }
 	}
 }
 
-.aff_bg__logo {
+.affiliate_bg__logo {
 	position: absolute;	
 	z-index: 10;
 	top: 29%;
@@ -131,11 +131,62 @@
 	@include max(400) { max-width: 32px; right: calc(66% + -1px); top: 26%; }
 }
 
-.aff_bg__ifso {
+.affiliate_bg__text_param {
+	position: absolute;	
+	z-index: 10;
+	top: 31%;
+    right: 65%;
+    transform: rotate(-15deg);
+    color: #f00;
+    width: 100%;
+    max-width: 120px;
+	font-weight: bold;
+	text-align: center;
+	font-family: 'FuturaBold';
+	font-size: 24px;
+	word-break: break-word;
+	@include max(1750) {
+		max-width: 102px;
+		font-size: 22px;
+	}
+	@include max(1600) {
+		max-width: 90px;
+		font-size: 18px;
+	}
+	@include max(1300) {
+		max-width: 80px;
+		font-size: 16px;
+		top: 33%;
+	}
+	@include max(1200) {
+		font-size: 15px;
+		top: 34%;
+		right: calc(65% - 2px);
+	}
+	@include max(1050) {
+		font-size: 14px;
+		top: 37%;
+		max-width: 64px;
+	}
+	@include max(500) {
+		font-size: 12px;
+		top: 32%;
+		max-width: 56px;
+		font-family: 'Futura';
+	}
+	@include max(400) {
+		top: 35%;
+		right: calc(63% - 1px);
+		max-width: 56px;
+		transform: scale(0.75) rotate(-15deg);
+	}
+}
+
+.affiliate_bg__ifso {
 	position: absolute;
 	top: 28%;
 	right: 41%;
-	// background: url(../../../../img/aff/if-so-transform.png) center/contain no-repeat;
+	// background: url(../img/aff/if-so-transform.png) center/contain no-repeat;
 	width: 58px;
 	height: 28px;
 	transform: rotate(10deg);

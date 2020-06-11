@@ -7,7 +7,7 @@
             width: 90px;
             height: 80px;
             bottom: -100px;
-            background: url(../../../../img/google-hero/quote_left.png) center center/contain no-repeat;
+            background: url(../img/google-hero/quote_left.png) center center/contain no-repeat;
             @include max(1100) {
                 left: -40px;
                 bottom: -120px;
@@ -25,7 +25,7 @@
             width: 90px;
             height: 80px;
             top: -80px;
-            background: url(../../../../img/google-hero/quote_right.png) center center/contain no-repeat;
+            background: url(../img/google-hero/quote_right.png) center center/contain no-repeat;
             @include max(1100) {
                 right: -40px;
                 top: -100px;

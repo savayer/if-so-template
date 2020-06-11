@@ -66,7 +66,7 @@
             display: block;
             -webkit-transition: .2s;
             transition: .2s;
-            background: url(../../../img/svg/list-arrow.svg) center/contain no-repeat;
+            background: url(../img/svg/list-arrow.svg) center/contain no-repeat;
         }
     }
 
@@ -87,7 +87,7 @@
         a {
             color: #fd5b56;
             &:after {
-                background: url(../../../img/svg/list-arrow-active.svg) center/contain no-repeat;
+                background: url(../img/svg/list-arrow-active.svg) center/contain no-repeat;
             }
         }
     }

@@ -36,7 +36,7 @@
     top: 20px;
     left: 30%;
     display: block;
-    background: url(../../../../img/svg/docs_ready_bubble_sm.svg) center/contain no-repeat;
+    background: url(../img/svg/docs_ready_bubble_sm.svg) center/contain no-repeat;
     @include max(1550) { left: 23%; }
     @include max(1200) {
         width: 60px;
@@ -66,7 +66,7 @@
     top: -180px;
     left: 20%;
     display: block;
-    background: url(../../../../img/svg/docs_ready_bubble_lg.svg) center/contain no-repeat;
+    background: url(../img/svg/docs_ready_bubble_lg.svg) center/contain no-repeat;
     @include max(1550) { left: 12%; }
     @include max(1200) { width: 170px; height: 160px; }
     @include max(900) { left: 2% }

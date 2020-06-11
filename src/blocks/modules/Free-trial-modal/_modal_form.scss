@@ -34,7 +34,7 @@
 .modal__sad_man {
     width: 170px;
     height: 300px;
-    background: url(../../../img/modal/sad_man.png) center/contain no-repeat;
+    background: url(../img/modal/sad_man.png) center/contain no-repeat;
     position: absolute;
     bottom: -7px;
     left: -164px;
@@ -69,7 +69,7 @@
     bottom: 170px;
     width: 620px;
     height: 280px;
-    background: url(../../../img/modal/speech_bubble.png) center/contain no-repeat;
+    background: url(../img/modal/speech_bubble.png) center/contain no-repeat;
     display: flex;
     &_text {
         margin: auto;
@@ -115,7 +115,7 @@
 .man__body {
     width: 160px;
     height: 290px;
-    background: url(../../../img/modal/modal_man2.png) center/contain no-repeat;    
+    background: url(../img/modal/modal_man2.png) center/contain no-repeat;    
     position: relative;
     @include max(1200) { width: 170px; height: 270px; }
     @include max(930) { width: 140px; height: 240px; }
@@ -127,7 +127,7 @@
 .man__hand {
     width: 185px;
     height: 190px;
-    background: url(../../../img/modal/hand.png) center/contain no-repeat;
+    background: url(../img/modal/hand.png) center/contain no-repeat;
     position: absolute;
     bottom: 13px;
     left: 2px;
@@ -281,7 +281,7 @@ $min-height400-header: 130px;
         position: absolute;
         left: 0;
         top: 1px;
-        background: url(./../../../img/modal/modal_checkmark.svg) center/contain no-repeat;
+        background: url(./../img/modal/modal_checkmark.svg) center/contain no-repeat;
         width: 24px;
         height: 18px;
         @include max(500) { top: -1px }

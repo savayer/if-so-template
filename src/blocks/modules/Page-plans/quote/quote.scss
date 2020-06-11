@@ -31,7 +31,7 @@
         left: -120px;
         width: 103px;
         height: 91px;
-        background: url(../../../../img/svg/quote_left.svg) center center/contain no-repeat;
+        background: url(../img/svg/quote_left.svg) center center/contain no-repeat;
         @include max(992) {
             width: 80px;
             height: 70px;
@@ -50,7 +50,7 @@
         right: -120px;
         width: 103px;
         height: 91px;
-        background: url(../../../../img/svg/quote_right.svg) center center/contain no-repeat;
+        background: url(../img/svg/quote_right.svg) center center/contain no-repeat;
         @include max(992) {
             width: 80px;
             height: 70px;

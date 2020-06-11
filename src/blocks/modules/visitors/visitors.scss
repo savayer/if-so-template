@@ -13,7 +13,7 @@
 .visitors__illustration {
     width: 800px;
     height: 650px;
-    background: url(../../../img/svg/analytics.svg) center/contain no-repeat;
+    background: url(../img/svg/analytics.svg) center/contain no-repeat;
     margin-left: -8%;
     @include max(1550) {
         width: 640px;
@@ -127,7 +127,7 @@
     position: absolute;
     right: 320px;
     bottom: 20%;
-    background: url(../../../img/svg/visitors_bubble1.svg) center/contain no-repeat;
+    background: url(../img/svg/visitors_bubble1.svg) center/contain no-repeat;
     @include max(1550) {
         bottom: 10%;
     }
@@ -165,7 +165,7 @@
 .visitors__bubble2 {
     width: 265px;
     height: 250px;
-    background: url(../../../img/svg/visitors_bubble2.svg) center/contain no-repeat;
+    background: url(../img/svg/visitors_bubble2.svg) center/contain no-repeat;
     position: absolute;
     bottom: -5%;
     right: 40px;

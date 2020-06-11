@@ -95,7 +95,7 @@
 .header__perspective {
     .layer {
         transform: rotateX(0deg) rotateZ(7deg) rotateY(-12deg);
-        background: url(../../../img/google-hero/bg.png) no-repeat;
+        background: url(../img/google-hero/bg.png) no-repeat;
         background-size: contain;
         min-height: 485px;
         border-radius: 40px;
@@ -135,7 +135,7 @@
         @include max(390) { min-height: 200px; width: 290px; bottom: 45px; }
         @include max(370) { right: 100%; }
         &__search {
-            background: url(../../../img/google-hero/search_input.png) no-repeat;
+            background: url(../img/google-hero/search_input.png) no-repeat;
             background-size: contain;
             width: 373px;
             height: 76px;
@@ -186,7 +186,7 @@
             }
         }
         &__shoes_bg {
-            background: url(../../../img/google-hero/shoes_bg.png) center/cover no-repeat;
+            background: url(../img/google-hero/shoes_bg.png) center/cover no-repeat;
             width: 80%;
             margin: auto;
             height: 150px;
@@ -206,7 +206,7 @@
             display: none;
         }
         &__image--1 {
-            background: url(../../../img/google-hero/running.png) center/contain no-repeat;
+            background: url(../img/google-hero/running.png) center/contain no-repeat;
             width: 160px;
             height: 120px;
             @include max(1500) { width: 100px; height: 100px; }
@@ -214,7 +214,7 @@
             @include max(450) { width: 70px; height: 50px; }
         }
         &__image--2 {
-            background: url(../../../img/google-hero/women.png) center/contain no-repeat;
+            background: url(../img/google-hero/women.png) center/contain no-repeat;
             width: 100px;
             height: 110px;
             @include max(1500) { width: 90px; height: 80px; }
@@ -222,7 +222,7 @@
             @include max(450) { width: 60px; height: 50px; }
         }
         &__image--3 {
-            background: url(../../../img/google-hero/elegant.png) center/contain no-repeat;
+            background: url(../img/google-hero/elegant.png) center/contain no-repeat;
             width: 150px;
             height: 80px;
             @include max(1500) { width: 110px; height: 70px; }

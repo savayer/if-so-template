@@ -4,6 +4,9 @@
     justify-content: space-between;
     position: relative;
     z-index: 11;
+    .logo {
+        flex-shrink: 0;
+    }
     @include max(1500) {    
         padding: 30px 50px;
     }
@@ -64,25 +67,22 @@
         margin: 0 56px;
     }
     @include max(1650) {    
-        margin: 0 52px;
-    }
-    @include max(1550) {
         margin: 0 45px;
     }
-    @include max(1420) {
+    @include max(1550) {
         margin: 0 35px;
     }
-    @include max(1320) {
+    @include max(1420) {
         margin: 0 25px;
     }
-    @include max(1210) {
+    @include max(1320) {
         margin: 0 15px;
     }
-    @include max(950) {
-        margin: 0 10px;
+    @include max(1210) {
+        margin: 0 13px;
     }
-    @include max(870) {
-        margin: 0 8px;
+    @include max(1150) {
+        margin: 0 9px;
     }
 }
 

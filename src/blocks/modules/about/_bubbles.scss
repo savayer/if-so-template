@@ -1,12 +1,12 @@
 @for $i from 1 through 6 {
     .bubble#{$i} {
-        background: url(../../../img/bubbles/bubble#{$i}.svg) no-repeat;
+        background: url(../img/bubbles/bubble#{$i}.svg) no-repeat;
     }
 }
 
 .about__profile_bubble {
     margin: auto;    
-    background: url(../../../img/svg/your_profile.svg) center/contain no-repeat;
+    background: url(../img/svg/your_profile.svg) center/contain no-repeat;
     width: 200px;
     height: 210px;
     position: relative;

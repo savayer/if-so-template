@@ -109,7 +109,7 @@
 .sales__bubble, .join__bubble {
     position: absolute;
     &--small {
-        background: url(../../../img/svg/sales_small_bubble.svg) center center/contain no-repeat;
+        background: url(../img/svg/sales_small_bubble.svg) center center/contain no-repeat;
         width: 30px;
         height: 30px;
         top: 70%;
@@ -127,7 +127,7 @@
         @include max(340) { top: 119%; right: 26% }
     }
     &--medium {
-        background: url(../../../img/svg/sales_middle_bubble.svg) center center/contain no-repeat;
+        background: url(../img/svg/sales_middle_bubble.svg) center center/contain no-repeat;
         top: 35%;
         right: -3%;
         width: 80px;
@@ -147,7 +147,7 @@
         @include max(340) { right: 24% }
     }
     &--big {
-        background: url(../../../img/svg/sales_big_bubble.svg) center center/contain no-repeat;
+        background: url(../img/svg/sales_big_bubble.svg) center center/contain no-repeat;
         width: 150px;
         height: 140px;
         top: 65%;

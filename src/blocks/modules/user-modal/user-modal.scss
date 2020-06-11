@@ -88,7 +88,7 @@
         position: absolute;
         top: -18px;
         right: -18px;
-        background: url(../../../img/user-modal/if-so-modal-close-icon.png) center/contain no-repeat;
+        background: url(../img/user-modal/if-so-modal-close-icon.png) center/contain no-repeat;
         width: 36px;
         height: 36px;
         cursor: pointer;
@@ -99,7 +99,7 @@
     }
 
     &__man-flag {
-        background: url(../../../img/user-modal/man_flag_longer.png) center/contain no-repeat;
+        background: url(../img/user-modal/man_flag_longer.png) center/contain no-repeat;
         width: 250px;
         height: 500px;
         position: absolute;
@@ -140,7 +140,7 @@
     @include xs(right, -70px);
     
     &__hand-flag {
-        background: url(../../../img/user-modal/hand_flag.png) center/contain no-repeat;
+        background: url(../img/user-modal/hand_flag.png) center/contain no-repeat;
         width: 155px;
         height: 180px;
     }
@@ -180,7 +180,7 @@
         right: 92px;
         width: 15px;
         height: 15px;
-        background: url(../../../img/user-modal/close_man_hand.png) center/contain no-repeat;
+        background: url(../img/user-modal/close_man_hand.png) center/contain no-repeat;
         cursor: pointer;
         &:hover + .open_if-so-user-modal__buttons {
             opacity: 1;
@@ -241,7 +241,7 @@
 }
 
 .open_if-so-user-modal__il-icon {
-    background: url(../../../img/user-modal/il.png) center/contain no-repeat;
+    background: url(../img/user-modal/il.png) center/contain no-repeat;
     width: 70px;
     height: 70px;
     cursor: pointer;

@@ -18,7 +18,7 @@
 
 .bubble100 {
     position: absolute;
-    background: url(../../../../img/aff/bubble.svg) center/contain no-repeat;
+    background: url(../img/aff/bubble.svg) center/contain no-repeat;
     display: flex;
     &__text {
         font-family: 'Open Sans', sans-serif;
@@ -159,7 +159,7 @@
             left: -40px;
             height: 21px;
             width: 27px;
-            background: url(../../../../img/aff/checkmark.svg) center/contain no-repeat;
+            background: url(../img/aff/checkmark.svg) center/contain no-repeat;
         }
         &:nth-child(even) {
             margin-left: -20px;
@@ -174,12 +174,12 @@
 }
 
 .program__view {
-    background: url(../../../../img/aff/program_aff_bg.svg) center/contain no-repeat;
+    background: url(../img/aff/program_aff_bg.svg) center/contain no-repeat;
     background-position: 0 0;
     &:before {
         content: '' !important;
         position: absolute;
-        background: url(../../../../img/aff/arrow-program.svg) center/contain no-repeat;
+        background: url(../img/aff/arrow-program.svg) center/contain no-repeat;
         width: 280px !important;
         height: 170px !important;
         top: -50px !important;
@@ -221,7 +221,7 @@
 }
 
 .man_on_wheel {
-    background: url(../../../../img/aff/man_on_wheel.png) center/contain no-repeat;
+    background: url(../img/aff/man_on_wheel.png) center/contain no-repeat;
     width: 400px;
     height: 300px;    
     position: relative;
@@ -234,7 +234,7 @@
         position: absolute;
         top: 60px;
         right: -30px;
-        background: url(../../../../img/aff/man_on_wheel_arrow.png) center/contain no-repeat;
+        background: url(../img/aff/man_on_wheel_arrow.png) center/contain no-repeat;
         width: 120px;
         height: 50px;
         @include max(530) { top: 50px; right: 0px; width: 80px; height: 40px; }
@@ -257,7 +257,7 @@
 }
 
 .view__perspective--program {
-    background: #fff url(../../../../img/aff/affiliate.png) center/contain no-repeat;
+    background: #fff url(../img/aff/affiliate.png) center/contain no-repeat;
     box-shadow: 1px 34px 80px #ccc, inset 1px 2px 9px #ccc;
     margin-left: 90px;
     margin-top: 16px;
