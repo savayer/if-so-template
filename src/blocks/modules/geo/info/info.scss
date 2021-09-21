@@ -1,0 +1,118 @@
+.info {
+  margin: 100px 0;
+}
+
+.info__title {
+  text-align: center;
+  word-spacing: -6px;
+}
+
+.info__introtext {
+  margin-top: 20px;
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.info__advantages {
+  max-width: 1200px;
+  @include row-flex();
+  margin: 50px auto 0;
+  justify-content: center;
+}
+
+.info_advantage {
+  @include col();
+  @include size(4);
+  @include size-md(6);
+  @include size-sm(12);
+  margin-top: 15px;
+
+  .check {
+    width: 51px;
+    height: 38px;
+    background: url('../img/svg/check_mark3.svg') center/contain no-repeat;
+    margin: auto;
+  }
+
+  &__title {
+    margin-top: 20px;
+    font-family: 'FuturaBold', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 26px;
+  }
+}
+
+.simple {
+  margin: 60px 0;
+  padding: 0 30px;
+
+  &__teaser {
+    font-size: 40px;
+    font-family: 'FuturaBold';
+    margin-bottom: 15px;
+    text-align: center;
+
+    .if-so {
+      font-size: 24px;
+      margin: 0 -3px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    span {
+      word-spacing: -6px;
+      display: block;
+
+      @include md(display, inline)
+    }
+  }
+
+  &__ways {
+    @include row-flex();
+    margin: 50px auto;
+    justify-content: center;
+  }
+
+  &_way {
+    @include col();
+    @include size(4);
+    @include max(1200) { @include size(6); }
+    @include size-md(12);
+    text-align: center;
+  }
+}
+
+.simple_way {
+  &__step {
+    color: #fd5b56;
+    font-size: 22px;
+    font-family: FuturaBold;
+  }
+
+  &__title {
+    margin: 10px 0 15px;
+    font-family: FuturaBold;
+    font-size: 28px;
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+  }
+
+  &__image {
+    width: 380px;
+    margin: 30px auto 0;
+
+    @include max(992) {
+      width: 320px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

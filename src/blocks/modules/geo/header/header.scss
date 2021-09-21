@@ -1,0 +1,38 @@
+.navigation {
+  &, > ul >li >a {
+    color: #fff;
+  }
+}
+
+.geo-header {
+  background: #1e0547 url('../img/geo/earth.jpg');
+  background-position: 70% 0;
+  background-size: 100%;
+}
+
+.header--geo {
+  &, * {
+    color: #fff;
+  }
+
+  min-height: 716px !important;
+
+  background: transparent;
+
+  .header__content {
+    max-width: 740px;
+    @include xl-block {
+      padding-bottom: 3%;
+    }
+    @include max(700) { max-width: 500px; }
+    @include max(500) { max-width: 90%; }
+  }
+  .header__container {
+    @include max(1400) {
+      padding-right: 35%;
+    }
+    @include max(1100) {
+      padding-right: 0;
+    }
+  }
+}
