@@ -1,13 +1,41 @@
-.navigation {
-  &, > ul >li >a {
+.geo-nav .navigation {
+  &, > ul >li >a, .menu__icon {
     color: #fff;
+  }
+  
+  .white-logo {
+    display: block;
+  }
+
+  .default-logo {
+    display: none;
   }
 }
 
+.white-logo {
+  display: none;
+}
+
 .geo-header {
-  background: #1e0547 url('../img/geo/earth.jpg');
-  background-position: 70% 0;
-  background-size: 100%;
+  transform: $header_skew;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: url(../img/geo/header_bg.png) center/cover no-repeat;
+  }
+
+  &__wrapper {
+    @extend %header_unskew;
+    background: url(../img/geo/dots_map.png) no-repeat;
+    background-size: 70%;
+    background-position: 50% 60%;
+  }
 }
 
 .header--geo {
@@ -15,8 +43,7 @@
     color: #fff;
   }
 
-  min-height: 716px !important;
-
+  min-height: 750px !important;
   background: transparent;
 
   .header__content {
@@ -35,4 +62,26 @@
       padding-right: 0;
     }
   }
+}
+
+.header__earth {
+  @extend %header_unskew;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 900px;
+  height: 800px;
+  background: url(../img/geo/earth.png) no-repeat;
+  background-size: contain;
+}
+
+.header__astronaut {
+  background: url(../img/geo/astronaut-flag.png) no-repeat;
+  width: 446px;
+  height: 357px;
+  position: absolute;
+  left: -60px;
+  top: 20%;
 }

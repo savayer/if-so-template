@@ -1,5 +1,7 @@
 .info {
-  margin: 100px 0;
+  margin: 160px 0 100px;
+  @include lg(margin-top, 120px);
+  @include sm(margin-top, 80px);
 }
 
 .info__title {
