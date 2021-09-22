@@ -1,0 +1,54 @@
+.appsumo {
+  margin-top: 200px;
+  background: #e6e1ef;
+
+  @include md(margin-top, 120px);
+
+  &__top_bg, &__bottom_bg {
+    width: 105%;
+    margin-left: -3%;
+
+    img {
+      width: 105%;
+      margin-top: -10px;
+    }
+  }
+
+  &__bottom_bg {
+    margin-top: -100px;
+    @include max(1920) { margin-top: -50px; }
+    @include max(1500) { margin-top: 0; }
+    img {
+      margin-top: 0;
+      margin-bottom: -10px;
+    }
+  }
+
+  &__wrapper {
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+
+  &__reviews {
+    display: block;
+    margin: 70px auto 40px;
+    user-select: none;
+    max-width: 95%;
+  }
+
+  &__title {
+    text-align: center;
+    span {
+      display: block;
+      word-spacing: -6px;
+
+      @include lg(display, inline);
+    }
+
+    @include lg-block {
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

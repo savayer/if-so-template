@@ -19,7 +19,10 @@
 .effective {
   margin-top: 200px;
   background: #e6e1ef;
-  min-height: 1000px;
+
+  .example__content {
+    @include sm(margin, 0 !important);
+  }
 
   &__top_bg, &__bottom_bg {
     width: 105%;

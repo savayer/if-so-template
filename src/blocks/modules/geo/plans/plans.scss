@@ -120,6 +120,51 @@
   }
 }
 
+.geo_plans__tabs {
+  margin: 40px auto 0;
+  text-align: center;
+  max-width: 600px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    list-style: none;
+    border: 2px solid #1e0547;
+    font-size: 18px;
+    font-family: FuturaBold;
+    color: #1e0547;
+    background: #fff;
+    padding: 15px 35px;
+    transition: .2s;
+    cursor: pointer;
+
+    @include md(padding, 12px 30px);
+
+    &:hover {
+      background: #1e0547;
+      color: #fff;
+    }
+
+    &.active {
+      background: #1e0547;
+      color: #fff;
+    }
+
+    &:first-child {
+      border-radius: 50px 0 0 50px;
+    }
+
+    &:last-child {
+      border-radius: 0 50px 50px 0;
+    }
+  }
+}
+
 $planColors: (
         1: #84cd73,
         2: #fff,

@@ -61,6 +61,7 @@
 
   &__ways {
     @include row-flex();
+    max-width: 1500px;
     margin: 50px auto;
     justify-content: center;
   }
@@ -79,26 +80,29 @@
     color: #fd5b56;
     font-size: 22px;
     font-family: FuturaBold;
+    @include sm(font-size, 20px);
   }
 
   &__title {
     margin: 10px 0 15px;
     font-family: FuturaBold;
     font-size: 28px;
+    @include sm(font-size, 24px);
   }
 
   &__text {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
+    @include sm(font-size, 18px);
   }
 
   &__image {
     width: 380px;
     margin: 30px auto 0;
 
-    @include max(992) {
-      width: 320px;
-    }
+    @include lg(width, 320px);
+    @include sm(width, 260px);
+
     img {
       width: 100%;
     }

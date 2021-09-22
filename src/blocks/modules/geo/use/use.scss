@@ -61,6 +61,10 @@
     width: 320px;
     margin: auto auto 0 auto;
 
+    &.less {
+      width: 290px;
+    }
+
     img {
       width: 100%;
     }
