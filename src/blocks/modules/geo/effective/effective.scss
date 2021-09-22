@@ -1,0 +1,114 @@
+.teaser {
+  font-size: 40px;
+  font-family: 'FuturaBold';
+  margin-bottom: 15px;
+  text-align: center;
+
+  .if-so {
+    font-size: 24px;
+    margin: 0 -3px;
+  }
+
+  @include xl(font-size, 36px);
+  @include lg(font-size, 32px);
+  @include md(font-size, 30px);
+  @include sm(font-size, 28px);
+  @include xs(font-size, 26px);
+}
+
+.effective {
+  margin-top: 200px;
+  background: #e6e1ef;
+  min-height: 1000px;
+
+  &__top_bg, &__bottom_bg {
+    width: 105%;
+    margin-left: -3%;
+
+    img {
+      width: 105%;
+      margin-top: -10px;
+    }
+  }
+
+  &__bottom_bg {
+    margin-top: -350px;
+    @include max(1920) { margin-top: -300px; }
+    @include max(1500) { margin-top: -250px; }
+    @include max(1200) { margin-top: -200px; }
+    @include max(992) { margin-top: -150px; }
+    @include max(576) { margin-top: -100px; }
+    @include max(400) { margin-top: -50px; }
+    img {
+      margin-top: 0;
+      margin-bottom: -10px;
+    }
+  }
+
+  &__wrapper {
+    margin-top: -100px;
+
+    @include max(1800) { margin-top: -50px }
+    @include max(1200) { margin-top: 0 }
+  }
+
+  &__title {
+    text-align: center;
+    span {
+      display: block;
+      word-spacing: -6px;
+
+      @include lg(display, inline);
+    }
+
+    @include lg-block {
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__introtext {
+    font-size: 24px;
+    font-family: FuturaBold;
+    text-align: center;
+    max-width: 550px;
+    margin: 50px auto 20px;
+    @include md(max-width, 90%);
+  }
+
+  .examples__item {
+    background: transparent;
+  }
+  
+  .example__title {
+    text-align: center;
+  }
+
+  .example__text {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+  }
+
+  .example__total {
+    font-family: FuturaBold;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .example__image.resize {
+    img {
+      width: 350px;
+
+      @include lg-block {
+        width: 300px;
+        display: block;
+        margin: auto;
+      }
+      @include md(width, 250px);
+      @include sm(width, 200px);
+    }
+  }
+}

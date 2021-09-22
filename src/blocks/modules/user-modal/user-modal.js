@@ -1,14 +1,14 @@
 window.addEventListener('load', e => {
-    const handOpenModal = document.querySelector('.open_if-so-user-modal')
-    const modal = document.querySelector('.if-so-user-modal')
-    const openModalButton = document.querySelector('.open_if-so-user-modal__button.open-modal')
-    const closeModalButton = document.querySelector('.if-so-user-modal__close')
-    const closeButtonHideTheHand = document.querySelector('.open_if-so-user-modal__close')
-    const neverShowButton = document.querySelector('.open_if-so-user-modal__never-show')
+    const handOpenModal = document.querySelector('.open_if-so-use-modal')
+    const modal = document.querySelector('.if-so-use-modal')
+    const openModalButton = document.querySelector('.open_if-so-use-modal__button.open-modal')
+    const closeModalButton = document.querySelector('.if-so-use-modal__close')
+    const closeButtonHideTheHand = document.querySelector('.open_if-so-use-modal__close')
+    const neverShowButton = document.querySelector('.open_if-so-use-modal__never-show')
     
-    const openModalHebrewBlock = document.querySelector('.open_if-so-user-modal--hebrew')
-    const closeButtonHideHebrew = document.querySelector('.open_if-so-user-modal__button_close.hebrew-close')
-    const openModalButtonHebrew = document.querySelector('.open_if-so-user-modal__il-icon')
+    const openModalHebrewBlock = document.querySelector('.open_if-so-use-modal--hebrew')
+    const closeButtonHideHebrew = document.querySelector('.open_if-so-use-modal__button_close.hebrew-close')
+    const openModalButtonHebrew = document.querySelector('.open_if-so-use-modal__il-icon')
 
     if (handOpenModal && localStorage.getItem('show_modal') !== 'false') {
         handOpenModal.classList.add('active')

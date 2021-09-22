@@ -2,6 +2,10 @@
   margin-top: 200px;
 }
 
+.futura-bold {
+  font-family: FuturaBold;
+}
+
 .geo_plans_section__info {
   max-width: 500px;
   margin: 80px auto 40px;
@@ -9,6 +13,7 @@
   strong {
     font-weight: 800;
     font-style: italic;
+    font-size: 20px;
   }
   &, p {
     font-style: italic;
@@ -21,6 +26,7 @@
 .geo_plans_section__title {
   text-align: center;
   word-spacing: -6px;
+  padding: 0 15px;
 }
 
 .geo_plans_section__text {

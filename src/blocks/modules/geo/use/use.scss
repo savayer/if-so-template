@@ -1,0 +1,68 @@
+.use {
+  margin-top: 150px;
+}
+
+.use__wrapper {
+  padding: 0 15px;
+}
+
+.use__steps {
+  @include row-flex();
+  justify-content: center;
+  margin: 50px auto 0;
+  max-width: 1500px;
+
+  @include md(margin, 0);
+}
+
+.use__title {
+  text-align: center;
+  max-width: 90%;
+  margin: auto;
+  span {
+    display: block;
+    word-spacing: -6px;
+  }
+}
+
+.use__introtext {
+  margin: 20px auto 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  max-width: 600px;
+
+  @include md(max-width, 90%);
+}
+
+.use__step {
+  @include col();
+  @include size(4);
+  @include size-xl(6);
+  @include size-md(12);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+  &_title {
+    font-family: FuturaBold;
+    font-size: 26px;
+  }
+
+  &_text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  &_image {
+    width: 320px;
+    margin: auto auto 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+}

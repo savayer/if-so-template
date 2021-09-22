@@ -46,20 +46,8 @@
 }
 
 .simple {
-  margin: 60px 0;
+  margin: 160px 0 60px;
   padding: 0 30px;
-
-  &__teaser {
-    font-size: 40px;
-    font-family: 'FuturaBold';
-    margin-bottom: 15px;
-    text-align: center;
-
-    .if-so {
-      font-size: 24px;
-      margin: 0 -3px;
-    }
-  }
 
   &__title {
     text-align: center;

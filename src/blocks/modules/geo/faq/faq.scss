@@ -1,0 +1,106 @@
+.geo_faq {
+  margin-top: 250px;
+
+  &__wrapper {
+    padding: 0 20px;
+  }
+  
+  &__title {
+    text-align: center;
+
+    span {
+      position: relative;
+      
+      @include lg-block {
+        display: block;
+
+        &.last {
+          padding-left: 200px;
+        }
+      }
+
+      @include sm-block {
+        &.last {
+          padding-left: 70px;
+        }
+      }
+    }
+
+    span.man {
+      display: inline !important;
+    }
+
+    span.man:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 210px;
+      height: 240px;
+      background: url(../img/geo/faq.png) center/contain no-repeat;
+      left: -190px;
+      top: -120px;
+      z-index: -1;
+
+      @include lg-block {
+        left: -142px;
+        top: -90px;
+        width: 160px;
+        height: 180px;
+      }
+      @include sm-block {
+        left: -111px;
+        top: -70px;
+        width: 122px;
+        height: 140px;
+      }
+    }
+  }
+}
+
+.questions {
+  @include row-flex();
+  max-width: 1500px;
+  margin: 160px auto 0;
+
+  @include lg(margin-top, 90px);
+  @include sm(margin-top, 60px);
+}
+
+.question {
+  @include col();
+  @include size(6);
+  @include size-md(12);
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 90px;
+
+  @include md(margin-bottom, 50px);
+
+  &.small_answer {
+    .question__title {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-family: FuturaBold;
+    position: relative;
+    margin-bottom: auto;
+
+    @include md(font-size, 22px);
+    @include sm(font-size, 20px);
+
+    &:before {
+      content: '+';
+    }
+  }
+
+  &__answer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+    @include md(font-size, 16px);
+  }
+}
