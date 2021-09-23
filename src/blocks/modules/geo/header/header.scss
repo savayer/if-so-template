@@ -5,6 +5,34 @@
   
   .white-logo {
     display: block;
+    @include max(840) {
+      display: none;
+    }
+  }
+  
+  .navigation__toggle_menu {
+    &.active div {
+      background: #1e0547;
+    }
+    div {
+      background: #fff;
+    }
+  }
+  
+  >ul>li.active {
+    background: #947bbd;
+  }
+
+  .try_it {
+    background: #4cb5d2;
+    border: 2px solid #fff;
+    span {
+      color: #fff;
+    }
+
+    path {
+      fill: #fff;
+    }
   }
 
   .default-logo {
@@ -28,6 +56,8 @@
     bottom: 0;
     z-index: -1;
     background: url(../img/geo/header_bg.png) center/cover no-repeat;
+
+    @include min(1900) { top: -170px }
   }
 
   &__wrapper {
@@ -35,6 +65,25 @@
     background: url(../img/geo/dots_map.png) no-repeat;
     background-size: 70%;
     background-position: 50% 60%;
+
+    @include max(1300) {
+      background-size: 90%;
+      background-position: 50% 70%;
+    }
+
+    @include max(1100) { background-size: 110% }
+    @include lg-block {
+      background-size: 120%;
+      background-position: 30% 30%;
+    }
+    @include md-block {
+      background-size: 140%;
+      background-position: 60% 20%;
+    }
+    @include sm-block {
+      background-size: 190%;
+      background-position: 74% 20%;
+    }
   }
 }
 
@@ -46,13 +95,27 @@
   min-height: 750px !important;
   background: transparent;
 
+  @include lg-block {
+    min-height: 860px !important;
+    overflow: hidden;
+  }
+  @include sm(min-height, 800px !important);
+  @include max(450) {
+    min-height: 720px !important;
+  }
+  @include max(350) {
+    min-height: 650px !important;
+  }
+
   .header__content {
     max-width: 740px;
-    @include xl-block {
-      padding-bottom: 3%;
+    @include max(1400) {
+      max-width: 600px;
+      margin-left: 100px;
     }
+    @include md(margin-left, auto);
     @include max(700) { max-width: 500px; }
-    @include max(500) { max-width: 90%; }
+    @include max(600) { max-width: 90%; }
   }
   .header__container {
     @include max(1400) {
@@ -60,6 +123,18 @@
     }
     @include max(1100) {
       padding-right: 0;
+    }
+  }
+
+  .try_it--button {
+    @include max(500) {
+      padding: 12px 15px 12px 30px;
+    }
+  }
+
+  .try_it--button .try_it__arrow-container {
+    @include max(500) {
+      margin-left: 10px;
     }
   }
 }
@@ -75,13 +150,154 @@
   height: 800px;
   background: url(../img/geo/earth.png) no-repeat;
   background-size: contain;
+
+  @include max(1900) { right: -4% }
+  @include max(1800) { width: 860px; height: 710px; }
+  @include max(1700) { right: -7% }
+  @include max(1600) { right: -10% }
+  @include max(1500) { top: 10% }
+  @include max(1350) {
+    width: 800px;
+    height: 660px;
+    right: -12%;
+  }
+  @include max(1250) { top: 16% }
+  @include lg-block {
+    top: 31%;
+    right: auto;
+    left: 25%;
+  }
+  @include max(840) {
+    top: 27%;
+    left: 14%;
+  }
+  @include md-block {
+    top: 30%;
+    left: 0;
+  }
+  @include max(660) {
+    width: 740px;
+    height: 620px;
+    left: -10%;
+  }
+  @include sm(left, -25%);
+  @include max(450) {
+    width: 630px;
+    height: 530px;
+  }
+  @include max(420) { left: -27% }
+  @include max(400) { left: -30% }
+  @include max(390) { left: -32% }
+  @include max(350) {
+    width: 580px;
+    height: 470px;
+  }
 }
 
 .header__astronaut {
-  background: url(../img/geo/astronaut-flag.png) no-repeat;
-  width: 446px;
-  height: 357px;
+  background: url(../img/geo/astronaut.png) center/contain no-repeat;
+  width: 346px;
+  height: 350px;
   position: absolute;
-  left: -60px;
+  left: 80px;
   top: 20%;
+
+  animation: 4s astronaut infinite;
+
+  @include max(1800) { width: 315px; height: 310px; }
+  @include max(1200) { left: 24% }
+  @include max(1050) { left: 30% }
+  @include max(840) { top: 25%; }
+  @include md(top, 28%);
+  @include max(450) {
+    width: 235px;
+    height: 240px;
+    left: 42%;
+  }
+  @include max(380) { left: 36% }
+  @include max(350) { top: 34%; left: 34% }
+  @include max(330) { left: 32% }
+}
+
+.header__astronaut_flag {
+  background: url(../img/geo/flag.png) center/contain no-repeat;
+  width: 65px;
+  height: 38px;
+  position: absolute;
+  left: -87px;
+  top: 26px;
+  transform: rotate(-25deg);
+
+  animation: 4s wave infinite;
+
+  @include max(1800) {
+    width: 60px;
+    height: 35px;
+    left: -75px;
+    top: 19px;
+  }
+  @include max(450) {
+    width: 50px;
+    height: 29px;
+    left: -63px;
+    top: 17px;
+  }
+}
+
+.header__astronaut_stick {
+  height: 93px;
+  width: 2px;
+  background: #2c2c2c;
+  display: block;
+  left: -16px;
+  top: 9px;
+  position: absolute;
+  transform: rotate(-24deg);
+  z-index: 2;
+  @include max(1800) {
+    height: 84px;
+    left: -10px;
+    top: 4px;
+  }
+  @include max(450) {
+    height: 65px;
+  }
+}
+
+@keyframes astronaut {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translate3d(0, 0, 0) rotateZ(-25deg) rotateY(22deg);
+  }
+
+  20% {
+    transform: translate3d(0, 0, 0) rotateZ(-25deg) rotateY(0deg);
+  }
+
+  40% {
+    transform: translate3d(0, 0, 0) rotateZ(-25deg) rotateY(-22deg);
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0) rotateZ(-25deg) rotateY(0deg);
+  }
+
+  80% {
+    transform: translate3d(0, 0, 0) rotateZ(-25deg) rotateY(16deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotateZ(-25deg) rotateY(22deg);
+  }
 }

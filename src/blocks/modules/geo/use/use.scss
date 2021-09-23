@@ -22,6 +22,8 @@
   span {
     display: block;
     word-spacing: -6px;
+
+    @include sm(display, inline);
   }
 }
 
