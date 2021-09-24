@@ -244,6 +244,20 @@
   }
 }
 
+.flag-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, 0 -25%, 100% top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(20%, rgba(255, 255, 255, 0)), color-stop(30%, rgba(0, 0, 0, 0.04)), color-stop(40%, rgba(255, 255, 255, 0.2)), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(65%, rgba(255, 255, 255, 0.2)), color-stop(80%, rgba(0, 0, 0, 0.05)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-size: 200%;
+  animation-name: air;
+  animation-duration: 8s;
+  animation-timing-function: cubic-bezier(0.16, 0.14, 0.82, 0.73);
+  animation-iteration-count: infinite;
+}
+
 .header__astronaut_stick {
   height: 93px;
   width: 2px;
@@ -261,6 +275,21 @@
   }
   @include max(450) {
     height: 65px;
+  }
+}
+
+@keyframes air {
+  0% {
+    background-position: -200% 0px;
+  }
+  30% {
+    background-position: -60% 5px;
+  }
+  70% {
+    background-position: 70% -5px;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }
 
