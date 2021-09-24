@@ -28,6 +28,11 @@
     width: 105%;
     margin-left: -3%;
 
+    @include sm-block {
+      width: 110%;
+      margin-left: -5%;
+    }
+
     img {
       width: 105%;
       margin-top: -10px;

@@ -8,9 +8,15 @@
     width: 105%;
     margin-left: -3%;
 
+    @include xl-block {
+      width: 110%;
+      margin-left: -7%;
+    }
+
     img {
       width: 105%;
-      margin-top: -10px;
+      margin-top: -5px;
+      @include md(margin-top, -2px);
     }
   }
 
@@ -20,7 +26,7 @@
     @include max(1500) { margin-top: 0; }
     img {
       margin-top: 0;
-      margin-bottom: -10px;
+      margin-bottom: -5px;
     }
   }
 

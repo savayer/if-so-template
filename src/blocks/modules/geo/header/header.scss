@@ -55,7 +55,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: url(../img/geo/header_bg.png) center/cover no-repeat;
+    background: #100a28 url(../img/geo/header_bg.png) center/cover no-repeat;
 
     @include min(1900) { top: -170px }
   }
