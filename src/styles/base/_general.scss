@@ -191,6 +191,14 @@ strong {
     overflow: hidden;
 }
 
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
 @keyframes move {
     0% {
         transform: translate(0)

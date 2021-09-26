@@ -48,6 +48,8 @@
   margin-top: 80px;
   @include max(1000) { flex-wrap: wrap; }
 
+  animation: fadeEffect .3s;
+
   .plans__item.active {
     background: #9b6fd1;
   }
@@ -125,6 +127,7 @@
   margin: 40px auto 0;
   text-align: center;
   max-width: 600px;
+  user-select: none;
 
   ul {
     padding: 0;
@@ -200,4 +203,9 @@ $planColors: (
       border-color: $color;
     }
   }
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

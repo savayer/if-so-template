@@ -23,6 +23,7 @@ import "%modules%/Page-affiliates/program/program";
 import "%modules%/Page-google/google-header/google-header";
 
 import "%modules%/Page-careers/careers";
+import "%modules%/geo/plans/plans";
 
 import "%modules%/preloader/preloader";
 
