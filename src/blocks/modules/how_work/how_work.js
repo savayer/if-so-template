@@ -1,3 +1,27 @@
+const $workExplainNav = document.querySelector('.work_explain__nav')
+const $workExplainImage = document.querySelector('.work_explain__img')
+const $workExplainImageMobile = document.querySelector('.work_explain__img-mobile')
+if ($workExplainNav) {
+    $workExplainNav.addEventListener('click', e => {
+        if (e.target.nodeName === 'LI' && e.target.getAttribute('data-image')) {
+            const imageUrl = e.target.getAttribute('data-image')
+            removeAllActiveFromWorkExplainNav()
+            e.target.classList.add('active')
+            $workExplainImageMobile.setAttribute('src', imageUrl)
+            $workExplainImage.style.backgroundImage = `url(${imageUrl})`
+        }
+    })
+}
+
+function removeAllActiveFromWorkExplainNav () {
+    const $liItems = $workExplainNav.querySelectorAll('li')
+    if ($liItems) {
+        $liItems.forEach($liItem => {
+            $liItem.classList.remove('active')
+        })
+    }
+}
+
 const $title = document.querySelectorAll('.work_explain__title span');
 
 const $subTitle1 = $title[0]
